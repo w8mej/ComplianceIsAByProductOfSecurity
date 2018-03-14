@@ -1,0 +1,2 @@
+DO NOT DELETE THIS FILE 
+It is Required by the automation that copies the library so that the folder is not empty and can be copied.

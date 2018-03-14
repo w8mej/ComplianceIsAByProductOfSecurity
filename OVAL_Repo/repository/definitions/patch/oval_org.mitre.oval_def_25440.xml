@@ -1,0 +1,42 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:25440" version="5">
+  <metadata>
+    <title>SUSE-SU-2014:0773-1 -- Security update for Linux Kernel</title>
+    <affected family="unix">
+      <platform>SUSE Linux Enterprise Server 10</platform>
+      <product>Linux Kernel</product>
+    </affected>
+    <reference ref_id="SUSE-SU-2014:0773-1" ref_url="https://www.suse.com/support/update/announcement/2014/suse-su-20140773-1.html" source="VENDOR" />
+    <reference ref_id="CVE-2013-6382" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6382" source="CVE" />
+    <reference ref_id="CVE-2013-7263" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7263" source="CVE" />
+    <reference ref_id="CVE-2013-7264" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7264" source="CVE" />
+    <reference ref_id="CVE-2013-7265" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7265" source="CVE" />
+    <reference ref_id="CVE-2014-1737" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1737" source="CVE" />
+    <reference ref_id="CVE-2014-1738" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1738" source="CVE" />
+    <description>The SUSE Linux Enterprise Server 10 Service Pack 4 LTSS kernel has been
+updated to fix various security issues and several bugs.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-07-15T17:08:30">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-07-29T19:03:55.230-04:00">DRAFT</status_change>
+        <status_change date="2014-08-18T04:04:19.693-04:00">INTERIM</status_change>
+        <status_change date="2014-09-08T04:02:21.508-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="SUSE Linux Enterprise Server 10 is installed" definition_ref="oval:org.mitre.oval:def:1368" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="kernel-default RPM is earlier than 0:2.6.16.60-0.107.1" test_ref="oval:org.mitre.oval:tst:116313" />
+      <criterion comment="kernel-source RPM is earlier than 0:2.6.16.60-0.107.1" test_ref="oval:org.mitre.oval:tst:116319" />
+      <criterion comment="kernel-syms RPM is earlier than 0:2.6.16.60-0.107.1" test_ref="oval:org.mitre.oval:tst:116194" />
+      <criterion comment="kernel-debug RPM is earlier than 0:2.6.16.60-0.107.1" test_ref="oval:org.mitre.oval:tst:116325" />
+      <criterion comment="kernel-kdump RPM is earlier than 0:2.6.16.60-0.107.1" test_ref="oval:org.mitre.oval:tst:115731" />
+      <criterion comment="kernel-smp RPM is earlier than 0:2.6.16.60-0.107.1" test_ref="oval:org.mitre.oval:tst:115849" />
+      <criterion comment="kernel-xen RPM is earlier than 0:2.6.16.60-0.107.1" test_ref="oval:org.mitre.oval:tst:116023" />
+    </criteria>
+  </criteria>
+</definition>

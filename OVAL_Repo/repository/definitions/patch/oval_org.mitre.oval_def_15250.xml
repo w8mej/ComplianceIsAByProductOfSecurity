@@ -1,0 +1,54 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:15250" version="27">
+  <metadata>
+    <title>USN-1200-1 -- Quassel vulnerability</title>
+    <affected family="unix">
+      <platform>Ubuntu 11.04</platform>
+      <platform>Ubuntu 10.04</platform>
+      <platform>Ubuntu 10.10</platform>
+      <product>Quassel</product>
+    </affected>
+    <reference ref_id="USN-1200-1" ref_url="https://lists.ubuntu.com/archives/ubuntu-security-announce/2011-September/001425.html" source="VENDOR" />
+    <description>quassel: KDE/Qt-based IRC client A remote attacker could send crafted input to Quassel and cause it to crash.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2012-03-31T03:11:26-05:00">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2012-03-31T09:15:31.983-04:00">DRAFT</status_change>
+        <status_change date="2012-04-16T04:07:17.891-04:00">INTERIM</status_change>
+        <status_change date="2012-05-07T04:01:41.383-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 11.04 is installed" definition_ref="oval:org.mitre.oval:def:14150" />
+      <criteria comment="Architecture section" operator="OR">
+        <criteria comment="Architecture independent section" operator="AND">
+          <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+          <criterion comment="quassel-core DPKG is earlier than 0.7.2-0ubuntu2.2" test_ref="oval:org.mitre.oval:tst:78526" />
+        </criteria>
+      </criteria>
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.04 is installed" definition_ref="oval:org.mitre.oval:def:13089" />
+      <criteria comment="Architecture section" operator="OR">
+        <criteria comment="Architecture independent section" operator="AND">
+          <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+          <criterion comment="quassel-core DPKG is earlier than 0.6.1-0ubuntu1.2" test_ref="oval:org.mitre.oval:tst:78369" />
+        </criteria>
+      </criteria>
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.10 is installed" definition_ref="oval:org.mitre.oval:def:13134" />
+      <criteria comment="Architecture section" operator="OR">
+        <criteria comment="Architecture independent section" operator="AND">
+          <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+          <criterion comment="quassel-core DPKG is earlier than 0.7.1-0ubuntu1.1" test_ref="oval:org.mitre.oval:tst:78539" />
+        </criteria>
+      </criteria>
+    </criteria>
+  </criteria>
+</definition>

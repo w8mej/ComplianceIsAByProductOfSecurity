@@ -1,0 +1,50 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27827" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2012-1098 -- glibc security and bug fix update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>glibc</product>
+    </affected>
+    <reference ref_id="ELSA-2012-1098" ref_url="http://linux.oracle.com/errata/ELSA-2012-1098.html" source="VENDOR" />
+    <reference ref_id="CVE-2012-3404" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3404" source="CVE" />
+    <reference ref_id="CVE-2012-3405" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3405" source="CVE" />
+    <reference ref_id="CVE-2012-3406" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3406" source="CVE" />
+    <description>[2.12-1.80.el6_3.3]
+- Fix incorrect/corrupt patchfile for 833716.  Did not
+    affect generated code, but tests were missing (#833716).
+
+[2.12-1.80.el6_3.2]
+- Fix regression after patch for BZ804630 (#837026).
+
+[2.12-1.80.el6_3.1]
+- Fixes an unbound alloca and related problems. (#833716)</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:24:55">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:25:21.348-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:06:24.981-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:03:02.660-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T19:37:28.013-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T19:37:28.013-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="glibc is earlier than 0:2.12-1.80.el6_3.3" test_ref="oval:org.mitre.oval:tst:130733" />
+      <criterion comment="glibc-common is earlier than 0:2.12-1.80.el6_3.3" test_ref="oval:org.mitre.oval:tst:131016" />
+      <criterion comment="glibc-devel is earlier than 0:2.12-1.80.el6_3.3" test_ref="oval:org.mitre.oval:tst:131424" />
+      <criterion comment="glibc-headers is earlier than 0:2.12-1.80.el6_3.3" test_ref="oval:org.mitre.oval:tst:131518" />
+      <criterion comment="glibc-static is earlier than 0:2.12-1.80.el6_3.3" test_ref="oval:org.mitre.oval:tst:131381" />
+      <criterion comment="glibc-utils is earlier than 0:2.12-1.80.el6_3.3" test_ref="oval:org.mitre.oval:tst:131279" />
+      <criterion comment="nscd is earlier than 0:2.12-1.80.el6_3.3" test_ref="oval:org.mitre.oval:tst:130614" />
+    </criteria>
+  </criteria>
+</definition>

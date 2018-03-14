@@ -1,0 +1,25 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="inventory" id="oval:org.mitre.oval:def:19165" version="26">
+  <metadata>
+    <title>IBM AIX 6100-05 is installed</title>
+    <affected family="unix">
+      <platform>IBM AIX 6.1</platform>
+    </affected>
+    <reference ref_id="cpe:/o:ibm:aix:6.1" source="CPE" />
+    <description>The operating system installed on the system is IBM AIX version 6100-05.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2013-11-15T17:30:00.000-05:00">
+          <contributor organization="Hewlett-Packard">Chandan M C</contributor>
+        </submitted>
+        <status_change date="2013-11-21T13:18:00.697-05:00">DRAFT</status_change>
+        <status_change date="2013-12-09T04:00:14.174-05:00">INTERIM</status_change>
+        <status_change date="2013-12-30T04:00:21.641-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criterion comment="Version of IBM AIX installed is 6100-05" test_ref="oval:org.mitre.oval:tst:87354" />
+  </criteria>
+</definition>

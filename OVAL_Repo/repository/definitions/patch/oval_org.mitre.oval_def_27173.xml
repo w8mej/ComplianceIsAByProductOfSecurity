@@ -1,0 +1,75 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:27173" version="15">
+  <metadata>
+    <title>ELSA-2014-1327 -- php security update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 7</platform>
+      <product>php</product>
+    </affected>
+    <reference ref_id="ELSA-2014-1327" ref_url="http://linux.oracle.com/errata/ELSA-2014-1327.html" source="VENDOR" />
+    <reference ref_id="CVE-2014-2497" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2497" source="CVE" />
+    <reference ref_id="CVE-2014-3478" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3478" source="CVE" />
+    <reference ref_id="CVE-2014-3538" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3538" source="CVE" />
+    <reference ref_id="CVE-2014-3587" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3587" source="CVE" />
+    <reference ref_id="CVE-2014-3597" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3597" source="CVE" />
+    <reference ref_id="CVE-2014-4670" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4670" source="CVE" />
+    <reference ref_id="CVE-2014-4698" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4698" source="CVE" />
+    <reference ref_id="CVE-2014-5120" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5120" source="CVE" />
+    <description>[5.4.16-23.1]
+        - gd: fix NULL pointer dereference in gdImageCreateFromXpm().
+          CVE-2014-2497
+        - gd: fix NUL byte injection in file names. CVE-2014-5120
+        - fileinfo: fix extensive backtracking in regular expression
+          (incomplete fix for CVE-2013-7345). CVE-2014-3538
+        - fileinfo: fix mconvert incorrect handling of truncated
+          pascal string size. CVE-2014-3478
+        - fileinfo: fix cdf_read_property_info
+          (incomplete fix for CVE-2012-1571). CVE-2014-3587
+        - spl: fix use-after-free in ArrayIterator due to object
+          change during sorting. CVE-2014-4698
+        - spl: fix use-after-free in SPL Iterators. CVE-2014-4670
+        - network: fix segfault in dns_get_record
+          (incomplete fix for CVE-2014-4049). CVE-2014-3597</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:20:44">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T17:20:32.555-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:02:36.993-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:00:57.665-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 7.x" definition_ref="oval:org.mitre.oval:def:25183" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="php is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126595" />
+      <criterion comment="php-bcmath is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126440" />
+      <criterion comment="php-cli is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126725" />
+      <criterion comment="php-common is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126131" />
+      <criterion comment="php-dba is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126630" />
+      <criterion comment="php-devel is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126749" />
+      <criterion comment="php-embedded is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126710" />
+      <criterion comment="php-enchant is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126868" />
+      <criterion comment="php-fpm is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126569" />
+      <criterion comment="php-gd is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126269" />
+      <criterion comment="php-intl is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126866" />
+      <criterion comment="php-ldap is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126738" />
+      <criterion comment="php-mbstring is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126824" />
+      <criterion comment="php-mysql is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126386" />
+      <criterion comment="php-mysqlnd is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126805" />
+      <criterion comment="php-odbc is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126801" />
+      <criterion comment="php-pdo is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126827" />
+      <criterion comment="php-pgsql is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126813" />
+      <criterion comment="php-process is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126703" />
+      <criterion comment="php-pspell is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126781" />
+      <criterion comment="php-recode is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126849" />
+      <criterion comment="php-snmp is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126431" />
+      <criterion comment="php-soap is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126664" />
+      <criterion comment="php-xml is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126761" />
+      <criterion comment="php-xmlrpc is earlier than 0:5.4.16-23.el7_0.1" test_ref="oval:org.mitre.oval:tst:126744" />
+    </criteria>
+  </criteria>
+</definition>

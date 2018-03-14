@@ -1,0 +1,47 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27553" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2013-0276 -- libvirt security, bug fix, and enhancement update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>libvirt</product>
+    </affected>
+    <reference ref_id="ELSA-2013-0276" ref_url="http://linux.oracle.com/errata/ELSA-2013-0276.html" source="VENDOR" />
+    <reference ref_id="CVE-2012-3411" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3411" source="CVE" />
+    <description>[libvirt-0.10.2-18.0.1.el6]
+
+- Replace docs/et.png in tarball with blank image
+
+
+
+[0.10.2-18]
+
+- rpc: Fix crash on error paths of message dispatching (CVE-2013-0170)
+
+- spec: Disable libssh2 support (rhbz#513363)</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:23:50">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:14:45.937-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:05:02.185-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:02:13.853-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T13:11:37.537-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T13:11:37.537-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="libvirt is earlier than 0:0.10.2-18.0.1.el6" test_ref="oval:org.mitre.oval:tst:129749" />
+      <criterion comment="libvirt-client is earlier than 0:0.10.2-18.0.1.el6" test_ref="oval:org.mitre.oval:tst:130215" />
+      <criterion comment="libvirt-devel is earlier than 0:0.10.2-18.0.1.el6" test_ref="oval:org.mitre.oval:tst:130307" />
+      <criterion comment="libvirt-python is earlier than 0:0.10.2-18.0.1.el6" test_ref="oval:org.mitre.oval:tst:130262" />
+    </criteria>
+  </criteria>
+</definition>

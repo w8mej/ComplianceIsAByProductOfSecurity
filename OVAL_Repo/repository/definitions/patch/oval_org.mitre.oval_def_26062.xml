@@ -1,0 +1,33 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:26062" version="4">
+  <metadata>
+    <title>SUSE-SU-2014:0930-1 -- Security update for kdirstat</title>
+    <affected family="unix">
+      <platform>SUSE Linux Enterprise Server 11</platform>
+      <platform>SUSE Linux Enterprise Desktop 11</platform>
+      <product>kdirstat</product>
+    </affected>
+    <reference ref_id="SUSE-SU-2014:0930-1" ref_url="https://www.suse.com/support/update/announcement/2014/suse-su-20140930-1.html" source="VENDOR" />
+    <reference ref_id="CVE-2014-2527" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2527" source="CVE" />
+    <reference ref_id="CVE-2014-2528" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2528" source="CVE" />
+    <description>The following security issue has been fixed:command injection in kcleanup.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-08-06T15:00:11">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-08-07T15:07:51.618-04:00">DRAFT</status_change>
+        <status_change date="2014-08-25T04:01:26.519-04:00">INTERIM</status_change>
+        <status_change date="2014-09-15T04:00:32.909-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Operation system section" operator="OR">
+      <extend_definition comment="SUSE Linux Enterprise Server 11.x is installed" definition_ref="oval:org.mitre.oval:def:17270" />
+      <extend_definition comment="SUSE Linux Enterprise Desktop 11.x is installed" definition_ref="oval:org.mitre.oval:def:25140" />
+    </criteria>
+    <criterion comment="kdirstat RPM is earlier than 0:2.4.4-255.28.1" test_ref="oval:org.mitre.oval:tst:121201" />
+  </criteria>
+</definition>

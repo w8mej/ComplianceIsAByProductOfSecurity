@@ -1,0 +1,32 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:17862" version="7">
+  <metadata>
+    <title>USN-1415-1 -- linux-mvl-dove vulnerability</title>
+    <affected family="unix">
+      <platform>Ubuntu 10.10</platform>
+      <product>linux-mvl-dove</product>
+    </affected>
+    <reference ref_id="USN-1415-1" ref_url="https://lists.ubuntu.com/archives/ubuntu-security-announce/2012-April/001666.html" source="VENDOR" />
+    <description>The system could be made to crash under certain conditions.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2013-07-22T12:08:11">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2013-08-15T12:49:11.868-04:00">DRAFT</status_change>
+        <status_change date="2013-09-02T04:04:05.237-04:00">INTERIM</status_change>
+        <status_change date="2013-09-23T04:03:44.311-04:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:ste:21810 - updated UBUNTU states - evr and comment with explicit epoch" date="2013-11-26T15:09:00.423-05:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2013-11-26T15:14:28.127-05:00">INTERIM</status_change>
+        <status_change date="2013-12-16T04:00:52.971-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Ubuntu 10.10 is installed" definition_ref="oval:org.mitre.oval:def:13134" />
+    <criterion comment="linux-image-2.6.32-423-dove DPKG is earlier than 2.6.32-423.42" test_ref="oval:org.mitre.oval:tst:83853" />
+  </criteria>
+</definition>

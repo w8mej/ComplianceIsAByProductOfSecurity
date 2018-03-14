@@ -1,0 +1,3 @@
+<rpminfo_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" comment="openssl package information" id="oval:org.mitre.oval:obj:13882" version="2">
+  <name>openssl</name>
+</rpminfo_object>

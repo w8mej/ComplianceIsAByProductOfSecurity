@@ -1,0 +1,38 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:20998" version="43">
+  <metadata>
+    <title>RHSA-2013:0122: tcl security and bug fix update (Moderate)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 5</platform>
+      <platform>CentOS Linux 5</platform>
+      <product>tcl</product>
+    </affected>
+    <reference ref_id="RHSA-2013:0122-00" ref_url="https://rhn.redhat.com/errata/RHSA-2013-0122.html" source="VENDOR" />
+    <reference ref_id="CESA-2013:0122" source="CESA" />
+    <reference ref_id="CVE-2007-4772" ref_url="https://www.redhat.com/security/data/cve/CVE-2007-4772.html" source="CVE" />
+    <reference ref_id="CVE-2007-6067" ref_url="https://www.redhat.com/security/data/cve/CVE-2007-6067.html" source="CVE" />
+    <description>Algorithmic complexity vulnerability in the regular expression parser in TCL before 8.4.17, as used in PostgreSQL 8.2 before 8.2.6, 8.1 before 8.1.11, 8.0 before 8.0.15, and 7.4 before 7.4.19, allows remote authenticated users to cause a denial of service (memory consumption) via a crafted "complex" regular expression with doubly-nested states.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-09T13:03:25">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-10T12:58:35.449-05:00">DRAFT</status_change>
+        <status_change date="2014-01-27T04:00:53.133-05:00">INTERIM</status_change>
+        <status_change date="2014-02-17T04:01:03.783-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Redhat 5 or Centos 5 release" operator="OR">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 5" definition_ref="oval:org.mitre.oval:def:11414" />
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 5.x" definition_ref="oval:org.mitre.oval:def:15802" />
+    </criteria>
+    <criteria comment="Packages section" operator="OR">
+      <criterion comment="tcl-devel is earlier than 0:8.4.13-6.el5" test_ref="oval:org.mitre.oval:tst:89559" />
+      <criterion comment="tcl is earlier than 0:8.4.13-6.el5" test_ref="oval:org.mitre.oval:tst:90118" />
+      <criterion comment="tcl-html is earlier than 0:8.4.13-6.el5" test_ref="oval:org.mitre.oval:tst:89344" />
+    </criteria>
+  </criteria>
+</definition>

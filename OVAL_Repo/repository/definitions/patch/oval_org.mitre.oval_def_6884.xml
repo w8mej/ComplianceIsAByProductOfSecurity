@@ -1,0 +1,32 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:6884" version="29">
+  <metadata>
+    <title>DSA-2039 cacti -- missing input sanitising</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 5.0</platform>
+      <product>cacti</product>
+    </affected>
+    <reference ref_id="DSA-2039" ref_url="http://www.debian.org/security/2010/dsa-2039" source="DSA" />
+    <description>It was discovered that Cacti, a frontend to rrdtool for monitoring systems and services missed input sanitising, making an SQL injection attack possible.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2010-05-24T19:10:15-05:00">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2010-05-26T13:29:17.248-04:00">DRAFT</status_change>
+        <status_change date="2010-06-14T04:00:19.156-04:00">INTERIM</status_change>
+        <status_change date="2010-06-29T11:49:02.909-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="AND">
+    <extend_definition comment="Debian GNU/Linux 5.0 is installed" definition_ref="oval:org.mitre.oval:def:6513" />
+    <criteria comment="Architecture section" operator="OR">
+      <criteria comment="Architecture independent section" operator="AND">
+        <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+        <criterion comment="cacti is earlier than 0.8.7b-2.1+lenny2" test_ref="oval:org.mitre.oval:tst:26941" />
+      </criteria>
+    </criteria>
+  </criteria>
+</definition>

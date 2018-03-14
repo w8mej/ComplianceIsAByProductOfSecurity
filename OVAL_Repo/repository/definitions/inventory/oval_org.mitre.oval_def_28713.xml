@@ -1,0 +1,36 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="inventory" id="oval:org.mitre.oval:def:28713" version="10">
+  <metadata>
+    <title>Microsoft SQL Server 2008 R2 SP3 is installed</title>
+    <affected family="windows">
+      <platform>Microsoft Windows XP</platform>
+      <platform>Microsoft Windows Vista</platform>
+      <platform>Microsoft Windows 7</platform>
+      <platform>Microsoft Windows 8</platform>
+      <platform>Microsoft Windows 8.1</platform>
+      <platform>Microsoft Windows Server 2003</platform>
+      <platform>Microsoft Windows Server 2008</platform>
+      <platform>Microsoft Windows Server 2008 R2</platform>
+      <platform>Microsoft Windows Server 2012</platform>
+      <platform>Microsoft Windows Server 2012 R2</platform>
+      <product>Microsoft SQL Server 2008 R2</product>
+    </affected>
+    <reference ref_id="cpe:/a:microsoft:sql_server:2008_r2:sp3" source="CPE" />
+    <description>Microsoft SQL Server 2008 R2 SP3 is installed.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2015-07-22T13:00:00">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2015-07-23T11:09:49.718-04:00">DRAFT</status_change>
+        <status_change date="2015-08-10T04:00:35.989-04:00">INTERIM</status_change>
+        <status_change date="2015-08-31T04:00:07.814-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Microsoft SQL Server 2008 R2 is installed" definition_ref="oval:org.mitre.oval:def:12596" />
+    <criterion comment="Check if SQL Server instances with version greater than or equal 2009.100.6000.0 exist" test_ref="oval:org.cisecurity:tst:4600" />
+  </criteria>
+</definition>

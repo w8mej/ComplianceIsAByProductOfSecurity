@@ -1,0 +1,38 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:28170" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2011-1441 -- icedtea-web security update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>icedtea-web</product>
+    </affected>
+    <reference ref_id="ELSA-2011-1441" ref_url="http://linux.oracle.com/errata/ELSA-2011-1441.html" source="VENDOR" />
+    <reference ref_id="CVE-2011-3377" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3377" source="CVE" />
+    <description>[1.0.6-1]
+- Updated to 1.0.6
+- Resolves: rhbz#744738
+- Resolves: rhbz#745414</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:25:28">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:53:29.648-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:07:34.627-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:03:36.785-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T13:29:18.161-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T13:29:18.161-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="icedtea-web is earlier than 0:1.0.6-1.el6_1" test_ref="oval:org.mitre.oval:tst:132925" />
+      <criterion comment="icedtea-web-javadoc is earlier than 0:1.0.6-1.el6_1" test_ref="oval:org.mitre.oval:tst:133061" />
+    </criteria>
+  </criteria>
+</definition>

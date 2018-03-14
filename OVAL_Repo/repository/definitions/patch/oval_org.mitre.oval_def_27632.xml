@@ -1,0 +1,49 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27632" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2012-0545 -- ImageMagick security and bug fix update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 5</platform>
+      <product>ImageMagick</product>
+    </affected>
+    <reference ref_id="ELSA-2012-0545" ref_url="http://linux.oracle.com/errata/ELSA-2012-0545.html" source="VENDOR" />
+    <reference ref_id="CVE-2012-0247" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0247" source="CVE" />
+    <reference ref_id="CVE-2012-0248" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0248" source="CVE" />
+    <reference ref_id="CVE-2012-0260" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0260" source="CVE" />
+    <description>[6.2.8.0-15.el5]
+- Fix for PostScript conversion was incomplete, as larger documents
+  would end up being cropped without the -g option (797364)
+
+[6.2.8.0-14.el5]
+- Add fix for CVE-2012-0247 CVE-2012-0248 CVE-2012-1185 CVE-2012-1186
+- Add fix for CVE-2012-0259 CVE-2012-0260 CVE-2012-1798
+
+[6.2.8.0-13.el5]
+- Fix PostScript conversion failing with /undefinedfilename (797364)</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:25:12">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:27:28.062-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:05:24.920-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:02:29.502-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T20:02:32.860-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T20:02:32.860-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 5.x" definition_ref="oval:org.mitre.oval:def:15459" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="ImageMagick is earlier than 0:6.2.8.0-15.el5_8" test_ref="oval:org.mitre.oval:tst:132121" />
+      <criterion comment="ImageMagick-c++ is earlier than 0:6.2.8.0-15.el5_8" test_ref="oval:org.mitre.oval:tst:132419" />
+      <criterion comment="ImageMagick-c++-devel is earlier than 0:6.2.8.0-15.el5_8" test_ref="oval:org.mitre.oval:tst:132282" />
+      <criterion comment="ImageMagick-devel is earlier than 0:6.2.8.0-15.el5_8" test_ref="oval:org.mitre.oval:tst:132306" />
+      <criterion comment="ImageMagick-perl is earlier than 0:6.2.8.0-15.el5_8" test_ref="oval:org.mitre.oval:tst:131423" />
+    </criteria>
+  </criteria>
+</definition>

@@ -1,0 +1,45 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:21136" version="16">
+  <metadata>
+    <title>RHSA-2013:0870: tomcat5 security update (Important)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 5</platform>
+      <platform>CentOS Linux 5</platform>
+      <product>tomcat5</product>
+    </affected>
+    <reference ref_id="RHSA-2013:0870-00" ref_url="https://rhn.redhat.com/errata/RHSA-2013-0870.html" source="VENDOR" />
+    <reference ref_id="CESA-2013:0870" source="CESA" />
+    <reference ref_id="CVE-2013-1976" ref_url="https://www.redhat.com/security/data/cve/CVE-2013-1976.html" source="CVE" />
+    <description>The (1) tomcat5, (2) tomcat6, and (3) tomcat7 init scripts, as used in the RPM distribution of Tomcat for JBoss Enterprise Web Server 1.0.2 and 2.0.0, and Red Hat Enterprise Linux 5 and 6, allow local users to change the ownership of arbitrary files via a symlink attack on (a) tomcat5-initd.log, (b) tomcat6-initd.log, (c) catalina.out, or (d) tomcat7-initd.log.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-09T13:03:25">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-10T12:59:06.291-05:00">DRAFT</status_change>
+        <status_change date="2014-01-27T04:01:08.122-05:00">INTERIM</status_change>
+        <status_change date="2014-02-17T04:01:20.730-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Redhat 5 or Centos 5 release" operator="OR">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 5" definition_ref="oval:org.mitre.oval:def:11414" />
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 5.x" definition_ref="oval:org.mitre.oval:def:15802" />
+    </criteria>
+    <criteria comment="Packages section" operator="OR">
+      <criterion comment="tomcat5-admin-webapps is earlier than 0:5.5.23-0jpp.40.el5_9" test_ref="oval:org.mitre.oval:tst:90887" />
+      <criterion comment="tomcat5-jasper is earlier than 0:5.5.23-0jpp.40.el5_9" test_ref="oval:org.mitre.oval:tst:91158" />
+      <criterion comment="tomcat5-server-lib is earlier than 0:5.5.23-0jpp.40.el5_9" test_ref="oval:org.mitre.oval:tst:91214" />
+      <criterion comment="tomcat5-jsp-2.0-api-javadoc is earlier than 0:5.5.23-0jpp.40.el5_9" test_ref="oval:org.mitre.oval:tst:91085" />
+      <criterion comment="tomcat5-servlet-2.4-api-javadoc is earlier than 0:5.5.23-0jpp.40.el5_9" test_ref="oval:org.mitre.oval:tst:91109" />
+      <criterion comment="tomcat5-jasper-javadoc is earlier than 0:5.5.23-0jpp.40.el5_9" test_ref="oval:org.mitre.oval:tst:90905" />
+      <criterion comment="tomcat5-servlet-2.4-api is earlier than 0:5.5.23-0jpp.40.el5_9" test_ref="oval:org.mitre.oval:tst:91078" />
+      <criterion comment="tomcat5-jsp-2.0-api is earlier than 0:5.5.23-0jpp.40.el5_9" test_ref="oval:org.mitre.oval:tst:90916" />
+      <criterion comment="tomcat5-common-lib is earlier than 0:5.5.23-0jpp.40.el5_9" test_ref="oval:org.mitre.oval:tst:91300" />
+      <criterion comment="tomcat5 is earlier than 0:5.5.23-0jpp.40.el5_9" test_ref="oval:org.mitre.oval:tst:91065" />
+      <criterion comment="tomcat5-webapps is earlier than 0:5.5.23-0jpp.40.el5_9" test_ref="oval:org.mitre.oval:tst:90983" />
+    </criteria>
+  </criteria>
+</definition>

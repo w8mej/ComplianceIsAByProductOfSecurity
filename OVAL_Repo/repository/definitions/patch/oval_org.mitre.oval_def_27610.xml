@@ -1,0 +1,88 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:27610" version="15">
+  <metadata>
+    <title>RHSA-2014:1861 -- mariadb security update (Important)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 7</platform>
+      <platform>CentOS Linux 7</platform>
+      <product>mariadb</product>
+    </affected>
+    <reference ref_id="RHSA-2014:1861" ref_url="https://rhn.redhat.com/errata/RHSA-2014-1861.html" source="VENDOR" />
+    <reference ref_id="CESA-2014:1861" ref_url="http://lists.centos.org/pipermail/centos-announce/2014-November/020761.html" source="CESA-2014:1861" />
+    <reference ref_id="CVE-2012-5615" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-5615" source="CVE" />
+    <reference ref_id="CVE-2014-2494" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2494" source="CVE" />
+    <reference ref_id="CVE-2014-4207" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4207" source="CVE" />
+    <reference ref_id="CVE-2014-4243" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4243" source="CVE" />
+    <reference ref_id="CVE-2014-4258" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4258" source="CVE" />
+    <reference ref_id="CVE-2014-4260" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4260" source="CVE" />
+    <reference ref_id="CVE-2014-4274" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4274" source="CVE" />
+    <reference ref_id="CVE-2014-4287" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4287" source="CVE" />
+    <reference ref_id="CVE-2014-6463" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6463" source="CVE" />
+    <reference ref_id="CVE-2014-6464" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6464" source="CVE" />
+    <reference ref_id="CVE-2014-6469" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6469" source="CVE" />
+    <reference ref_id="CVE-2014-6484" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6484" source="CVE" />
+    <reference ref_id="CVE-2014-6505" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6505" source="CVE" />
+    <reference ref_id="CVE-2014-6507" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6507" source="CVE" />
+    <reference ref_id="CVE-2014-6520" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6520" source="CVE" />
+    <reference ref_id="CVE-2014-6530" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6530" source="CVE" />
+    <reference ref_id="CVE-2014-6551" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6551" source="CVE" />
+    <reference ref_id="CVE-2014-6555" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6555" source="CVE" />
+    <reference ref_id="CVE-2014-6559" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6559" source="CVE" />
+    <description>MariaDB is a multi-user, multi-threaded SQL database server that is binary
+compatible with MySQL.
+
+This update fixes several vulnerabilities in the MariaDB database server.
+Information about these flaws can be found on the Oracle Critical Patch
+Update Advisory page, listed in the References section. (CVE-2014-2494,
+CVE-2014-4207, CVE-2014-4243, CVE-2014-4258, CVE-2014-4260, CVE-2014-4287,
+CVE-2014-4274, CVE-2014-6463, CVE-2014-6464, CVE-2014-6469, CVE-2014-6484,
+CVE-2014-6505, CVE-2014-6507, CVE-2014-6520, CVE-2014-6530, CVE-2014-6551,
+CVE-2014-6555, CVE-2014-6559)
+
+These updated packages upgrade MariaDB to version 5.5.40. Refer to the
+MariaDB Release Notes listed in the References section for a complete list
+of changes.
+
+All MariaDB users should upgrade to these updated packages, which correct
+these issues. After installing this update, the MariaDB server daemon
+(mysqld) will be restarted automatically.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-12-08T15:38:20">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-12-19T17:36:11.421-05:00">DRAFT</status_change>
+        <status_change date="2015-01-05T04:00:10.901-05:00">INTERIM</status_change>
+        <status_change date="2015-01-26T04:00:11.523-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:tst:135771 - Updated Linux patches with modified epoch in states." date="2015-02-02T16:00:00.461-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-02T16:16:55.966-05:00">INTERIM</status_change>
+        <status_change date="2015-02-23T04:01:01.761-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Red Hat Enterprise Linux 7 and CentOS Linux 7 release section">
+      <criteria comment="Operation system section" operator="OR">
+        <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 7" definition_ref="oval:org.mitre.oval:def:24953" />
+        <extend_definition comment="The operating system installed on the system is CentOS Linux 7.x" definition_ref="oval:org.mitre.oval:def:24773" />
+      </criteria>
+      <criteria comment="Packages match section" operator="OR">
+        <criterion comment="mariadb is earlier than 1:5.5.40-1.el7_0" test_ref="oval:org.mitre.oval:tst:135792" />
+        <criterion comment="mariadb-bench is earlier than 1:5.5.40-1.el7_0" test_ref="oval:org.mitre.oval:tst:135934" />
+        <criterion comment="mariadb-devel is earlier than 1:5.5.40-1.el7_0" test_ref="oval:org.mitre.oval:tst:135801" />
+        <criterion comment="mariadb-embedded is earlier than 1:5.5.40-1.el7_0" test_ref="oval:org.mitre.oval:tst:135998" />
+        <criterion comment="mariadb-embedded-devel is earlier than 1:5.5.40-1.el7_0" test_ref="oval:org.mitre.oval:tst:135771" />
+        <criterion comment="mariadb-libs is earlier than 1:5.5.40-1.el7_0" test_ref="oval:org.mitre.oval:tst:136199" />
+        <criterion comment="mariadb-server is earlier than 1:5.5.40-1.el7_0" test_ref="oval:org.mitre.oval:tst:136232" />
+        <criterion comment="mariadb-test is earlier than 1:5.5.40-1.el7_0" test_ref="oval:org.mitre.oval:tst:136306" />
+      </criteria>
+    </criteria>
+    <criteria comment="Red Hat Enterprise Linux 7 release section">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 7" definition_ref="oval:org.mitre.oval:def:24953" />
+      <criterion comment="mariadb-debuginfo is earlier than 1:5.5.40-1.el7_0" test_ref="oval:org.mitre.oval:tst:135825" />
+    </criteria>
+  </criteria>
+</definition>

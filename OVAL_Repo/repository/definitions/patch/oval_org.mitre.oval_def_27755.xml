@@ -1,0 +1,41 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27755" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2012-0811 -- php-pecl-apc security, bug fix, and enhancement update (low)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>php-pecl-apc</product>
+    </affected>
+    <reference ref_id="ELSA-2012-0811" ref_url="http://linux.oracle.com/errata/ELSA-2012-0811.html" source="VENDOR" />
+    <reference ref_id="CVE-2010-3294" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3294" source="CVE" />
+    <description>[3.1.9-2]
+- remove -devel package ISA multilib dependencies
+
+[3.1.9-1]
+- update to 3.1.9 (bugfix, stable) (#662655)
+- create -devel subpackage with header files
+- ship apc.php for easier referral in the config files</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:24:57">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:25:11.409-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:06:03.340-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:02:52.695-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T16:49:15.603-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T16:49:15.603-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="php-pecl-apc is earlier than 0:3.1.9-2.el6" test_ref="oval:org.mitre.oval:tst:131746" />
+      <criterion comment="php-pecl-apc-devel is earlier than 0:3.1.9-2.el6" test_ref="oval:org.mitre.oval:tst:131445" />
+    </criteria>
+  </criteria>
+</definition>

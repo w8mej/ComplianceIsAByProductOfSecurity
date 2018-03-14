@@ -1,0 +1,64 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:28360" version="14">
+  <metadata>
+    <title>RHSA-2015:0090 -- glibc security update (Critical)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 5</platform>
+      <platform>CentOS Linux 5</platform>
+      <product>glibc</product>
+    </affected>
+    <reference ref_id="RHSA-2015:0090" ref_url="https://rhn.redhat.com/errata/RHSA-2015-0090.html" source="VENDOR" />
+    <reference ref_id="CESA-2015:0090" ref_url="http://lists.centos.org/pipermail/centos-announce/2015-January/020906.html" source="CESA-2015:0090" />
+    <reference ref_id="CVE-2015-0235" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0235" source="CVE" />
+    <description>The glibc packages provide the standard C libraries (libc), POSIX thread
+libraries (libpthread), standard math libraries (libm), and the Name
+Server Caching Daemon (nscd) used by multiple programs on the system.
+Without these libraries, the Linux system cannot function correctly.
+
+A heap-based buffer overflow was found in glibc&amp;#39;s
+__nss_hostname_digits_dots() function, which is used by the gethostbyname()
+and gethostbyname2() glibc function calls. A remote attacker able to make
+an application call either of these functions could use this flaw to
+execute arbitrary code with the permissions of the user running the
+application. (CVE-2015-0235)
+
+Red Hat would like to thank Qualys for reporting this issue.
+
+All glibc users are advised to upgrade to these updated packages, which
+contain a backported patch to correct this issue.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2015-01-28T12:51:50">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2015-01-29T16:29:58.109-05:00">DRAFT</status_change>
+        <status_change date="2015-02-16T04:00:06.204-05:00">INTERIM</status_change>
+        <status_change date="2015-03-09T04:01:36.881-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Red Hat Enterprise Linux 5 and CentOS Linux 5 release section">
+      <criteria comment="Operation system section" operator="OR">
+        <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 5" definition_ref="oval:org.mitre.oval:def:11414" />
+        <extend_definition comment="The operating system installed on the system is CentOS Linux 5.x" definition_ref="oval:org.mitre.oval:def:15802" />
+      </criteria>
+      <criteria comment="Packages match section" operator="OR">
+        <criterion comment="glibc is earlier than 0:2.5-123.el5_11.1" test_ref="oval:org.mitre.oval:tst:137647" />
+        <criterion comment="glibc-common is earlier than 0:2.5-123.el5_11.1" test_ref="oval:org.mitre.oval:tst:137625" />
+        <criterion comment="glibc-devel is earlier than 0:2.5-123.el5_11.1" test_ref="oval:org.mitre.oval:tst:137702" />
+        <criterion comment="glibc-headers is earlier than 0:2.5-123.el5_11.1" test_ref="oval:org.mitre.oval:tst:137627" />
+        <criterion comment="glibc-utils is earlier than 0:2.5-123.el5_11.1" test_ref="oval:org.mitre.oval:tst:137721" />
+        <criterion comment="nscd is earlier than 0:2.5-123.el5_11.1" test_ref="oval:org.mitre.oval:tst:137572" />
+      </criteria>
+    </criteria>
+    <criteria comment="Red Hat Enterprise Linux 5 release section">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 5" definition_ref="oval:org.mitre.oval:def:11414" />
+      <criteria comment="Packages match section" operator="OR">
+        <criterion comment="glibc-debuginfo is earlier than 0:2.5-123.el5_11.1" test_ref="oval:org.mitre.oval:tst:137530" />
+        <criterion comment="glibc-debuginfo-common is earlier than 0:2.5-123.el5_11.1" test_ref="oval:org.mitre.oval:tst:137694" />
+      </criteria>
+    </criteria>
+  </criteria>
+</definition>

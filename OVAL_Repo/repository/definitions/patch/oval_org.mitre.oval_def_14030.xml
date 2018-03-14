@@ -1,0 +1,50 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:14030" version="30">
+  <metadata>
+    <title>USN-1130-1 -- exim4 vulnerability</title>
+    <affected family="unix">
+      <platform>Ubuntu 10.10</platform>
+      <platform>Ubuntu 10.04</platform>
+      <product>exim4</product>
+    </affected>
+    <reference ref_id="USN-1130-1" ref_url="https://lists.ubuntu.com/archives/ubuntu-security-announce/2011-May/001343.html" source="VENDOR" />
+    <reference ref_id="CVE-2011-1764" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1764" source="CVE" />
+    <description>exim4: Exim mail transfer agent Exim could be made to run arbitrary code under some conditions.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2011-10-18T15:55:55">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2011-11-02T16:12:18.765-04:00">DRAFT</status_change>
+        <status_change date="2011-11-21T04:12:59.760-05:00">INTERIM</status_change>
+        <status_change date="2011-12-12T04:10:11.168-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:14030 - added CVE references; also made minor updates" date="2014-06-13T15:24:00.249-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-13T15:26:18.003-04:00">INTERIM</status_change>
+        <status_change date="2014-06-30T04:04:43.868-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.10 is installed" definition_ref="oval:org.mitre.oval:def:13134" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criteria comment="Packages section" operator="OR">
+        <criterion comment="exim4-daemon-heavy DPKG is earlier than 4.72-1ubuntu1.2" test_ref="oval:org.mitre.oval:tst:74972" />
+        <criterion comment="exim4-daemon-custom DPKG is earlier than 4.72-1ubuntu1.2" test_ref="oval:org.mitre.oval:tst:74165" />
+        <criterion comment="exim4-daemon-light DPKG is earlier than 4.72-1ubuntu1.2" test_ref="oval:org.mitre.oval:tst:74410" />
+      </criteria>
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.04 is installed" definition_ref="oval:org.mitre.oval:def:13089" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criteria comment="Packages section" operator="OR">
+        <criterion comment="exim4-daemon-heavy DPKG is earlier than 4.71-3ubuntu1.2" test_ref="oval:org.mitre.oval:tst:74890" />
+        <criterion comment="exim4-daemon-custom DPKG is earlier than 4.71-3ubuntu1.2" test_ref="oval:org.mitre.oval:tst:74394" />
+        <criterion comment="exim4-daemon-light DPKG is earlier than 4.71-3ubuntu1.2" test_ref="oval:org.mitre.oval:tst:74900" />
+      </criteria>
+    </criteria>
+  </criteria>
+</definition>

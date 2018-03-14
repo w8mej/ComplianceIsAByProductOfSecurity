@@ -1,0 +1,21 @@
+Important info about the files included in the STIG.zip file.
+
+*** The Unclassified version excludes IAVM information.  IAVM information is in an FOUO IAVM zip file available in the PKI-enabled area of IASE. ***
+
+The following files are included in this STIG.  The file names listed below are generic; the actual file names will be specific to the technology and STIG release.
+
+
+
+STIG_Overview.doc or .pdf – This file will contain the overview and background information, as well as screen captures, network diagrams, and other important information that could not be stored in the XML file.
+
+
+STIG_Manual.zip - These contain the appropriate files listed below.  The STIG_Manual files are for manually viewing the STIG in a browser.  
+
+
+The STIG_Manual.zip files need to be extracted to the same directory for use.
+
+STIG_Manual.xml – This is the STIG XML file that contains the manual check procedures.
+
+STIG_unclass.xsl – This is the transformation file that will allow the XML to be presented in a “human friendly” format.
+
+DoD-DISA-logos-as-JPEG.jpg - Contains logos used by STIG.xsl.

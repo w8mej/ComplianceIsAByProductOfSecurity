@@ -1,0 +1,27 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:24279" version="6">
+  <metadata>
+    <title>DSA-2908-1 openssl - security update</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 7</platform>
+      <product>openssl</product>
+    </affected>
+    <reference ref_id="DSA-2908-1" ref_url="http://www.debian.org/security/dsa-2908-1" source="VENDOR" />
+    <description>Multiple vulnerabilities have been discovered in OpenSSL. The followingCommon Vulnerabilities and Exposures project ids identify them.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-04-24T10:52:08">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-04-30T15:06:34.908-04:00">DRAFT</status_change>
+        <status_change date="2014-05-19T04:00:13.440-04:00">INTERIM</status_change>
+        <status_change date="2014-06-09T04:00:33.702-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian 7 is installed" definition_ref="oval:org.mitre.oval:def:19338" />
+    <criterion comment="openssl DPKG is earlier than 0:1.0.1e-2+deb7u7" test_ref="oval:org.mitre.oval:tst:113868" />
+  </criteria>
+</definition>

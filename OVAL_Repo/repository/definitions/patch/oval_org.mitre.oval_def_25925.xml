@@ -1,0 +1,34 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:25925" version="4">
+  <metadata>
+    <title>SUSE-SU-2013:0756-1 -- Security update for ImageMagick</title>
+    <affected family="unix">
+      <platform>SUSE Linux Enterprise Desktop 10</platform>
+      <product>ImageMagick</product>
+    </affected>
+    <reference ref_id="SUSE-SU-2013:0756-1" ref_url="https://www.suse.com/support/update/announcement/2013/suse-su-20130756-1.html" source="VENDOR" />
+    <reference ref_id="CVE-2012-3438" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3438" source="CVE" />
+    <description>ImageMagick has been updated to fix an integer overflow
+(CVE-2012-3438).</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-07-15T17:36:40">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-07-29T19:34:05.720-04:00">DRAFT</status_change>
+        <status_change date="2014-08-18T04:05:35.628-04:00">INTERIM</status_change>
+        <status_change date="2014-09-08T04:03:39.933-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="SUSE Linux Enterprise Desktop 10 is installed" definition_ref="oval:org.mitre.oval:def:2106" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="ImageMagick RPM is earlier than 0:6.2.5-16.36.2" test_ref="oval:org.mitre.oval:tst:119879" />
+      <criterion comment="ImageMagick-Magick++ RPM is earlier than 0:6.2.5-16.36.2" test_ref="oval:org.mitre.oval:tst:120076" />
+      <criterion comment="ImageMagick-devel RPM is earlier than 0:6.2.5-16.36.2" test_ref="oval:org.mitre.oval:tst:120052" />
+      <criterion comment="perl-PerlMagick RPM is earlier than 0:6.2.5-16.36.2" test_ref="oval:org.mitre.oval:tst:120226" />
+    </criteria>
+  </criteria>
+</definition>

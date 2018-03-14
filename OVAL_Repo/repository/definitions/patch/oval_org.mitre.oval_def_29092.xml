@@ -1,0 +1,47 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:29092" version="5">
+  <metadata>
+    <title>DSA-2891-3 -- mediawiki, mediawiki-extensions -- security update</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 7.0</platform>
+      <platform>Debian GNU/kFreeBSD 7.0</platform>
+      <product>mediawiki</product>
+      <product>mediawiki-extensions</product>
+    </affected>
+    <reference ref_id="DSA-2891-3" ref_url="http://www.debian.org/security/dsa-2891" source="VENDOR" />
+    <reference ref_id="CVE-2013-2031" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2031" source="CVE" />
+    <reference ref_id="CVE-2013-2032" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2032" source="CVE" />
+    <reference ref_id="CVE-2013-4567" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4567" source="CVE" />
+    <reference ref_id="CVE-2013-4568" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4568" source="CVE" />
+    <reference ref_id="CVE-2013-4572" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4572" source="CVE" />
+    <reference ref_id="CVE-2013-6452" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6452" source="CVE" />
+    <reference ref_id="CVE-2013-6453" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6453" source="CVE" />
+    <reference ref_id="CVE-2013-6454" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6454" source="CVE" />
+    <reference ref_id="CVE-2013-6472" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6472" source="CVE" />
+    <reference ref_id="CVE-2014-1610" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1610" source="CVE" />
+    <reference ref_id="CVE-2014-2665" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2665" source="CVE" />
+    <description>Several vulnerabilities were discovered in MediaWiki, a wiki engine.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2015-06-29T10:39:28">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2015-07-06T10:37:19.001-04:00">DRAFT</status_change>
+        <status_change date="2015-07-27T04:01:03.249-04:00">INTERIM</status_change>
+        <status_change date="2015-08-17T04:00:53.712-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.6</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian 7 is installed" definition_ref="oval:org.mitre.oval:def:19338" />
+    <criteria comment="GNU/Linux or GNU/kFreeBSD kernel" operator="OR">
+      <extend_definition comment="Debian GNU/Linux is installed" definition_ref="oval:org.mitre.oval:def:24894" />
+      <extend_definition comment="Debian GNU/kFreeBSD is installed" definition_ref="oval:org.mitre.oval:def:24698" />
+    </criteria>
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="mediawiki is earlier than 1:1.19.14+dfsg-0+deb7u1" test_ref="oval:org.mitre.oval:tst:139390" />
+      <criterion comment="mediawiki-extensions is earlier than 0:3.5~deb7u1" test_ref="oval:org.mitre.oval:tst:140041" />
+    </criteria>
+  </criteria>
+</definition>

@@ -1,0 +1,74 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:7586" version="28">
+  <metadata>
+    <title>DSA-1942 wireshark -- several vulnerabilities</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 5.0</platform>
+      <platform>Debian GNU/Linux 4.0</platform>
+      <product>wireshark</product>
+    </affected>
+    <reference ref_id="DSA-1942" ref_url="http://www.debian.org/security/2009/dsa-1942" source="VENDOR" />
+    <reference ref_id="CVE-2009-1268" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1268" source="CVE" />
+    <reference ref_id="CVE-2008-1829" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1829" source="CVE" />
+    <reference ref_id="CVE-2009-2560" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2560" source="CVE" />
+    <reference ref_id="CVE-2009-2562" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2562" source="CVE" />
+    <reference ref_id="CVE-2009-3241" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3241" source="CVE" />
+    <reference ref_id="CVE-2009-3550" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3550" source="CVE" />
+    <reference ref_id="CVE-2009-3829" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-3829" source="CVE" />
+    <description>Several remote vulnerabilities have been discovered in the Wireshark network traffic analyzer, which may lead to the execution of arbitrary code or denial of service. The Common Vulnerabilities and Exposures project identifies the following problems: A NULL pointer dereference was found in the RADIUS dissector. A NULL pointer dereference was found in the DCERP/NT dissector. An integer overflow was discovered in the ERF parser. This update also includes fixes for three minor issues (CVE-2008-1829, CVE-2009-2562, CVE-2009-3241), which were scheduled for the next stable point update. Also CVE-2009-1268 was fixed for Etch. Since this security update was issued prior to the release of the point update, the fixes were included.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2009-12-15T20:12:02-05:00">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2009-12-28T07:48:36.074-05:00">DRAFT</status_change>
+        <status_change date="2010-01-18T04:01:10.242-05:00">INTERIM</status_change>
+        <status_change date="2010-02-08T04:00:48.403-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:7586 - Debian Patch Update" date="2014-06-06T16:44:00.039-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-06T16:46:30.892-04:00">INTERIM</status_change>
+        <status_change date="2014-06-23T04:08:37.297-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Debian GNU/Linux 5.0 is installed" definition_ref="oval:org.mitre.oval:def:6513" />
+      <criteria comment="Supported architectures section" operator="OR">
+        <criterion comment="Installed architecture is s390" test_ref="oval:org.mitre.oval:tst:11024" />
+        <criterion comment="Installed architecture is amd64" test_ref="oval:org.mitre.oval:tst:10392" />
+        <criterion comment="Installed architecture is sparc" test_ref="oval:org.mitre.oval:tst:2465" />
+        <criterion comment="Installed architecture is arm" test_ref="oval:org.mitre.oval:tst:10933" />
+        <criterion comment="Installed architecture is i386" test_ref="oval:org.mitre.oval:tst:10864" />
+        <criterion comment="Installed architecture is armel" test_ref="oval:org.mitre.oval:tst:11101" />
+        <criterion comment="Installed architecture is mips" test_ref="oval:org.mitre.oval:tst:11195" />
+        <criterion comment="Installed architecture is ia64" test_ref="oval:org.mitre.oval:tst:10830" />
+        <criterion comment="Installed architecture is alpha" test_ref="oval:org.mitre.oval:tst:10654" />
+        <criterion comment="Installed architecture is powerpc" test_ref="oval:org.mitre.oval:tst:11168" />
+        <criterion comment="Installed architecture is mipsel" test_ref="oval:org.mitre.oval:tst:11110" />
+        <criterion comment="Installed architecture is hppa" test_ref="oval:org.mitre.oval:tst:11164" />
+      </criteria>
+      <criteria comment="Packages section" operator="OR">
+        <criterion comment="wireshark-dev is earlier than 1.0.2-3+lenny7" test_ref="oval:org.mitre.oval:tst:11593" />
+        <criterion comment="wireshark-common is earlier than 1.0.2-3+lenny7" test_ref="oval:org.mitre.oval:tst:11843" />
+        <criterion comment="tshark is earlier than 1.0.2-3+lenny7" test_ref="oval:org.mitre.oval:tst:11792" />
+        <criterion comment="wireshark is earlier than 1.0.2-3+lenny7" test_ref="oval:org.mitre.oval:tst:11443" />
+      </criteria>
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Debian GNU/Linux 4.0 is installed." definition_ref="oval:org.mitre.oval:def:6461" />
+      <criteria comment="Packages section" operator="OR">
+        <criterion comment="wireshark-dev is earlier than 0.99.4-5.etch.4" test_ref="oval:org.mitre.oval:tst:11848" />
+        <criterion comment="tshark is earlier than 0.99.4-5.etch.4" test_ref="oval:org.mitre.oval:tst:11683" />
+        <criterion comment="ethereal-dev is earlier than 0.99.4-5.etch.4" test_ref="oval:org.mitre.oval:tst:11714" />
+        <criterion comment="tethereal is earlier than 0.99.4-5.etch.4" test_ref="oval:org.mitre.oval:tst:11600" />
+        <criterion comment="wireshark-common is earlier than 0.99.4-5.etch.4" test_ref="oval:org.mitre.oval:tst:11653" />
+        <criterion comment="ethereal is earlier than 0.99.4-5.etch.4" test_ref="oval:org.mitre.oval:tst:10970" />
+        <criterion comment="ethereal-common is earlier than 0.99.4-5.etch.4" test_ref="oval:org.mitre.oval:tst:11117" />
+        <criterion comment="wireshark is earlier than 0.99.4-5.etch.4" test_ref="oval:org.mitre.oval:tst:11858" />
+      </criteria>
+    </criteria>
+  </criteria>
+</definition>

@@ -1,0 +1,35 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="inventory" id="oval:org.mitre.oval:def:16099" version="6">
+  <metadata>
+    <title>Kaspersky Internet Security is installed</title>
+    <affected family="windows">
+      <platform>Microsoft Windows 2000</platform>
+      <platform>Microsoft Windows XP</platform>
+      <platform>Microsoft Windows Vista</platform>
+      <platform>Microsoft Windows 7</platform>
+      <platform>Microsoft Windows 8</platform>
+      <product>Kaspersky Internet Security</product>
+    </affected>
+    <reference ref_id="cpe:/a:kaspersky_lab:kaspersky_internet_security" source="CPE" />
+    <description>Kaspersky Internet Security is installed</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2013-05-15T10:26:26.748+04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2013-05-15T14:59:14.314-04:00">DRAFT</status_change>
+        <status_change date="2013-06-03T04:02:45.902-04:00">INTERIM</status_change>
+        <status_change date="2013-06-24T04:00:07.384-04:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:obj:15474 - Regular expressions revised" date="2014-03-26T13:17:00.914-04:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2014-03-26T13:18:39.414-04:00">INTERIM</status_change>
+        <status_change date="2014-04-14T04:00:06.873-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criterion comment="Check if Kaspersky Internet Security is installed" test_ref="oval:org.mitre.oval:tst:80821" />
+  </criteria>
+</definition>

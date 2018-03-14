@@ -1,0 +1,183 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:13481" version="28">
+  <metadata>
+    <title>USN-1045-2 -- util-linux update</title>
+    <affected family="unix">
+      <platform>Ubuntu 8.04</platform>
+      <platform>Ubuntu 10.10</platform>
+      <platform>Ubuntu 9.10</platform>
+      <platform>Ubuntu 10.04</platform>
+      <product>util-linux</product>
+    </affected>
+    <reference ref_id="USN-1045-2" ref_url="https://lists.ubuntu.com/archives/ubuntu-security-announce/2011-January/001246.html" source="VENDOR" />
+    <reference ref_id="CVE-2010-3879" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-3879" source="CVE" />
+    <description>USN-1045-1 fixed vulnerabilities in FUSE. This update to util-linux adds support for new options required by the FUSE update. Original advisory details: It was discovered that FUSE could be tricked into incorrectly updating the mtab file when mounting filesystems. A local attacker, with access to use FUSE, could unmount arbitrary locations, leading to a denial of service.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2011-10-18T15:55:55">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2011-11-02T15:34:01.281-04:00">DRAFT</status_change>
+        <status_change date="2011-11-21T04:07:51.259-05:00">INTERIM</status_change>
+        <status_change date="2011-12-12T04:06:15.626-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:13481 - added CVE references; also made minor updates" date="2014-06-13T15:53:00.659-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-13T15:55:19.770-04:00">INTERIM</status_change>
+        <status_change date="2014-06-30T04:03:12.806-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 8.04 is installed" definition_ref="oval:org.mitre.oval:def:13250" />
+      <criteria comment="Architecture section" operator="OR">
+        <criteria comment="Architecture independet section" operator="AND">
+          <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+          <criterion comment="util-linux-locales DPKG is earlier than 2.13.1-5ubuntu3.1" test_ref="oval:org.mitre.oval:tst:61790" />
+        </criteria>
+        <criteria comment="Architecture depended section" operator="AND">
+          <criteria comment="Supported architectures section" operator="OR">
+            <criterion comment="Installed architecture is amd64" test_ref="oval:org.mitre.oval:tst:10392" />
+            <criterion comment="Installed architecture is i386" test_ref="oval:org.mitre.oval:tst:10864" />
+            <criterion comment="Installed architecture is powerpc" test_ref="oval:org.mitre.oval:tst:11168" />
+            <criterion comment="Installed architecture is sparc" test_ref="oval:org.mitre.oval:tst:2465" />
+            <criterion comment="Installed architecture is lpia" test_ref="oval:org.mitre.oval:tst:44349" />
+          </criteria>
+          <criteria comment="Packages section" operator="OR">
+            <criterion comment="mount DPKG is earlier than 2.13.1-5ubuntu3.1" test_ref="oval:org.mitre.oval:tst:61771" />
+            <criterion comment="util-linux DPKG is earlier than 2.13.1-5ubuntu3.1" test_ref="oval:org.mitre.oval:tst:61864" />
+            <criterion comment="fdisk-udeb DPKG is earlier than 2.13.1-5ubuntu3.1" test_ref="oval:org.mitre.oval:tst:61922" />
+            <criterion comment="bsdutils DPKG is earlier than 2.13.1-5ubuntu3.1" test_ref="oval:org.mitre.oval:tst:61580" />
+          </criteria>
+        </criteria>
+        <criteria comment="Architecture depended section" operator="AND">
+          <criteria comment="Supported architectures section" operator="OR">
+            <criterion comment="Installed architecture is i386" test_ref="oval:org.mitre.oval:tst:10864" />
+            <criterion comment="Installed architecture is amd64" test_ref="oval:org.mitre.oval:tst:10392" />
+            <criterion comment="Installed architecture is lpia" test_ref="oval:org.mitre.oval:tst:44349" />
+            <criterion comment="Installed architecture is powerpc" test_ref="oval:org.mitre.oval:tst:11168" />
+          </criteria>
+          <criterion comment="cfdisk-udeb DPKG is earlier than 2.13.1-5ubuntu3.1" test_ref="oval:org.mitre.oval:tst:61812" />
+        </criteria>
+      </criteria>
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.10 is installed" definition_ref="oval:org.mitre.oval:def:13134" />
+      <criteria comment="Architecture section" operator="OR">
+        <criteria comment="Architecture independet section" operator="AND">
+          <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+          <criterion comment="util-linux-locales DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61861" />
+        </criteria>
+        <criteria comment="Architecture depended section" operator="AND">
+          <criteria comment="Supported architectures section" operator="OR">
+            <criterion comment="Installed architecture is powerpc" test_ref="oval:org.mitre.oval:tst:11168" />
+            <criterion comment="Installed architecture is armel" test_ref="oval:org.mitre.oval:tst:11101" />
+            <criterion comment="Installed architecture is amd64" test_ref="oval:org.mitre.oval:tst:10392" />
+            <criterion comment="Installed architecture is i386" test_ref="oval:org.mitre.oval:tst:10864" />
+          </criteria>
+          <criteria comment="Packages section" operator="OR">
+            <criterion comment="util-linux DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61613" />
+            <criterion comment="fdisk-udeb DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61610" />
+            <criterion comment="libuuid1-udeb DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61936" />
+            <criterion comment="mount DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61684" />
+            <criterion comment="libblkid-dev DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61671" />
+            <criterion comment="cfdisk-udeb DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61828" />
+            <criterion comment="uuid-dev DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61749" />
+            <criterion comment="bsdutils DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61468" />
+            <criterion comment="util-linux-udeb DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61743" />
+            <criterion comment="uuid-runtime DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61634" />
+            <criterion comment="libblkid1 DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61823" />
+            <criterion comment="libblkid1-udeb DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61677" />
+            <criterion comment="libuuid1 DPKG is earlier than 2.17.2-0ubuntu1.10.10.1" test_ref="oval:org.mitre.oval:tst:61903" />
+          </criteria>
+        </criteria>
+      </criteria>
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 9.10 is installed" definition_ref="oval:org.mitre.oval:def:13079" />
+      <criteria comment="Architecture section" operator="OR">
+        <criteria comment="Architecture independet section" operator="AND">
+          <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+          <criterion comment="util-linux-locales DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:61670" />
+        </criteria>
+        <criteria comment="Architecture depended section" operator="AND">
+          <criteria comment="Supported architectures section" operator="OR">
+            <criterion comment="Installed architecture is amd64" test_ref="oval:org.mitre.oval:tst:10392" />
+            <criterion comment="Installed architecture is sparc" test_ref="oval:org.mitre.oval:tst:2465" />
+            <criterion comment="Installed architecture is powerpc" test_ref="oval:org.mitre.oval:tst:11168" />
+            <criterion comment="Installed architecture is i386" test_ref="oval:org.mitre.oval:tst:10864" />
+            <criterion comment="Installed architecture is armel" test_ref="oval:org.mitre.oval:tst:11101" />
+            <criterion comment="Installed architecture is lpia" test_ref="oval:org.mitre.oval:tst:44349" />
+          </criteria>
+          <criteria comment="Packages section" operator="OR">
+            <criterion comment="util-linux DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:61502" />
+            <criterion comment="fdisk-udeb DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:61863" />
+            <criterion comment="libuuid1-udeb DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:61714" />
+            <criterion comment="mount DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:61854" />
+            <criterion comment="libblkid-dev DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:61732" />
+            <criterion comment="uuid-dev DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:60952" />
+            <criterion comment="bsdutils DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:61883" />
+            <criterion comment="util-linux-udeb DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:61245" />
+            <criterion comment="uuid-runtime DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:61851" />
+            <criterion comment="libblkid1 DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:61694" />
+            <criterion comment="libblkid1-udeb DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:61191" />
+            <criterion comment="libuuid1 DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:61806" />
+          </criteria>
+        </criteria>
+        <criteria comment="Architecture depended section" operator="AND">
+          <criteria comment="Supported architectures section" operator="OR">
+            <criterion comment="Installed architecture is i386" test_ref="oval:org.mitre.oval:tst:10864" />
+            <criterion comment="Installed architecture is armel" test_ref="oval:org.mitre.oval:tst:11101" />
+            <criterion comment="Installed architecture is amd64" test_ref="oval:org.mitre.oval:tst:10392" />
+            <criterion comment="Installed architecture is lpia" test_ref="oval:org.mitre.oval:tst:44349" />
+            <criterion comment="Installed architecture is powerpc" test_ref="oval:org.mitre.oval:tst:11168" />
+          </criteria>
+          <criterion comment="cfdisk-udeb DPKG is earlier than 2.16-1ubuntu5.1" test_ref="oval:org.mitre.oval:tst:61913" />
+        </criteria>
+      </criteria>
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.04 is installed" definition_ref="oval:org.mitre.oval:def:13089" />
+      <criteria comment="Architecture section" operator="OR">
+        <criteria comment="Architecture independet section" operator="AND">
+          <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+          <criterion comment="util-linux-locales DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:61704" />
+        </criteria>
+        <criteria comment="Architecture depended section" operator="AND">
+          <criteria comment="Supported architectures section" operator="OR">
+            <criterion comment="Installed architecture is amd64" test_ref="oval:org.mitre.oval:tst:10392" />
+            <criterion comment="Installed architecture is i386" test_ref="oval:org.mitre.oval:tst:10864" />
+            <criterion comment="Installed architecture is powerpc" test_ref="oval:org.mitre.oval:tst:11168" />
+            <criterion comment="Installed architecture is sparc" test_ref="oval:org.mitre.oval:tst:2465" />
+            <criterion comment="Installed architecture is armel" test_ref="oval:org.mitre.oval:tst:11101" />
+          </criteria>
+          <criteria comment="Packages section" operator="OR">
+            <criterion comment="libblkid1 DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:61843" />
+            <criterion comment="fdisk-udeb DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:61433" />
+            <criterion comment="libuuid1-udeb DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:61010" />
+            <criterion comment="mount DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:61302" />
+            <criterion comment="util-linux-udeb DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:61379" />
+            <criterion comment="uuid-dev DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:61624" />
+            <criterion comment="bsdutils DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:61788" />
+            <criterion comment="libblkid-dev DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:61949" />
+            <criterion comment="uuid-runtime DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:62011" />
+            <criterion comment="util-linux DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:61449" />
+            <criterion comment="libblkid1-udeb DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:61727" />
+            <criterion comment="libuuid1 DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:61625" />
+          </criteria>
+        </criteria>
+        <criteria comment="Architecture depended section" operator="AND">
+          <criteria comment="Supported architectures section" operator="OR">
+            <criterion comment="Installed architecture is i386" test_ref="oval:org.mitre.oval:tst:10864" />
+            <criterion comment="Installed architecture is armel" test_ref="oval:org.mitre.oval:tst:11101" />
+            <criterion comment="Installed architecture is amd64" test_ref="oval:org.mitre.oval:tst:10392" />
+            <criterion comment="Installed architecture is powerpc" test_ref="oval:org.mitre.oval:tst:11168" />
+          </criteria>
+          <criterion comment="cfdisk-udeb DPKG is earlier than 2.17.2-0ubuntu1.10.04.1" test_ref="oval:org.mitre.oval:tst:61709" />
+        </criteria>
+      </criteria>
+    </criteria>
+  </criteria>
+</definition>

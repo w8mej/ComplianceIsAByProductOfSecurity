@@ -1,0 +1,38 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27496" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2013-0132 -- autofs security, bug fix, and enhancement update (low)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 5</platform>
+      <product>autofs</product>
+    </affected>
+    <reference ref_id="ELSA-2013-0132" ref_url="http://linux.oracle.com/errata/ELSA-2013-0132.html" source="VENDOR" />
+    <reference ref_id="CVE-2012-2697" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2697" source="CVE" />
+    <description>[5.0.1-0.rc2.177.0.1.el5]
+
+- apply fix from NetApp to use tcp before udp
+
+  http://www.mail-archive.com/autofs@linux.kernel.org/msg07910.html
+
+  (Bert Barbe) [orabug 6827898]</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:24:15">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:19:44.814-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:04:49.841-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:02:05.001-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T17:18:59.783-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T17:18:59.783-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 5.x" definition_ref="oval:org.mitre.oval:def:15459" />
+    <criterion comment="autofs is earlier than 0:5.0.1-0.rc2.177.0.1.el5" test_ref="oval:org.mitre.oval:tst:130635" />
+  </criteria>
+</definition>

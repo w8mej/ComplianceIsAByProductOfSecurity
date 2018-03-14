@@ -1,0 +1,58 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:26666" version="16">
+  <metadata>
+    <title>DEPRECATED: ELSA-2014-0370 -- httpd security update (Moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>httpd</product>
+    </affected>
+    <reference ref_id="ELSA-2014-0370" ref_url="http://linux.oracle.com/errata/ELSA-2014-0370.html" source="VENDOR" />
+    <reference ref_id="CVE-2013-6438" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6438" source="CVE" />
+    <reference ref_id="CVE-2014-0098" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0098" source="CVE" />
+    <description>The httpd packages provide the Apache HTTP Server, a powerful, efficient,
+and extensible web server.
+
+It was found that the mod_dav module did not correctly strip leading white
+space from certain elements in a parsed XML. In certain httpd
+configurations that use the mod_dav module (for example when using the
+mod_dav_svn module), a remote attacker could send a specially crafted DAV
+request that would cause the httpd child process to crash or, possibly,
+allow the attacker to execute arbitrary code with the privileges of the
+&amp;quot;apache&amp;quot; user. (CVE-2013-6438)
+
+A buffer over-read flaw was found in the httpd mod_log_config module.
+In configurations where cookie logging is enabled (on Red Hat Enterprise
+Linux it is disabled by default), a remote attacker could use this flaw to
+crash the httpd child process via an HTTP request with a malformed cookie
+header. (CVE-2014-0098)
+
+All httpd users are advised to upgrade to these updated packages, which
+contain backported patches to correct these issues. After installing the
+updated packages, the httpd daemon will be restarted automatically.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-09-29T17:52:06">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-10-10T18:19:59.401-04:00">DRAFT</status_change>
+        <status_change date="2014-10-27T04:01:19.557-04:00">INTERIM</status_change>
+        <status_change date="2014-11-17T04:00:43.251-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T21:16:07.268-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T21:16:07.268-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="httpd RPM is earlier than 0:2.2.15-30.0.1.el6_5" test_ref="oval:org.mitre.oval:tst:124429" />
+      <criterion comment="httpd-devel RPM is earlier than 0:2.2.15-30.0.1.el6_5" test_ref="oval:org.mitre.oval:tst:124425" />
+      <criterion comment="httpd-manual RPM is earlier than 0:2.2.15-30.0.1.el6_5" test_ref="oval:org.mitre.oval:tst:124662" />
+      <criterion comment="httpd-tools RPM is earlier than 0:2.2.15-30.0.1.el6_5" test_ref="oval:org.mitre.oval:tst:124714" />
+      <criterion comment="mod_ssl RPM is earlier than 0:2.2.15-30.0.1.el6_5" test_ref="oval:org.mitre.oval:tst:124736" />
+    </criteria>
+  </criteria>
+</definition>

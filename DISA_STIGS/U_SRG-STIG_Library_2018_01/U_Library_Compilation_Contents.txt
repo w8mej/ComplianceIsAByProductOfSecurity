@@ -1,0 +1,797 @@
+ 
+STIG Library Compilation Folder Contents 
+ 
+     CREATED: Sun 01/28/2018 -  9:11;     FOR - U_SRG-STIG_Library_2018_01   
+ 
+Folder PATH listing for volume TOSHIBA EXT
+Volume serial number is 227A-C250
+Z:\U_SRG-STIG_LIBRARY_2018_01
+|   U_Library_Compilation_Contents.txt
+|   U_STIG_Library-zip_Read-ME_v1-06.pdf
+|   U__NOTICE RE- SUNSET CONTENT.txt
+|   
++---$ $ $ $ $ $ Library Change LOGs and General Library Information
+|       2017 04 SRG-STIG Updates Released w-changes.pdf
+|       2017 07 SRG-STIG Updates Released w-changes.pdf
+|       2017 10 SRG-STIG Updates Released w-changes.pdf
+|       2018 01 SRG-STIG Updates Released w-changes.pdf
+|       _  SRG-STIG Library Revision History.docx
+|       _ SRG-STIG Library Description v2.docx
+|       
++---$ $ $ $ $ - - - SRG and STIG Library  - - - $ $ $
+|       DO NOT DELETE THIS FILE - Required by automation.txt
+|       
++---APP- $ $ $ - - - A P P L I C A T I O N S - - - $ $ $ $
+|       DO NOT DELETE THIS FILE - Required by automation.txt
+|       
++---App- Adobe Acrobat Pro XI STIG
+|       U_Adobe_Acrobat_Pro_XI_V1R1_STIG.zip
+|       
++---App- Antivirus- McAfee Antivirus 8.8 STIG
+|       U_McAfee_VirusScan88_Local_Client_V5R14_STIG.zip
+|       U_McAfee_VirusScan88_Managed_Client_V5R17_STIG.zip
+|       U_McAfee_VirusScan88_V5R7_Overview.zip
+|       
++---App- Antivirus- McAfee Antivirus STIG (Pre 8.8)
+|       u_mcafee_antivirus_v4r10_stig.zip
+|       
++---App- Antivirus- McAfee MOVE 2.6 Multi-Platform STIG
+|       U_McAfee MOVE 2_6 MultiPlatform STIG V1 release memo.pdf
+|       U_McAfee_MOVE_Multi-Platform3-6-1_Client_V1R5_STIG.zip
+|       U_McAfee_MOVE_Multi-Platform3-6-1_OSS_V1R5_STIG.zip
+|       U_McAfee_MOVE_V1R2_Overview.zip
+|       
++---App- Antivirus- McAfee MOVE 3.0 Agentless STIG
+|       U_McAfee_MOVE3_0_Agentless_SVA_V1R3_STIG.zip
+|       U_McAfee_MOVE3_0_Agentless_VSEL_for_SVA_V1R3_STIG.zip
+|       U_McAfee_MOVE_Agentless3-6-1_SVA_V1R5_STIG.zip
+|       U_McAfee_MOVE_V1R2_Overview.zip
+|       
++---App- Antivirus- McAfee MOVE 4.5 Agentless STIG
+|       U_McAfee_MOVE_AV_4-5_V1R1_Overview.zip
+|       U_McAfee_MOVE_AV_Agentless_4-5_V1R1_STIG.zip
+|       U_McAfee_MOVE_AV_Multi-Platform_4-5_V1R1_STIG.zip
+|       U_MOVE 4.5 STIG Ver1_memo_signed.pdf
+|       
++---App- Antivirus- McAfee VSEL 1.9x2.0x STIG
+|       U_McAfee_VSEL_1-9_2-0_Local_Client_V1R2_STIG.zip
+|       U_McAfee_VSEL_1-9_2-0_Managed_Client_V1R3_STIG.zip
+|       U_McAfee_VSEL_1-9_2-0_V1R1_Overview.zip
+|       
++---App- Antivirus- Trend Micro Deep Security 9.x STIG
+|       U_Trend_Micro_Deep_Security_9-x_V1R1_STIG.ZIP
+|       
++---App- Antivirus- Windows Defender
+|       U_MS_Windows_Defender_Antivirus_V1R3_STIG.zip
+|       
++---App- Application Security and Development (ASD) STIG
+|       U_Application_Security_and_Development_STIG_V4_Memo.pdf
+|       U_ASD_V4R5_STIG.zip
+|       
++---App- Application Server- Adobe ColdFusion 11 STIG
+|       U_Adobe_ColdFusion_11_V1R4_STIG.zip
+|       
++---App- Application Server- Application Server SRG
+|       U_Application_Server_V2R3_SRG.zip
+|       
++---App- Application Server- Oracle WebLogic Server 12c STIG
+|       U_Oracle WebLogic 12c_Release Memo V1.pdf
+|       U_Oracle_WebLogic_Server_12c_V1R4_STIG.zip
+|       
++---App- Application Server- Red Hat JBoss EAP 6.3 STIG
+|       U_JBoss_EAP_6-3_V1R2_STIG.zip
+|       
++---App- Application Server- Tanium v6.5 STIG
+|       U_Tanium STIG_V1_memo_signed.pdf
+|       U_Tanium_6-5_V1R2_STIG.zip
+|       
++---App- Application Server- Tanium v7 STIG
+|       U_Tanium_7-0_V1R1_STIG.zip
+|       U_Tanum 7.0 STIG Ver1_memo_signed.pdf
+|       
++---App- Citrix XenApp (Server) STIG
+|       See Remote Access (SRC) STIG for Client Guidance .txt
+|       u_xenapp_v1r1.4_stig_20130426.zip
+|       
++---App- Database  SRG
+|       U_Database_V2R8_SRG.zip
+|       
++---App- Database- IBM DB2 V10.5 LUW STIG
+|       U_IBM_DB2_V10-5_LUW_V1R2_STIG.zip
+|       
++---App- Database- Microsoft SQL Server 2005 (v9) + 2008 (v10) STIG
+|       U_Database_STIG_V8R1 - SUNSET.pdf
+|       
++---App- Database- Microsoft SQL Server 2012 (v11) + 2008 R2 (v10-5) STIG
+|       $$ SQL 2008 R2 NOTE.txt
+|       u_sql_server2012_stig_v1_memo.pdf
+|       U_SQL_Server_2012_V1R16_STIG.zip
+|       
++---App- Database- Microsoft SQL Server 2014 (v12) + 2016 (v13) STIG
+|       U_Microsoft_SQL_Server_2014_STIG_V1_Memo.pdf
+|       U_MS_SQL_Server_2014_Database_V1R6_STIG.zip
+|       U_MS_SQL_Server_2014_Instance_V1R7_STIG.zip
+|       U_MS_SQL_Server_2014_V1R1_Overview.zip
+|       
++---App- Database- Oracle 11.2g STIG
+|       U_Oracle_Database_11-2g_V1R13_STIG.zip
+|       
++---App- Database- Oracle 11g STIG
+|       U_Oracle_Database_11g_V8R20_STIG.zip
+|       
++---App- Database- Oracle 12c STIG
+|       FAQ_for_Oracle_12c_Release_2_STIG.docx
+|       U_Oracle_Database_12c_V1R9_STIG.zip
+|       
++---App- Database- Oracle Exadata Database Machine - Vendor Best Practice
+|       Oracle Exadata Integrated Lights Out Manager Security Report-ILOM-v1.3.pdf
+|       Oracle Exadata Storage Server Security Report-EXACELL-v1.6.pdf
+|       Oracle Exadata Sun Data Center InfiniBand Switch 36 Security Report-IBSW-v1.3.pdf
+|       Oracle Exadata ZFS Storage Appliance Security Report-ZFSSA-v1.3.pdf
+|       SUPPORT NOTICE.txt
+|       
++---App- Database- Postgres Advanced Server 9 (EDB) on REHL STIG
+|       U_EDB_PGS_Advanced_Server_V1R4_STIG.zip
+|       U_EDB_Postgres_Advanced_Server_9_STIG_V1_Memo.pdf
+|       
++---App- Database- Postgres SQL 9.x
+|       U_PostgreSQL_9-x_V1R2_STIG.zip
+|       
++---App- Desktop- Adobe Acrobat Pro XI STIG
+|       U_Adobe_Acrobat_Pro_XI_V1R2_STIG.zip
+|       
++---App- Desktop- Adobe Acrobat Reader DC STIGs
+|       $_U_ READ-ME_OVAL Benchmark(s) are available for this STIG.doc
+|       U_Adobe_Acrobat_Reader_DC_Classic_V1R2_STIG.zip
+|       U_Adobe_Acrobat_Reader_DC_Continuous_V1R3_STIG.zip
+|       
++---App- Directory Services- Active Directory STIG
+|       U_Active_Directory_Domain_V2R9_STIG.zip
+|       U_Active_Directory_Forest_V2R7_STIG.zip
+|       
++---App- E-mail- E-mail Services Policy STIG
+|       U_Email_Services_Policy_V2R6_STIG.zip
+|       
++---App- E-mail- Microsoft Exchange 2010 STIG
+|       U_Exchange_2010_Client_Access_V1R9_STIG.zip
+|       U_Exchange_2010_Edge_V1R12_STIG.zip
+|       U_Exchange_2010_Hub_V1R12_STIG.zip
+|       U_Exchange_2010_Mailbox_V1R10_STIG.zip
+|       U_Exchange_2010_V1R6_Overview.zip
+|       
++---App- E-mail- Microsoft Exchange 2013 STIG
+|       U_MS_Exchange_2013_CAS_V1R1_STIG.zip
+|       U_MS_Exchange_2013_Edge_V1R2_STIG.zip
+|       U_MS_Exchange_2013_Mailbox_V1R2_STIG.zip
+|       U_MS_Exchange_2013_V1R1_Overview.zip
+|       
++---App- Google Search Appliance STIG
+|       U_Google_Search_Appliance_V1R1_STIG.zip
+|       
++---App- Java Runtime Environment (JRE) v8 STIG
+|       U_Oracle_JRE_8_UNIX_V1R3_STIG.zip
+|       U_Oracle_JRE_8_Windows_V1R5_STIG.zip
+|       
++---App- Mainframe Product SRG
+|       U_Mainframe_Product_V1R2_SRG.zip
+|       
++---App- McAfee Application Control 7.x STIG
+|       U_McAfee_Application_Control_7-x_V1R3_STIG.zip
+|       
++---App- Microsoft Dot-NET Framework v1.0 thru v3.5 Checklist
+|       U_Dot-NET_v1-0_thru_3-5_V1R3_Checklist.pdf
+|       u_net-framework-tools.zip
+|       
++---App- Microsoft Dot-NET Framework v4.0 STIG
+|       U_MS_DotNet_Framework_4-0_V1R4_STIG.zip
+|       
++---App- Microsoft Exchange and ISA server
+|       SEE App- Email- Microsoft Exchange.txt
+|       
++---App- Microsoft Office 2010 STIGs
+|       U_MicrosoftAccess2010_V1R9_STIG.zip
+|       U_MicrosoftExcel2010_V1R10_STIG.zip
+|       U_MicrosoftInfoPath2010_V1R10_STIG.zip
+|       U_MicrosoftOffice2010_V1R12_Overview.zip
+|       U_MicrosoftOfficeSystem2010_V1R11_STIG.zip
+|       U_MicrosoftOneNote2010_V1R8_STIG.zip
+|       U_MicrosoftOutlook2010_V1R12_STIG.zip
+|       U_MicrosoftPowerPoint2010_V1R9_STIG.zip
+|       U_MicrosoftProject2010_V1R8_STIG.zip
+|       U_MicrosoftPublisher2010_V1R10_STIG.zip
+|       U_MicrosoftWord2010_V1R10_STIG.zip
+|       
++---App- Microsoft Office 2013 STIGs
+|       U_MicrosoftAccess_2013_V1R5_STIG.zip
+|       U_MicrosoftExcel2013_V1R6_STIG.zip
+|       U_MicrosoftGroove2013_V1R2_STIG.zip
+|       U_MicrosoftInfoPath2013_V1R4_STIG.zip
+|       U_MicrosoftLync2013_V1R3_STIG.zip
+|       U_MicrosoftOffice2013_V1R5_Overview.zip
+|       U_MicrosoftOfficeSystem2013_V1R5_STIG.zip
+|       U_MicrosoftOneNote2013_V1R2_STIG.zip
+|       U_MicrosoftOutlook_2013_V1R11_STIG.zip
+|       U_MicrosoftPowerPoint2013_V1R5_STIG.zip
+|       U_MicrosoftProject2013_V1R3_STIG.zip
+|       U_MicrosoftPublisher2013_V1R4_STIG.zip
+|       U_MicrosoftSharePointDesigner2013_V1R2_STIG.zip
+|       U_MicrosoftVisio2013_V1R3_STIG.zip
+|       U_MicrosoftWord2013_V1R5_STIG.zip
+|       
++---App- Microsoft Office 2016 STIGs
+|       U_Microsoft_Access_2016_V1R1_STIG.zip
+|       U_Microsoft_Excel_2016_V1R2_STIG.zip
+|       U_Microsoft_Office_2016_V1R2_Overview.pdf
+|       U_Microsoft_Office_System_2016_V1R1_STIG.zip
+|       U_Microsoft_OneDrive_for_Business_2016_V1R2_STIG.zip
+|       U_Microsoft_OneNote_2016_V1R2_STIG.zip
+|       U_Microsoft_Outlook_2016_V1R2_STIG.zip
+|       U_Microsoft_PowerPoint_2016_V1R1_STIG.zip
+|       U_Microsoft_Project_2016_V1R1_STIG.zip
+|       U_Microsoft_Publisher_2016_V1R2_STIG.zip
+|       U_Microsoft_Skype_for_Business_2016_V1R1_STIG.zip
+|       U_Microsoft_Visio_2016_V1R1_STIG.zip
+|       U_Microsoft_Word_2016_V1R1_STIG.zip
+|       
++---App- Microsoft SharePoint 2007 NOTICE
+|       Microsoft SharePoint 2007 NOTICE.docx
+|       
++---App- Microsoft SharePoint 2010 STIG
+|       U_Sharepoint_2010_V1R7_STIG.zip
+|       
++---App- Microsoft SharePoint 2013 STIG
+|       U_SharePoint_2013_V1R3_STIG.zip
+|       
++---App- RSA SecurID Authentication Manager SCG
+|       U_RSA_SecurID_AM_Secure_Configuration_Guide_V2R2.docx
+|       
++---App- Web Browsers- DoD Annex to NIAP App Sw PP Ext'd Pkg
+|       About the DoD Annex to the App Sw PP Ext'd Pkg Web Browser PP.docx
+|       U_DoD_Browser_Annex_for_AppSoftware_Extended_Package_V1R1.pdf
+|       
++---App- Web Browsers- Google Chrome STIG
+|       $_U_ READ-ME_OVAL Benchmark(s) are available for this STIG.doc
+|       U_Google_Chrome_Browser_V1R11_STIG.zip
+|       
++---App- Web Browsers- Microsoft Internet Explorer 10 STIG
+|       U_MS_IE10_V1R15_STIG.zip
+|       
++---App- Web Browsers- Microsoft Internet Explorer 11 STIG
+|       U_MS_IE11_V1R14_STIG.zip
+|       
++---App- Web Browsers- Mozilla Firefox STIG
+|       U_Mozilla_Firefox_V4R20_STIG.zip
+|       
++---App- Web Server-  Web Server SRG
+|       U_Web_Server_V2R2_SRG.zip
+|       
++---App- Web Server- Apache 2.2 STIG
+|       U_Apache_2-2_UNIX_V1R9_STIG.zip
+|       U_Apache_2-2_WIN_V1R12_STIG.zip
+|       
++---App- Web Server- Microsoft IIS 7.0 STIG
+|       U_IIS_7-0_V1R16_STIG.zip
+|       
++---App- Web Server- Microsoft IIS 7.5 NOTICE
+|       IIS 7.5 NOTICE.docx
+|       
++---App- Web Server- Microsoft IIS 8.0 NOTICE
+|       IIS 8 STIG NOTICE.docx
+|       
++---App- Web Server- Microsoft IIS 8.5 STIG
+|       U_IIS_8-5_Server_V1R2_STIG.zip
+|       U_IIS_8-5_Site_V1R2_STIG.zip
+|       U_IIS_8-5_V1R1_Overview.zip
+|       
++---App- Web Server- Oracle_HTTP_Server_12-1-3
+|       U_Oracle_HTTP_Server_12-1-3_V1R2_STIG.zip
+|       
++---App- Web- Esri ArcGIS for Server 10.3 STIG
+|       U_ArcGIS_Server_10-3_V1R3_STIG.zip
+|       
++---Forms
+|   |   AllItems.aspx
+|   |   Combine.aspx
+|   |   DispForm.aspx
+|   |   EditForm.aspx
+|   |   repair.aspx
+|   |   Thumbnails.aspx
+|   |   Upload.aspx
+|   |   
+|   \---Document
++---MISC-  $ $ $ - - - M I S C E L L A N E O U S - - -  $ $ $
+|       DO NOT DELETE THIS FILE - Required by automation.txt
+|       
++---Misc- Akamai KSD Service IL2 VD STIG
+|       U_Akamai KSD STIG Ver1_memo_signed.pdf
+|       U_Akamai_KSD_Service_IL2_ALG_V1R1_STIG.zip
+|       U_Akamai_KSD_Service_IL2_NDM_V1R1_STIG.zip
+|       U_Akamai_KSD_Service_IL2_V1R1_Overview.zip
+|       
++---Misc- CA API Gateway STIG
+|       U_CA API Gateway_STIG_V1_Memo_signed.pdf
+|       U_CA_API_Gateway_ALG_V1R2_STIG.zip
+|       U_CA_API_Gateway_NDM_V1R1_STIG.ZIP
+|       U_CA_API_Gateway_V1R1_Overview.zip
+|       
++---Misc- Cloud Computing Best Practices Guide
+|       unclass-best_practices_guide_for_dod_cloud_mission_owners_FINAL.pdf
+|       
++---Misc- Cloud Computing SRG
+|       CC SRG v1r2 Revision History.pdf
+|       Cloud Computing SRG v1r2.pdf
+|       Cloud_Related_Baseline_and_EMASS_Cloud_Overlays_v1r1p.xlsx
+|       
++---Misc- HPE 3PAR StoreServ 3.2.x STIG
+|       U_HPE_3PAR_StoreServ_3-2-x_V1R3_STIG.zip
+|       
++---Misc- IBM MQ Appliance v9.0 STIG
+|       U_IBM_MQ_Appliance_v9-0_AS_V1R1_STIG.ZIP
+|       U_IBM_MQ_Appliance_v9-0_NDM_V1R1_STIG.ZIP
+|       U_IBM_MQ_Appliance_v9-0_V1R1_Overview.zip
+|       
++---Misc- KVM Switch STIG
+|       U_Keyboard_Video_and_Mouse_Switch_V2R6_STIG.zip
+|       
++---Misc- Multi-Function Device (MFD) and Network Printer STIG
+|       U_Multifunction_Device_and_Network_Printers_V2R11_STIG.zip
+|       
++---Misc- Storage Area Network (SAN) STIG
+|       U_Storage_Area_Network_V2R2_STIG.zip
+|       
++---Misc-Phy- Traditional Security Checklist
+|       Also See - App- Access Control STIG.txt
+|       U_Traditional_Security_V1R2_Checklist.zip
+|       
++---Misc-USB- Removable Storage and Ext Conn Tech STIG
+|       U_Removable_Storage_and_External_Connections_V1R7_STIG.zip
+|       
++---MOB- $ $ $  - - - M O B I L I T Y  - - - $ $ $
+|       DO NOT DELETE THIS FILE - Required by automation.txt
+|       
++---Mobility - MDM - BlackBerry BES 12.5.x STIG
+|       U_BB_BES_12-5-x_MDM_V1R3_STIG.zip
+|       
++---Mobility-    Mobility Policy STIG
+|       U_Mobile_Policy_V2R3_STIG.zip
+|       
++---Mobility- App- DoD Annex to NIAP Application Software Protection Profile
+|       U_DoD_Annex_for_PP_APP_SW_V1-1_V1R3.pdf
+|       
++---Mobility- MAS- BlackBerry Enterprise Mobility Server (BEMS) 2.x STIG
+|       U_BEMS 2.x STIG Ver1_memo_signed.pdf
+|       U_BEMS_2-x_V1R1_STIG.zip
+|       
++---Mobility- MDM-  DoD Annex to NIAP Mobile Device Management (MDM) Protection Profile
+|       About the DoD MDM PP Annex.docx
+|       U_DoD_Annex_for_EP_for_MDM_Agents_V3-0_V1R1.pdf
+|       U_DoD_Annex_for_EP_for_MDM_Agent_V2-0_V1R2.pdf
+|       U_DoD_Annex_for_PP_for_MDM_V2-0_V1R3.pdf
+|       U_DoD_Annex_for_PP_for_MDM_V3-0_V1R1.pdf
+|       
++---Mobility- MDM- AirWatch MDM Software v9.x  (VMWare ) STIG
+|       U_VMW_AW_v9-x_MDM_V1R1_STIG.ZIP
+|       
++---Mobility- MDM- Blackberry Unified Endpoint Manager (UEM) 12.7 STIG
+|       U_BB_UEM_12-7_V1R1_STIG.zip
+|       U_BlackBerry UEM 12.7 STIG Ver1_memo_signed.pdf
+|       
++---Mobility- MDM- CMD Management Server Policy STIG
+|       U_MDM_Server_Policy_V2R4_STIG.zip
+|       
++---Mobility- MDM- IBM_MaaS360 STIG
+|       U_IBM_MaaS360_v2-3-x_MDM_V1R1_STIG.zip
+|       
++---Mobility- MDM- MobileIron Core 9.x STIG
+|       U_MobileIron_Core_v9-x_MDM_V1R3_STIG.zip
+|       
++---Mobility- MDM- Samsung SDS Enterprise Mobility Management (EMM) STIG
+|       U_Samsung_SDS_EMM_v1-5-x_V1R1_STIG.ZIP
+|       
++---Mobility- Wireless PED - Connections Chart
+|       Mobility_Conections.pdf
+|       
++---Mobility- Wireless PED - Derived Credentials ISCG
+|       2015-05-06_DoD_Interim_Guidance_for_Implementing_Derived_PKI_Credentials_on_Unclass_CMDs.pdf
+|       
++---Mobility- Wireless PED OS- Apple iOS 10 STIG
+|       U_Apple_iOS_10_V1R3_STIG.zip
+|       
++---Mobility- Wireless PED OS- Apple iOS 11 STIG
+|       U_Apple iOS 11 STIG Ver1_memo_signed.pdf
+|       U_Apple_iOS_11_V1R1_STIG.zip
+|       
++---Mobility- Wireless PED OS- Blackberry 10.3 OS STIG
+|       U_BlackBerry_OS_10-3-x_V1R3_STIG.zip
+|       U_BlackBerry_OS_10-3_STIG_V1R1_memo_signed.pdf
+|       
++---Mobility- Wireless PED OS- LG Android 6.x STIG
+|       U_LG_Android_6-x_V1R1_STIG.zip
+|       
++---Mobility- Wireless PED OS- Samsung Android OS 5 w- Knox 2x STIG
+|       U_Samsung_Android_OS_5_with_Knox_2-x_V1R3_STIG.zip
+|       
++---Mobility- Wireless PED OS- Samsung Android OS 6 w- Knox 2x STIG
+|       U_Samsung Android OS 6 (w Knox 2.x)_V1_Memo.pdf
+|       U_Samsung_Android_OS_6_KNOX_2-x_V1R2_STIG.zip
+|       
++---Mobility- Wireless PED OS- Samsung Android OS 7 w- Knox 2x STIG
+|       U_Samsung_Android_OS_7_with_Knox_2-x_V1R1_STIG.zip
+|       
++---Mobility- Wireless PED OS- Windows 10 Mobile STIG
+|       U_MS_Windows_10_Mobile_V1R3_STIG.zip
+|       
++---Mobility- Wireless PED-   DoD Annex to NIAP Mobile Device Fundamentals (MDF) PP
+|       About the DoD MDF PP Annex.docx
+|       U_DoD_Annex_for_MDF_PP_V2-0_V1R4.pdf
+|       U_DoD_Annex_for_MDF_PP_V3-0_V1R1.pdf
+|       
++---Mobility- Wireless PED- Commercial Mobile Device (CMD) Policy STIG
+|       U_CMD_Policy_V2R5_STIG.zip
+|       
++---NET- $ $ $  - - - N E T W O R K I N G - - - $ $ $
+|       DO NOT DELETE THIS FILE - Required by automation.txt
+|       
++---Net- DNS-  Domain Name System (DNS) Policy STIG
+|       U_CNAME for DNS.docx
+|       U_DNS_Policy_V4R1-21_STIG.zip
+|       U_DNS_SRR_Prep_Questionnaire.doc
+|       
++---Net- DNS-  Domain Name System (DNS) SRG
+|       U_CNAME for DNS.docx
+|       U_Domain_Name_System_V2R4_SRG.zip
+|       
++---Net- DNS- BIND 9-x DNS STIG
+|       U_BIND_9-x_V1R3_STIG.zip
+|       
++---Net- DNS- CISCO DNS STIG
+|       U_CISCO_CSS_DNS_V4R1-18_STIG.zip
+|       
++---Net- DNS- Infoblox 7.x DNS STIG
+|       U_Infoblox_7-x_DNS_V1R5_STIG.zip
+|       
++---Net- DNS- Windows 2008 DNS STIG
+|       U_MS_Windows_2008_Server_DNS_V1R2_STIG.zip
+|       
++---Net- DNS- Windows 2012 DNS STIG
+|       U_Microsoft_Windows_2012_Server_DNS_V1R8_STIG.zip
+|       
++---Net- Enclave (Policy) STIG
+|       U_Enclave_V4R5_STIG.zip
+|       
++---Net- Enclave Test and Development (Policy) STIG
+|       U_Enclave_Test_and_Development_V1R3_STIG.zip
+|       U_Enclave_T_and_D V1 STIG memo.pdf
+|       
++---Net- Network    Infrastructure Policy STIG
+|       U_Network Infrastructure Policy_STIG_V9_Memo_signed.pdf
+|       U_Network_Infrastructure_Policy_V9R5_STIG.zip
+|       
++---Net- Network    Policy and Infrastructure STIGs Overview
+|       U_Network_Infrastructure_V8R8_Overview.zip
+|       
++---Net- Network   Perimeter- Application Layer Gateway (ALG) SRG
+|       U_Application_Layer_Gateway_V1R2_SRG.zip
+|       
++---Net- Network   Perimeter- DoD Annex to the cPP for Stateful Traffic Filter Firewalls
+|       U_DoD_Annex_to_the_cPP_for_Stateful_Traffic_Filter_Firewalls_V1-0_V1R3.pdf
+|       
++---Net- Network   Perimeter- F5 BIG-IP STIG
+|       (U)_F5 BIG-IP 11.x STIG Ver1 Release Memo_signed.pdf
+|       U_F5_BIG-IP_11-x_V1R1_Overview.zip
+|       U_F5_BIG-IP_Access_Policy_Manager_11-x_V1R1_STIG.zip
+|       U_F5_BIG-IP_Advanced_Firewall_Manager_11-x_V1R1_STIG.zip
+|       U_F5_BIG-IP_Application_Security_Manager_11-x_V1R1_STIG.zip
+|       U_F5_BIG-IP_Device_Management_11-x_V1R5_STIG.zip
+|       U_F5_BIG-IP_Local_Traffic_Manager_11-x_V1R2_STIG.zip
+|       
++---Net- Network   Perimeter- Firewall STIG
+|       U_Network_Firewall_V8R25_STIG.zip
+|       U_Network_Infrastructure_V8R8_Overview.zip
+|       
++---Net- Network   Perimeter- IBM DataPower ALG STIG
+|       U_IBM_DataPower_ALG_V1R1_STIG.zip
+|       U_IBM_DataPower_NDM_V1R2_STIG.zip
+|       U_IBM_DataPower_V1R1_Overview.zip
+|       
++---Net- Network   Perimeter- IDS-IPS (IDPS) SRG
+|       u_idps_srg_v1_memo.pdf
+|       U_Intrusion_Detection_and_Prevention_System_V2R3_SRG.zip
+|       
++---Net- Network   Perimeter- IPSec VPN Gateway STIG
+|       U_Network_IPSec_VPN_Gateway_V1R14_STIG.zip
+|       
++---Net- Network   Perimeter- Juniper SRX Services Gateway STIG
+|       U_Juniper SRX_STIG_V1_memo_signed.pdf
+|       U_Juniper_SRX_SG_ALG_V1R2_STIG.zip
+|       U_Juniper_SRX_SG_IDPS_V1R2_STIG.zip
+|       U_Juniper_SRX_SG_NDM_V1R2_STIG.zip
+|       U_Juniper_SRX_SG_V1R1_Overview.zip
+|       U_Juniper_SRX_SG_VPN_V1R2_STIG.zip
+|       
++---Net- Network   Perimeter- Palo Alto Networks STIG
+|       U_Palo Alto Networks STIG Ver1 memo signed.pdf
+|       U_Palo Alto_Networks_V1R1_Overview.zip
+|       U_Palo_Alto_Networks_ALG_V1R3_STIG.zip
+|       U_Palo_Alto_Networks_IDPS_V1R1_STIG.zip
+|       U_Palo_Alto_Networks_NDM_V1R3_STIG.zip
+|       
++---Net- Network   Perimeter- Riverbed SteelHead CX v8 STIG
+|       U_Riverbed SteelHead CX v8 STIG Ver1 memo signed.pdf
+|       U_Riverbed_SteelHead_CX_v8_ALG_V1R1_STIG.zip
+|       U_Riverbed_SteelHead_CX_v8_NDM_V1R1_STIG.zip
+|       U_Riverbed_SteelHead_CX_v8_V1R1_Overview.zip
+|       
++---Net- Network   Perimeter- Router and Layer 3 Switch STIG
+|       U_Network_Infrastructure_V8R8_Overview.zip
+|       U_Network_Perimeter_Router_L3_Switch_V8R28_STIG.zip
+|       
++---Net- Network  Infrastructure- A10 Networks ADC STIG
+|       U_A10 Networks_STIG_V1_Memo_signed.pdf
+|       U_A10_Networks_ADC_ALG_V1R1_STIG.zip
+|       U_A10_Networks_ADC_NDM_V1R1_STIG.zip
+|       U_A10_Networks_ADC_V1R1_Overview.zip
+|       
++---Net- Network  Infrastructure- Arista MLS DCS-7000 Series STIGs
+|       $ NOTICE- L2S, RTR, and NDM STIGS must be used together.txt
+|       (U)_Arista MLS DCS-7000 Series STIG Ver1 memo.pdf
+|       U_Arista_MLS_DCS-7000_Series_L2S_V1R2_STIG.zip
+|       U_Arista_MLS_DCS-7000_Series_NDM_V1R2_STIG.zip
+|       U_Arista_MLS_DCS-7000_Series_RTR_V1R2_STIG.zip
+|       U_Arista_MLS_DCS-7000_Series_V1R2_Overview.zip
+|       
++---Net- Network  Infrastructure- Cisco IOS XE R3 Router STIG
+|       NOTE- STIG Name Change.txt
+|       U_CISCO ISR _STIG_V1_Memo_signed.pdf
+|       U_Cisco_IOS-XE_Release_3_NDM_V1R3_STIG.zip
+|       U_Cisco_IOS_XE_Release_3_Router_V1R3_Overview.zip
+|       U_Cisco_IOS_XE_Release_3_RTR_V1R2_STIG.zip
+|       
++---Net- Network  Infrastructure- DB Networks DBN-6300 STIG
+|       U_DBN-6300 STIG Ver1_memo_signed.pdf
+|       U_DBN-6300_IDPS_V1R1_STIG.zip
+|       U_DBN-6300_NDM_V1R1_STIG.zip
+|       U_DBN-6300_V1R1_Overview.zip
+|       
++---Net- Network  Infrastructure- ForeScout CounterACT (NAC) STIG
+|       U_ForeScout CounterACT STIG Ver1_memo_signed.pdf
+|       U_ForeScout_CounterACT_ALG_V1R2_STIG.zip
+|       U_ForeScout_CounterACT_NDM_V1R1_STIG.zip
+|       U_ForeScout_CounterACT_V1R1_Overview.zip
+|       
++---Net- Network  Infrastructure- HP FlexFabric Switch STIG
+|       U_HP_FlexFabric_Switch_L2S_V1R1_STIG.ZIP
+|       U_HP_FlexFabric_Switch_NDM_V1R1_STIG.ZIP
+|       U_HP_FlexFabric_Switch_RTR_V1R1_STIG.ZIP
+|       U_HP_FlexFabric_Switch_V1R1_Overview.zip
+|       
++---Net- Network  Infrastructure- Layer 2 Switch SRG
+|       U_Layer 2 Switch SRG Ver1 memo_signed.pdf
+|       U_Layer_2_Switch_V1R1_Manual_SRG.ZIP
+|       
++---Net- Network  Infrastructure- Layer 2 Switch STIG
+|       U_Network_Infrastructure_V8R8_Overview.zip
+|       U_Network_L2_Switch_V8R23_STIG.zip
+|       
++---Net- Network  Infrastructure- Router and Layer 3 Switch STIG
+|       U_Network_Infrastructure_Router_L3_Switch_V8R24_STIG.zip
+|       U_Network_Infrastructure_V8R8_Overview.zip
+|       
++---Net- Secure Remote Computing (SRC) - Remote Access Endpoint STIG
+|       U_Remote_Endpoint_V2R7_STIG.zip
+|       
++---Net- Secure Remote Computing (SRC) - Remote Access Policy STIG
+|       U_Remote_Access_Policy_V2R11_STIG.zip
+|       
++---Net- Secure Remote Computing (SRC) - Remote Access Server (RAS) STIG
+|       U_Remote_Access_Server_V2R7_STIG.zip
+|       
++---Net- Secure Remote Computing (SRC) - Remote Access VPN STIG
+|       U_Remote_Access_VPN_V2R7_STIG.zip
+|       
++---Net- Secure Remote Computing (SRC) - Remote Access XenApp ICA Thin Client STIG
+|       U_Remote_XenApp_ICA_Thin_Client_V2R7_STIG.zip
+|       
++---Net- Video Services Policy (TeleConferencing (VTC)) STIG
+|       U_Video_Services_Policy_V1R9_STIG.zip
+|       
++---Net- Video TeleConferencing (VTC) STIG
+|       NOTICE Net- Video TeleConferencing (VTC) STIG - WITHDRAWN 2017 04.docx
+|       
++---Net- Voice-Video Endpoint SRG
+|       U_Voice Video Endpoint SRG_memo_signed.pdf
+|       U_Voice_Video_Endpoint_V1R7_SRG.zip
+|       
++---Net- Voice-Video over IP (VVoIP) STIG
+|       U_VVoIP_V3R11_STIG.zip
+|       
++---Net- Voice-Video Services Policy STIG
+|       U_Voice_Video_Services_Policy_V3R12_STIG.zip
+|       
++---Net- Voice-Video Session Management SRG
+|       U_VoiceVideo Session Mgmt SRG Ver1 memo_signed.pdf
+|       U_Voice_Video_Session_Mgmt_V1R5_SRG.zip
+|       
++---Net- Wireless LAN (WLAN) STIG
+|       U_Network_WLAN_V6R13_STIG.zip
+|       
++---Net- Wireless LAN- CSfC Policy STIG
+|       U_Network_CSfC_WLAN_Policy_V1R3_STIG.zip
+|       
++---Net- Wireless LAN- Guest Services Whitepaper
+|       U_Guest_Wireless_Services_White_Paper.docx
+|       
++---Net- Wireless MAN (WMAN) STIG
+|       U_Network_WMAN_V6R12_STIG.zip
+|       
++---Net- Wireless- Encryptor- L3 KOV-26 Talon (Wireless Role) STIG
+|       U_Network_L3_KOV-26_Talon_Wireless_Role_V6R8_STIG.zip
+|       
++---Net- _Network Device Management (NDM) SRG
+|       U_Network_Device_Management_V2R13_SRG.zip
+|       
++---Net- _Network Devices STIG
+|       U_Network_Devices_V8R21_STIG.zip
+|       U_Network_Infrastructure_V8R8_Overview.zip
+|       
++---Net- _Network Security White Papers
+|       U_Network_Management_Security_Guidance_At-a-Glance_V9R1.pdf
+|       
++---Net- _Router SRG
+|       U_Router_V2R3_SRG.zip
+|       
++---Net-VRT- Software Defined Networking (SDN) STIG
+|       U_SDN Using Network Virtualization STIG Ver1_memo_signed.pdf
+|       U_SDN_NV_V1R1_STIG.ZIP
+|       
++---OS-  $ $ $  - O P E R A T I N G    S Y S T E M S - $ $ $
+|       DO NOT DELETE THIS FILE - Required by automation.txt
+|       
++---OS-  General Purpose Operating System SRG
+|       U_General_Purpose_Operating_System_V1R4_SRG.zip
+|       
++---OS- Apple Macintosh OS X 10.10 Workstation STIG
+|       NOTE- Secure Host Baseline (SHB) OS Image  Available.docx
+|       U_Apple_OS_X_10-10_Workstation_V1R5_STIG.zip
+|       
++---OS- Apple Macintosh OS X 10.11 STIG
+|       NOTE- Secure Host Baseline (SHB) OS Image  Available.docx
+|       U_Apple_OS_X_10-11_Memo.pdf
+|       U_Apple_OS_X_10-11_V1R6_STIG.zip
+|       U_OS X El Capitan SHB Guide v-1.0.pdf
+|       
++---OS- Apple Macintosh OS X 10.6 STIG
+|       u_mac_osx_10.6_v1r3_stig_20130426.zip
+|       
++---OS- Apple Macintosh OS X 10.8 Workstation STIG
+|       U_Apple_OS_X_10-8_Workstation_V1R2_STIG.zip
+|       
++---OS- Apple Macintosh OS X 10.9 Workstation STIG
+|       NOTE- Secure Host Baseline (SHB) OS Image  Available.docx
+|       U_Apple_OS_X_10-9_Workstation_V1R2_STIG.zip
+|       
++---OS- Apple OS X 10.12 (Sierra) STIG
+|       U_Apple_OS_X_10-12_V1R2_STIG.zip
+|       
++---OS- IBM AIX 6.1 STIG
+|       $_U_ READ-ME_OVAL Benchmark(s) are available for this STIG.doc
+|       U_AIX_6-1_V1R12_STIG.zip
+|       
++---OS- IBM zLinux (SUSE-SLES 11x s390x) STIG
+|       u_sles_v11_for_system_z_stig_memo_signed.pdf
+|       U_SLES_V11_for_System_z_V1R11_STIG.zip
+|       
++---OS- IBM zOS   Hardware Management Console (HMC) STIG
+|       U_IBM_HMC_V1R5_STIG.zip
+|       
++---OS- IBM zOS  ACF2 STIG
+|       U_zOS_ACF2_V6R35_STIG.zip
+|       
++---OS- IBM zOS  RACF STIG
+|       U_zOS_RACF_V6R35_STIG.zip
+|       
++---OS- IBM zOS  TSS STIG
+|       U_zOS_TSS_V6R35_STIG.zip
+|       
++---OS- IBM zVM Using CA VMSecure STIG
+|       U_IBM_zVM_Using_CA_VMSecure_V1R1_STIG.zip
+|       
++---OS- Thin Client (SunRay) STIG
+|       U_Sun_Ray_V1R2_STIG.zip
+|       
++---OS- UNIX- HP-UX 11.31 STIG
+|       $_U_ READ-ME_OVAL Benchmark(s) are available for this STIG.doc
+|       U_HPUX_11-31_V1R16_STIG.zip
+|       
++---OS- UNIX- Oracle Linux 5 STIG
+|       U_Oracle_Linux_5_V1R11_STIG.zip
+|       
++---OS- UNIX- Oracle Linux 6 STIG
+|       U_Oracle_Linux_6_V1R11_STIG.zip
+|       
++---OS- UNIX- Oracle-Sun Solaris 10 STIG (SPARC and x86)
+|       $_U_ READ-ME_OVAL Benchmark(s) are available for this STIG.doc
+|       U_Solaris_10_SPARC_V1R21_STIG.zip
+|       U_Solaris_10_X86_V1R21_STIG.zip
+|       
++---OS- UNIX- Oracle-Sun Solaris 11 STIG (SPARC and x86)
+|       U_Solaris_11_SPARC_V1R13_STIG.zip
+|       U_Solaris_11_X86_V1R13_STIG.zip
+|       
++---OS- UNIX- Red Hat 6 STIG
+|       U_RedHat_6_V1R18_STIG.zip
+|       
++---OS- UNIX- Red Hat Enterprise Linux 7 STIG
+|       U_Red_Hat_Enterprise_Linux_7_V1R4_STIG.zip
+|       
++---OS- Windows  Firewall STIG
+|       $_U_ READ-ME_OVAL Benchmark(s) are available for this STIG.doc
+|       U_Windows_Firewall_V1R6_STIG.zip
+|       U_Windows_Operating_Systems_V1R3_Overview.zip
+|       
++---OS- Windows  Server 2008 STIG
+|       $_U_ READ-ME_OVAL Benchmark(s) are available for this STIG.doc
+|       U_Windows_2008_DC_V6R39_STIG.zip
+|       U_Windows_2008_MS_V6R39_STIG.zip
+|       U_Windows_Operating_Systems_V1R4_Overview.zip
+|       
++---OS- Windows  Server 2008-R2 STIG
+|       $_U_ READ-ME_OVAL Benchmark(s) are available for this STIG.doc
+|       NOTE- Secure Host Baseline (SHB) OS Image  Available.docx
+|       U_Windows_2008_R2_DC_V1R25_STIG.zip
+|       U_Windows_2008_R2_MS_V1R25_STIG.zip
+|       U_Windows_Operating_Systems_V1R4_Overview.zip
+|       
++---OS- Windows  Server 2012 and 2012 R2 STIG
+|       $_U_ READ-ME_OVAL Benchmark(s) are available for this STIG.doc
+|       NOTE- Secure Host Baseline (SHB) OS Image  Available.docx
+|       U_Windows_2012_and_2012_R2_DC_V2R11_STIG.zip
+|       U_Windows_2012_and_2012_R2_MS_V2R11_STIG.zip
+|       U_Windows_Operating_Systems_V1R4_Overview.zip
+|       
++---OS- Windows  Server 2016 STIG
+|       $ NOTICE- This STIG covers both MS and DC roles.txt
+|       $_U_ READ-ME_OVAL Benchmark(s) are available for this STIG.doc
+|       U_Windows_Server_2016_V1R3_STIG.zip
+|       
++---OS- Windows 10 STIG
+|       $_U_ READ-ME_OVAL Benchmark(s) are available for this STIG.doc
+|       NOTE- Secure Host Baseline (SHB) OS Image  Available.docx
+|       U_Windows_10_V1R12_STIG.zip
+|       U_Windows_Lifecycle_Support.docx
+|       U_Windows_Operating_Systems_V1R4_Overview.zip
+|       
++---OS- Windows 7 STIG
+|       $_U_ READ-ME_OVAL Benchmark(s) are available for this STIG.doc
+|       NOTE- Secure Host Baseline (SHB) OS Image  Available.docx
+|       unclassified_windows_7_scanned_memo.pdf
+|       U_Windows_7_V1R29_STIG.zip
+|       U_Windows_Operating_Systems_V1R4_Overview.zip
+|       
++---OS- Windows 8 - 8.1 STIG
+|       $_U_ READ-ME_OVAL Benchmark(s) are available for this STIG.doc
+|       NOTE- Secure Host Baseline (SHB) OS Image  Available.docx
+|       U_Windows_8_and_8-1_V1R20_STIG.zip
+|       U_Windows_Operating_Systems_V1R4_Overview.zip
+|       
++---OS-VRT - $ $ $ - - - OS VIRTUALIZATION - - - $ $ $
+|       DO NOT DELETE THIS FILE - Required by automation.txt
+|       
++---OS-VRT- VMware ESXi5 STIGs
+|       U_ESXi5_Server_V1R10_STIG.zip
+|       U_ESXi5_vCenter_Server_V1R7_STIG.zip
+|       U_ESXi5_Virtual_Machine_V1R7_STIG.zip
+|       
++---OS-VRT- VMWare NSX STIG
+|       U_VMware NSX_STIG_V1_Memo_signed.pdf
+|       U_VMware_NSX_Distributed_Firewall_V1R1_STIG.zip
+|       U_VMware_NSX_Distributed_Logical_Router_V1R1_STIG.zip
+|       U_VMware_NSX_Manager_V1R1_STIG.zip
+|       U_VMware_NSX_V1R1_Overview.zip
+|       
+\---OS-VRT- VMWare vSphere 6 0 STIGs
+        U_VMware_vSphere_6-0_ESXi_V1R4_STIG.zip
+        U_VMWare_vSphere_6-0_V1R1_Overview.zip
+        U_VMware_vSphere_6-0_vCenter_Server_for_Windows_V1R4_STIG.zip
+        U_VMware_vSphere_6-0_Virtual_Machine_V1R1_STIG.zip
+        

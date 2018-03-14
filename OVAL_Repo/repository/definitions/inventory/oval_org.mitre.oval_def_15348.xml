@@ -1,0 +1,31 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="inventory" id="oval:org.mitre.oval:def:15348" version="14">
+  <metadata>
+    <title>Microsoft Windows 7 Professional is installed</title>
+    <affected family="windows">
+      <platform>Microsoft Windows 7</platform>
+    </affected>
+    <reference ref_id="cpe:/o:microsoft:windows_7:::professional" source="CPE" />
+    <description>Microsoft Windows 7 Professional is installed.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2012-10-16T10:26:26.748+04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2012-10-25T16:32:09.678-04:00">DRAFT</status_change>
+        <status_change date="2012-11-12T04:00:09.859-05:00">INTERIM</status_change>
+        <status_change date="2012-12-03T04:00:06.892-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:15348 - Unified edition checks for Windows 7 and Vista" date="2015-08-17T14:55:00.985-04:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-08-17T14:57:22.440-04:00">INTERIM</status_change>
+        <status_change date="2015-12-22T12:30:00.000-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Microsoft Windows 7 is installed" definition_ref="oval:org.mitre.oval:def:12541" />
+    <criterion comment="Check if edition is Professional" test_ref="oval:org.mitre.oval:tst:81098" />
+  </criteria>
+</definition>

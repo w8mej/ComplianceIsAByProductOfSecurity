@@ -1,0 +1,27 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:24703" version="6">
+  <metadata>
+    <title>DSA-2926-1 linux - security update</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 7</platform>
+      <product>linux</product>
+    </affected>
+    <reference ref_id="DSA-2926-1" ref_url="http://www.debian.org/security/dsa-2926-1" source="VENDOR" />
+    <description>Several vulnerabilities have been discovered in the Linux kernel thatmay lead to a denial of service, information leaks or privilegeescalation.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-05-21T14:54:09">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-05-23T10:33:15.584-04:00">DRAFT</status_change>
+        <status_change date="2014-06-09T04:01:25.326-04:00">INTERIM</status_change>
+        <status_change date="2014-06-30T04:10:39.183-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian 7 is installed" definition_ref="oval:org.mitre.oval:def:19338" />
+    <criterion comment="linux DPKG is earlier than 0:3.2.57-3+deb7u1" test_ref="oval:org.mitre.oval:tst:114268" />
+  </criteria>
+</definition>

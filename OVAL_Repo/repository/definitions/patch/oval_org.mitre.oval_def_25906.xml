@@ -1,0 +1,32 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:25906" version="4">
+  <metadata>
+    <title>SUSE-RU-2013:1111-1 -- Recommended update for irqbalance</title>
+    <affected family="unix">
+      <platform>SUSE Linux Enterprise Server 11</platform>
+      <platform>SUSE Linux Enterprise Desktop 11</platform>
+      <product>irqbalance</product>
+    </affected>
+    <reference ref_id="SUSE-RU-2013:1111-1" ref_url="https://www.suse.com/support/update/announcement/2013/suse-ru-20131111-1.html" source="VENDOR" />
+    <description>This update for irqbalance fixes support for NUMA platforms
+by linking the  program against libnuma.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-07-15T17:33:08">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-07-29T19:32:06.293-04:00">DRAFT</status_change>
+        <status_change date="2014-08-18T04:05:31.292-04:00">INTERIM</status_change>
+        <status_change date="2014-09-08T04:03:36.435-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Operation system section" operator="OR">
+      <extend_definition comment="SUSE Linux Enterprise Server 11.x is installed" definition_ref="oval:org.mitre.oval:def:17270" />
+      <extend_definition comment="SUSE Linux Enterprise Desktop 11.x is installed" definition_ref="oval:org.mitre.oval:def:25140" />
+    </criteria>
+    <criterion comment="irqbalance RPM is earlier than 0:1.0.4-0.11.1" test_ref="oval:org.mitre.oval:tst:119646" />
+  </criteria>
+</definition>

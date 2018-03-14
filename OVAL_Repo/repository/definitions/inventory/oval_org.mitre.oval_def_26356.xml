@@ -1,0 +1,42 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="inventory" id="oval:org.mitre.oval:def:26356" version="11">
+  <metadata>
+    <title>Microsoft SQL Server 2005 32-bit is installed</title>
+    <affected family="windows">
+      <platform>Microsoft Windows Server 2003</platform>
+      <platform>Microsoft Windows Server 2008</platform>
+      <product>Microsoft SQL Server 2005</product>
+    </affected>
+    <reference ref_id="cpe:/a:microsoft:sql_server:2005::x86" source="CPE" />
+    <description>Microsoft SQL Server 2005 32-bit is installed.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-08-13T08:31:03">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </submitted>
+        <status_change date="2014-08-15T10:20:16.057-04:00">DRAFT</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:obj:26798 - Added criteria for 64 bit" date="2014-08-15T10:18:00.371-04:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2014-09-01T04:03:12.964-04:00">INTERIM</status_change>
+        <status_change date="2014-09-22T04:00:48.587-04:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:obj:26798 - Fixed/New Inventory Definitions, and fixed Vulnerability Definitions for Microsoft SQL Server 2012 and 2014." date="2014-10-10T18:35:00.565-04:00">
+          <contributor organization="ALTX-SOFT">Evgeniy Pavlov</contributor>
+        </modified>
+        <status_change date="2014-10-10T19:58:52.874-04:00">INTERIM</status_change>
+        <status_change date="2014-10-27T04:00:43.230-04:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:obj:26798 - Modified tests which check SQL Server 2005 Service Packs. The specific version of SQL Server was checked instead of diapason. Now new states were added which mark high limit of SP and operation=&quot;greater than or equal&quot; was add to the old states" date="2014-10-29T12:41:00.258-04:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2014-10-29T12:42:39.141-04:00">INTERIM</status_change>
+        <status_change date="2014-11-17T04:00:30.420-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Microsoft SQL Server 2005 is installed" definition_ref="oval:org.mitre.oval:def:6082" />
+    <criterion comment="Check if 32-bit SQLPath of Microsoft SQL Server instances exist" test_ref="oval:org.cisecurity:tst:4593" />
+    <criterion comment="Check if SQL Server 32-bit instances with version greater than 2005.90.0.0 and less than 2007.100.0.0 exist" test_ref="oval:org.cisecurity:tst:4575" />
+  </criteria>
+</definition>

@@ -1,0 +1,41 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:26993" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2013-0522 -- gdb security and bug fix update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>gdb</product>
+    </affected>
+    <reference ref_id="ELSA-2013-0522" ref_url="http://linux.oracle.com/errata/ELSA-2013-0522.html" source="VENDOR" />
+    <reference ref_id="CVE-2011-4355" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4355" source="CVE" />
+    <description>[7.2-60.el6]
+- Fix CVE-2011-4355 gdb: arbitrary code execution via .debug_gdb_scripts'
+  (Jan Kratochvil, RH BZ 756116).
+
+[7.2-58.el6]
+- Fix Backport gdb fix to handle identical binaries via additional build-id
+  symlinks' (RH BZ 836966).</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:23:57">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:14:33.208-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:01:37.741-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:00:36.651-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T12:44:48.865-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T12:44:48.865-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="gdb is earlier than 0:7.2-60.el6" test_ref="oval:org.mitre.oval:tst:130367" />
+      <criterion comment="gdb-gdbserver is earlier than 0:7.2-60.el6" test_ref="oval:org.mitre.oval:tst:130301" />
+    </criteria>
+  </criteria>
+</definition>

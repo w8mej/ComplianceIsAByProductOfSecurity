@@ -1,0 +1,48 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:25710" version="5">
+  <metadata>
+    <title>SUSE-SU-2013:1345-1 -- Security update for OpenSSH</title>
+    <affected family="unix">
+      <platform>SUSE Linux Enterprise Server 11</platform>
+      <platform>SUSE Linux Enterprise Desktop 11</platform>
+      <product>OpenSSH</product>
+    </affected>
+    <reference ref_id="SUSE-SU-2013:1345-1" ref_url="https://www.suse.com/support/update/announcement/2013/suse-su-20131345-1.html" source="VENDOR" />
+    <reference ref_id="CVE-2010-5107" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-5107" source="CVE" />
+    <description>This update for OpenSSH provides the following fixes:
+
+    * Implement remote denial of service hardening.
+(bnc#802639, CVE-2010-5107)
+    * Use only FIPS 140-2 approved algorithms when FIPS
+mode is detected. (bnc#755505, bnc#821039)
+    * Do not link OpenSSH binaries with LDAP libraries.
+(bnc#826906)
+
+Security Issue reference:
+
+    * CVE-2010-5107
+&lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-5107
+&gt;</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-07-15T17:28:22">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-07-29T19:23:11.161-04:00">DRAFT</status_change>
+        <status_change date="2014-08-18T04:04:57.069-04:00">INTERIM</status_change>
+        <status_change date="2014-09-08T04:03:02.852-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Operation system section" operator="OR">
+      <extend_definition comment="SUSE Linux Enterprise Server 11.x is installed" definition_ref="oval:org.mitre.oval:def:17270" />
+      <extend_definition comment="SUSE Linux Enterprise Desktop 11.x is installed" definition_ref="oval:org.mitre.oval:def:25140" />
+    </criteria>
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="openssh RPM is earlier than 0:5.1p1-41.57.1" test_ref="oval:org.mitre.oval:tst:118524" />
+      <criterion comment="openssh-askpass RPM is earlier than 0:5.1p1-41.57.1" test_ref="oval:org.mitre.oval:tst:118687" />
+    </criteria>
+  </criteria>
+</definition>

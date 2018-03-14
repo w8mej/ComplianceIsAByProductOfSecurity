@@ -1,0 +1,28 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:26404" version="57">
+  <metadata>
+    <title>End of life cycle for Microsoft XML Core Services 4</title>
+    <affected family="windows">
+      <platform>Microsoft Windows 2000</platform>
+      <platform>Microsoft Windows XP</platform>
+      <platform>Microsoft Windows Server 2003</platform>
+      <product>Microsoft XML Core Services 4</product>
+    </affected>
+    <reference ref_id="Microsoft XML Core Services 4" ref_url="http://support.microsoft.com/lifecycle/?p1=7921" source="VENDOR" />
+    <description>Product Microsoft XML Core Services 4 not longer supported</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-08-04T14:38:52">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </submitted>
+        <status_change date="2014-08-13T10:30:14.193-04:00">DRAFT</status_change>
+        <status_change date="2014-09-01T04:03:14.018-04:00">INTERIM</status_change>
+        <status_change date="2014-09-22T04:00:52.643-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Microsoft XML Core Services 4 is installed" definition_ref="oval:org.mitre.oval:def:1002" />
+  </criteria>
+</definition>

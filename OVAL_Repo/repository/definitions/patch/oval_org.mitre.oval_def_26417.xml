@@ -1,0 +1,33 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:26417" version="14">
+  <metadata>
+    <title>DEPRECATED: ELSA-2010-0362 -- scsi-target-utils security update (important)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 5</platform>
+      <product>scsi-target-utils</product>
+    </affected>
+    <reference ref_id="ELSA-2010-0362" ref_url="http://linux.oracle.com/errata/ELSA-2010-0362.html" source="VENDOR" />
+    <reference ref_id="CVE-2010-0743" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0743" source="CVE" />
+    <description>[0.0-6.20091205snap.2]
+- 576359 Fix format string vulnerability  (CVE-2010-0743)</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-10-28T12:13:26">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-03T14:45:31.823-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:00:21.346-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:00:09.815-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T19:42:01.344-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T19:42:01.344-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 5.x" definition_ref="oval:org.mitre.oval:def:15459" />
+    <criterion comment="scsi-target-utils is earlier than 0:0.0-6.20091205snap.el5_5.2" test_ref="oval:org.mitre.oval:tst:126426" />
+  </criteria>
+</definition>

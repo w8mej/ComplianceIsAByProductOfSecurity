@@ -1,0 +1,3 @@
+<rpminfo_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" comment="logrotate package information" id="oval:org.mitre.oval:obj:30245" version="2">
+  <name>logrotate</name>
+</rpminfo_object>

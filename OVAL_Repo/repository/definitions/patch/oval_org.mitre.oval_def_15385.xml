@@ -1,0 +1,53 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:15385" version="29">
+  <metadata>
+    <title>USN-1185-1 -- Thunderbird vulnerabilities</title>
+    <affected family="unix">
+      <platform>Ubuntu 11.04</platform>
+      <platform>Ubuntu 10.04</platform>
+      <platform>Ubuntu 10.10</platform>
+      <product>Thunderbird</product>
+    </affected>
+    <reference ref_id="USN-1185-1" ref_url="https://lists.ubuntu.com/archives/ubuntu-security-announce/2011-August/001418.html" source="VENDOR" />
+    <reference ref_id="CVE-2011-2982" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2982" source="CVE" />
+    <reference ref_id="CVE-2011-2981" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2981" source="CVE" />
+    <reference ref_id="CVE-2011-0084" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0084" source="CVE" />
+    <reference ref_id="CVE-2011-2984" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2984" source="CVE" />
+    <reference ref_id="CVE-2011-2378" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2378" source="CVE" />
+    <reference ref_id="CVE-2011-2983" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2983" source="CVE" />
+    <description>thunderbird: Mozilla Open Source mail and newsgroup client Multiple vulnerabilities have been fixed in Thunderbird.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2012-03-31T03:11:26-05:00">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2012-03-31T09:15:22.002-04:00">DRAFT</status_change>
+        <status_change date="2012-04-16T04:07:38.402-04:00">INTERIM</status_change>
+        <status_change date="2012-05-07T04:02:07.465-04:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:15385 - added CVE references; also made minor updates" date="2014-06-13T15:19:00.449-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-13T15:21:15.681-04:00">INTERIM</status_change>
+        <status_change date="2014-06-30T04:05:44.254-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 11.04 is installed" definition_ref="oval:org.mitre.oval:def:14150" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criterion comment="thunderbird DPKG is earlier than 3.1.12+build1+nobinonly-0ubuntu0.11.04.1" test_ref="oval:org.mitre.oval:tst:78558" />
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.04 is installed" definition_ref="oval:org.mitre.oval:def:13089" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criterion comment="thunderbird DPKG is earlier than 3.1.12+build1+nobinonly-0ubuntu0.10.04.1" test_ref="oval:org.mitre.oval:tst:78154" />
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.10 is installed" definition_ref="oval:org.mitre.oval:def:13134" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criterion comment="thunderbird DPKG is earlier than 3.1.12+build1+nobinonly-0ubuntu0.10.10.1" test_ref="oval:org.mitre.oval:tst:78692" />
+    </criteria>
+  </criteria>
+</definition>

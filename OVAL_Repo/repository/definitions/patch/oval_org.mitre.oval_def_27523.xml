@@ -1,0 +1,63 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27523" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2013-1119 -- 389-ds-base security and bug fix update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>389-ds-base</product>
+    </affected>
+    <reference ref_id="ELSA-2013-1119" ref_url="http://linux.oracle.com/errata/ELSA-2013-1119.html" source="VENDOR" />
+    <reference ref_id="CVE-2013-2219" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-2219" source="CVE" />
+    <description>[1.2.11.15.20]
+- Resolves: Bug 984970 - Overflow in nsslapd-disk-monitoring-threshold(part 5 limits not displayed correctly). (ticket 47427)
+
+[1.2.11.15.19]
+- Resolves: Bug 984970 - Overflow in nsslapd-disk-monitoring-threshold(part 4). (ticket 47427)
+- Patch was not added
+
+[1.2.11.15.19]
+- Resolves: Bug 984970 - Overflow in nsslapd-disk-monitoring-threshold(part 4). (ticket 47427)
+
+[1.2.11.15.19]
+- Bump version to 1.2.11.15-19
+- Resolves: Bug 984970 - Overflow in nsslapd-disk-monitoring-threshold(part 3). (ticket 47427)
+
+[1.2.11.15.18]
+- Bump version to 1.2.11.15-18
+- Resolves: Bug 984970 - Overflow in nsslapd-disk-monitoring-threshold(part 2). (ticket 47427)
+- Resolves: Bug 987850 - Disk Monitoring not checking filesystem with logs (ticket 47741)
+
+[1.2.11.15-17]
+- Resolves: Bug 970995 - DS not shutting down when disk monitoring threshold is reached to half. (Ticket 47385)
+- Resolves: Bug 984970 - Overflow in nsslapd-disk-monitoring-threshold. (ticket 47427)
+
+[1.2.11.15-16]
+- Resolves: Bug 979514 - CVE-2013-2219 ACLs inoperative in some search scenarios. (Ticket 47405)
+
+[1.2.11.15-15]
+- Resolves: Bug 970995 - RHDS not shutting down when disk monitoring threshold is reached to half.  (Ticket 47385)</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:23:17">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:03:22.043-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:04:56.004-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:02:09.693-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T11:22:15.118-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T11:22:15.118-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="389-ds-base is earlier than 0:1.2.11.15-20.el6_4" test_ref="oval:org.mitre.oval:tst:129172" />
+      <criterion comment="389-ds-base-devel is earlier than 0:1.2.11.15-20.el6_4" test_ref="oval:org.mitre.oval:tst:128921" />
+      <criterion comment="389-ds-base-libs is earlier than 0:1.2.11.15-20.el6_4" test_ref="oval:org.mitre.oval:tst:129272" />
+    </criteria>
+  </criteria>
+</definition>

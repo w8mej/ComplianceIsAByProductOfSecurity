@@ -1,0 +1,46 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:20771" version="169">
+  <metadata>
+    <title>RHSA-2013:0217: mingw32-libxml2 security update (Important)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 6</platform>
+      <platform>CentOS Linux 6</platform>
+      <product>mingw32-libxml2</product>
+    </affected>
+    <reference ref_id="RHSA-2013:0217-01" ref_url="https://rhn.redhat.com/errata/RHSA-2013-0217.html" source="VENDOR" />
+    <reference ref_id="CESA-2013:0217" source="CESA" />
+    <reference ref_id="CVE-2010-4008" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-4008.html" source="CVE" />
+    <reference ref_id="CVE-2010-4494" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-4494.html" source="CVE" />
+    <reference ref_id="CVE-2011-0216" ref_url="https://www.redhat.com/security/data/cve/CVE-2011-0216.html" source="CVE" />
+    <reference ref_id="CVE-2011-1944" ref_url="https://www.redhat.com/security/data/cve/CVE-2011-1944.html" source="CVE" />
+    <reference ref_id="CVE-2011-2821" ref_url="https://www.redhat.com/security/data/cve/CVE-2011-2821.html" source="CVE" />
+    <reference ref_id="CVE-2011-2834" ref_url="https://www.redhat.com/security/data/cve/CVE-2011-2834.html" source="CVE" />
+    <reference ref_id="CVE-2011-3102" ref_url="https://www.redhat.com/security/data/cve/CVE-2011-3102.html" source="CVE" />
+    <reference ref_id="CVE-2011-3905" ref_url="https://www.redhat.com/security/data/cve/CVE-2011-3905.html" source="CVE" />
+    <reference ref_id="CVE-2011-3919" ref_url="https://www.redhat.com/security/data/cve/CVE-2011-3919.html" source="CVE" />
+    <reference ref_id="CVE-2012-0841" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-0841.html" source="CVE" />
+    <reference ref_id="CVE-2012-5134" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-5134.html" source="CVE" />
+    <description>Heap-based buffer underflow in the xmlParseAttValueComplex function in parser.c in libxml2 2.9.0 and earlier, as used in Google Chrome before 23.0.1271.91 and other products, allows remote attackers to cause a denial of service or possibly execute arbitrary code via crafted entities in an XML document.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-09T13:03:25">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-10T12:57:03.615-05:00">DRAFT</status_change>
+        <status_change date="2014-01-27T04:00:29.512-05:00">INTERIM</status_change>
+        <status_change date="2014-02-17T04:00:36.497-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Redhat 6 or Centos 6 release" operator="OR">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 6" definition_ref="oval:org.mitre.oval:def:20273" />
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 6.x" definition_ref="oval:org.mitre.oval:def:16337" />
+    </criteria>
+    <criteria comment="Packages section" operator="OR">
+      <criterion comment="mingw32-libxml2 is earlier than 0:2.7.6-6.el6_3" test_ref="oval:org.mitre.oval:tst:90293" />
+      <criterion comment="mingw32-libxml2-static is earlier than 0:2.7.6-6.el6_3" test_ref="oval:org.mitre.oval:tst:90209" />
+    </criteria>
+  </criteria>
+</definition>

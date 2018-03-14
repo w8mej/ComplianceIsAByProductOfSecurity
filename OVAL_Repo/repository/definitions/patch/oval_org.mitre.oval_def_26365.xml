@@ -1,0 +1,61 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:26365" version="15">
+  <metadata>
+    <title>ELSA-2014-3034 -- Unbreakable Enterprise kernel security update (important)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>dtrace-modules</product>
+      <product>kernel-uek</product>
+      <product>dtrace-modules-headers</product>
+      <product>dtrace-modules-provider-headers</product>
+      <product>kernel-uek-debug</product>
+      <product>kernel-uek-debug-devel</product>
+      <product>kernel-uek-devel</product>
+      <product>kernel-uek-doc</product>
+      <product>kernel-uek-firmware</product>
+    </affected>
+    <reference ref_id="ELSA-2014-3034" ref_url="http://linux.oracle.com/errata/ELSA-2014-3034.html" source="VENDOR" />
+    <reference ref_id="CVE-2014-0196" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0196" source="CVE" />
+    <reference ref_id="CVE-2014-2309" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-2309" source="CVE" />
+    <reference ref_id="CVE-2014-0049" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0049" source="CVE" />
+    <reference ref_id="CVE-2014-0038" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0038" source="CVE" />
+    <reference ref_id="CVE-2013-4587" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4587" source="CVE" />
+    <reference ref_id="CVE-2013-7266" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-7266" source="CVE" />
+    <reference ref_id="CVE-2013-6885" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6885" source="CVE" />
+    <description>kernel-uek 
+
+[3.8.13-35.el6uek] 
+
+- n_tty: Fix n_tty_write crash when echoing in raw mode (Peter Hurley) [Orabug: 18754908] {CVE-2014-0196} {CVE-2014-0196}</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:21:52">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T17:44:20.587-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:00:18.704-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:00:08.275-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:tst:126687 - Corrected package names in objects and versions in states." date="2015-02-26T18:36:00.989-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-26T18:48:31.289-05:00">INTERIM</status_change>
+        <status_change date="2015-03-16T04:00:52.742-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="dtrace-modules-3.8.13-35.el6uek is earlier than 0:0.4.3-4.el6" test_ref="oval:org.mitre.oval:tst:126687" />
+      <criterion comment="kernel-uek is earlier than 0:3.8.13-35.el6uek" test_ref="oval:org.mitre.oval:tst:126689" />
+      <criterion comment="dtrace-modules-headers is earlier than 0:0.4.3-4.el6" test_ref="oval:org.mitre.oval:tst:127576" />
+      <criterion comment="dtrace-modules-provider-headers is earlier than 0:0.4.3-4.el6" test_ref="oval:org.mitre.oval:tst:127643" />
+      <criterion comment="kernel-uek-debug is earlier than 0:3.8.13-35.el6uek" test_ref="oval:org.mitre.oval:tst:127400" />
+      <criterion comment="kernel-uek-debug-devel is earlier than 0:3.8.13-35.el6uek" test_ref="oval:org.mitre.oval:tst:127118" />
+      <criterion comment="kernel-uek-devel is earlier than 0:3.8.13-35.el6uek" test_ref="oval:org.mitre.oval:tst:127285" />
+      <criterion comment="kernel-uek-doc is earlier than 0:3.8.13-35.el6uek" test_ref="oval:org.mitre.oval:tst:127622" />
+      <criterion comment="kernel-uek-firmware is earlier than 0:3.8.13-35.el6uek" test_ref="oval:org.mitre.oval:tst:127485" />
+    </criteria>
+  </criteria>
+</definition>

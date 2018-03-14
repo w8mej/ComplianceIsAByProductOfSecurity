@@ -1,0 +1,42 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:21648" version="40">
+  <metadata>
+    <title>RHSA-2010:0124: systemtap security update (Important)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 5</platform>
+      <platform>CentOS Linux 5</platform>
+      <product>systemtap</product>
+    </affected>
+    <reference ref_id="RHSA-2010:0124-01" ref_url="https://rhn.redhat.com/errata/RHSA-2010-0124.html" source="VENDOR" />
+    <reference ref_id="CESA-2010:0124" source="CESA" />
+    <reference ref_id="CVE-2009-4273" ref_url="https://www.redhat.com/security/data/cve/CVE-2009-4273.html" source="CVE" />
+    <reference ref_id="CVE-2010-0411" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-0411.html" source="CVE" />
+    <description>Multiple integer signedness errors in the (1) __get_argv and (2) __get_compat_argv functions in tapset/aux_syscalls.stp in SystemTap 1.1 allow local users to cause a denial of service (script crash, or system crash or hang) via a process with a large number of arguments, leading to a buffer overflow.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-15T12:48:40">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-15T12:46:01.513-05:00">DRAFT</status_change>
+        <status_change date="2014-02-03T04:03:35.371-05:00">INTERIM</status_change>
+        <status_change date="2014-02-24T04:01:52.756-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Redhat 5 or Centos 5 release" operator="OR">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 5" definition_ref="oval:org.mitre.oval:def:11414" />
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 5.x" definition_ref="oval:org.mitre.oval:def:15802" />
+    </criteria>
+    <criteria comment="Packages section" operator="OR">
+      <criterion comment="systemtap-runtime is earlier than 0:0.9.7-5.el5_4.3" test_ref="oval:org.mitre.oval:tst:98847" />
+      <criterion comment="systemtap-testsuite is earlier than 0:0.9.7-5.el5_4.3" test_ref="oval:org.mitre.oval:tst:99032" />
+      <criterion comment="systemtap is earlier than 0:0.9.7-5.el5_4.3" test_ref="oval:org.mitre.oval:tst:99265" />
+      <criterion comment="systemtap-sdt-devel is earlier than 0:0.9.7-5.el5_4.3" test_ref="oval:org.mitre.oval:tst:99268" />
+      <criterion comment="systemtap-client is earlier than 0:0.9.7-5.el5_4.3" test_ref="oval:org.mitre.oval:tst:99189" />
+      <criterion comment="systemtap-initscript is earlier than 0:0.9.7-5.el5_4.3" test_ref="oval:org.mitre.oval:tst:99216" />
+      <criterion comment="systemtap-server is earlier than 0:0.9.7-5.el5_4.3" test_ref="oval:org.mitre.oval:tst:99101" />
+    </criteria>
+  </criteria>
+</definition>

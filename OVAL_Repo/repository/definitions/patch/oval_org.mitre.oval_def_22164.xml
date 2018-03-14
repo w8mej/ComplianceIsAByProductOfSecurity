@@ -1,0 +1,39 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:22164" version="66">
+  <metadata>
+    <title>RHSA-2010:0819: pam security update (Moderate)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 5</platform>
+      <platform>CentOS Linux 5</platform>
+      <product>pam</product>
+    </affected>
+    <reference ref_id="RHSA-2010:0819-01" ref_url="https://rhn.redhat.com/errata/RHSA-2010-0819.html" source="VENDOR" />
+    <reference ref_id="CESA-2010:0819" source="CESA" />
+    <reference ref_id="CVE-2010-3316" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-3316.html" source="CVE" />
+    <reference ref_id="CVE-2010-3435" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-3435.html" source="CVE" />
+    <reference ref_id="CVE-2010-3853" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-3853.html" source="CVE" />
+    <reference ref_id="CVE-2010-4707" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-4707.html" source="CVE" />
+    <description>The check_acl function in pam_xauth.c in the pam_xauth module in Linux-PAM (aka pam) 1.1.2 and earlier does not verify that a certain ACL file is a regular file, which might allow local users to cause a denial of service (resource consumption) via a special file.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-15T12:48:40">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-15T12:46:09.188-05:00">DRAFT</status_change>
+        <status_change date="2014-02-03T04:04:28.309-05:00">INTERIM</status_change>
+        <status_change date="2014-02-24T04:02:51.703-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Redhat 5 or Centos 5 release" operator="OR">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 5" definition_ref="oval:org.mitre.oval:def:11414" />
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 5.x" definition_ref="oval:org.mitre.oval:def:15802" />
+    </criteria>
+    <criteria comment="Packages section" operator="OR">
+      <criterion comment="pam-devel is earlier than 0:0.99.6.2-6.el5_5.2" test_ref="oval:org.mitre.oval:tst:99771" />
+      <criterion comment="pam is earlier than 0:0.99.6.2-6.el5_5.2" test_ref="oval:org.mitre.oval:tst:99700" />
+    </criteria>
+  </criteria>
+</definition>

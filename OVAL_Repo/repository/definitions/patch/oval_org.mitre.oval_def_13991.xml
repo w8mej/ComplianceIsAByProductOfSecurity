@@ -1,0 +1,56 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:13991" version="28">
+  <metadata>
+    <title>USN-1122-1 -- thunderbird vulnerabilities</title>
+    <affected family="unix">
+      <platform>Ubuntu 10.10</platform>
+      <platform>Ubuntu 10.04</platform>
+      <product>thunderbird</product>
+    </affected>
+    <reference ref_id="USN-1122-1" ref_url="https://lists.ubuntu.com/archives/ubuntu-security-announce/2011-May/001340.html" source="VENDOR" />
+    <reference ref_id="CVE-2011-0081" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0081" source="CVE" />
+    <reference ref_id="CVE-2011-0069" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0069" source="CVE" />
+    <reference ref_id="CVE-2011-0070" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0070" source="CVE" />
+    <reference ref_id="CVE-2011-0080" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0080" source="CVE" />
+    <reference ref_id="CVE-2011-0074" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0074" source="CVE" />
+    <reference ref_id="CVE-2011-0075" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0075" source="CVE" />
+    <reference ref_id="CVE-2011-0077" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0077" source="CVE" />
+    <reference ref_id="CVE-2011-0078" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0078" source="CVE" />
+    <reference ref_id="CVE-2011-0072" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0072" source="CVE" />
+    <reference ref_id="CVE-2011-0065" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0065" source="CVE" />
+    <reference ref_id="CVE-2011-0066" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0066" source="CVE" />
+    <reference ref_id="CVE-2011-0073" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0073" source="CVE" />
+    <reference ref_id="CVE-2011-0067" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0067" source="CVE" />
+    <reference ref_id="CVE-2011-0071" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0071" source="CVE" />
+    <reference ref_id="CVE-2011-1202" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1202" source="CVE" />
+    <description>thunderbird: mail/news client with RSS and integrated spam filter support Thunderbird could be made to run programs as your login if it opened specially crafted mail.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2011-10-18T15:55:55">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2011-11-02T16:12:36.235-04:00">DRAFT</status_change>
+        <status_change date="2011-11-21T04:12:55.495-05:00">INTERIM</status_change>
+        <status_change date="2011-12-12T04:10:06.405-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:13991 - added CVE references; also made minor updates" date="2014-06-13T15:11:00.891-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-13T15:14:02.026-04:00">INTERIM</status_change>
+        <status_change date="2014-06-30T04:04:39.836-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.10 is installed" definition_ref="oval:org.mitre.oval:def:13134" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criterion comment="thunderbird DPKG is earlier than 3.1.10+build1+nobinonly-0ubuntu0.10.10.1" test_ref="oval:org.mitre.oval:tst:75096" />
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.04 is installed" definition_ref="oval:org.mitre.oval:def:13089" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criterion comment="thunderbird DPKG is earlier than 3.1.10+build1+nobinonly-0ubuntu0.10.04.1" test_ref="oval:org.mitre.oval:tst:74791" />
+    </criteria>
+  </criteria>
+</definition>

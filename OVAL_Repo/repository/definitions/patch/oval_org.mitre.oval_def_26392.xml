@@ -1,0 +1,40 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:26392" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2014-0474 -- struts security update (important)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 5</platform>
+      <product>struts</product>
+    </affected>
+    <reference ref_id="ELSA-2014-0474" ref_url="http://linux.oracle.com/errata/ELSA-2014-0474.html" source="VENDOR" />
+    <reference ref_id="CVE-2014-0114" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0114" source="CVE" />
+    <description>[1.2.9-4jpp.7]
+- Resolves: rhbz#1092457
+- CVE-2014-0114: Fixed ClassLoader manipulation vulnerability
+- Added dist tag to release</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:21:52">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T17:44:26.418-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:00:20.098-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:00:08.943-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T21:47:29.994-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T21:47:29.994-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 5.x" definition_ref="oval:org.mitre.oval:def:15459" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="struts is earlier than 0:1.2.9-4jpp.8.el5_10" test_ref="oval:org.mitre.oval:tst:127365" />
+      <criterion comment="struts-javadoc is earlier than 0:1.2.9-4jpp.8.el5_10" test_ref="oval:org.mitre.oval:tst:127608" />
+      <criterion comment="struts-manual is earlier than 0:1.2.9-4jpp.8.el5_10" test_ref="oval:org.mitre.oval:tst:127712" />
+      <criterion comment="struts-webapps-tomcat5 is earlier than 0:1.2.9-4jpp.8.el5_10" test_ref="oval:org.mitre.oval:tst:127431" />
+    </criteria>
+  </criteria>
+</definition>

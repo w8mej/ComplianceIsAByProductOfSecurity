@@ -1,0 +1,61 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27081" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2014-0027 -- java-1.7.0-openjdk security update (important)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 5</platform>
+      <product>java-1.7.0-openjdk</product>
+    </affected>
+    <reference ref_id="ELSA-2014-0027" ref_url="http://linux.oracle.com/errata/ELSA-2014-0027.html" source="VENDOR" />
+    <reference ref_id="CVE-2013-5878" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5878" source="CVE" />
+    <reference ref_id="CVE-2013-5884" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5884" source="CVE" />
+    <reference ref_id="CVE-2013-5893" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5893" source="CVE" />
+    <reference ref_id="CVE-2013-5896" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5896" source="CVE" />
+    <reference ref_id="CVE-2013-5907" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5907" source="CVE" />
+    <reference ref_id="CVE-2013-5910" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5910" source="CVE" />
+    <reference ref_id="CVE-2014-0368" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0368" source="CVE" />
+    <reference ref_id="CVE-2014-0373" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0373" source="CVE" />
+    <reference ref_id="CVE-2014-0376" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0376" source="CVE" />
+    <reference ref_id="CVE-2014-0411" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0411" source="CVE" />
+    <reference ref_id="CVE-2014-0416" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0416" source="CVE" />
+    <reference ref_id="CVE-2014-0422" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0422" source="CVE" />
+    <reference ref_id="CVE-2014-0423" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0423" source="CVE" />
+    <reference ref_id="CVE-2014-0428" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0428" source="CVE" />
+    <description>[1.7.0.51-2.4.4.1.0.1.el5_10]
+- Add oracle-enterprise.patch
+- Fix DISTRO_NAME to 'Enterprise Linux'
+
+[1.7.0.51-2.4.4.1.el5]
+- updated to security icedtea 2.4.4
+ - icedtea_version set to 2.4.4
+ - updatever bumped to       51
+ - release reset to 1
+- build requires: java-devel &gt;= 1:1.6.0 changed java7-devel
+- Resolves: rhbz#1050192</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:22:09">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T17:51:27.715-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:02:07.984-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:00:46.284-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T16:22:58.175-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T16:22:58.175-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 5.x" definition_ref="oval:org.mitre.oval:def:15459" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="java-1.7.0-openjdk is earlier than 0:1.7.0.51-2.4.4.1.0.1.el5_10" test_ref="oval:org.mitre.oval:tst:127769" />
+      <criterion comment="java-1.7.0-openjdk-demo is earlier than 0:1.7.0.51-2.4.4.1.0.1.el5_10" test_ref="oval:org.mitre.oval:tst:128188" />
+      <criterion comment="java-1.7.0-openjdk-devel is earlier than 0:1.7.0.51-2.4.4.1.0.1.el5_10" test_ref="oval:org.mitre.oval:tst:127727" />
+      <criterion comment="java-1.7.0-openjdk-javadoc is earlier than 0:1.7.0.51-2.4.4.1.0.1.el5_10" test_ref="oval:org.mitre.oval:tst:127996" />
+      <criterion comment="java-1.7.0-openjdk-src is earlier than 0:1.7.0.51-2.4.4.1.0.1.el5_10" test_ref="oval:org.mitre.oval:tst:127980" />
+    </criteria>
+  </criteria>
+</definition>

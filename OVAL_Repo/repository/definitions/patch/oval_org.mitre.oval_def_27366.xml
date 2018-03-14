@@ -1,0 +1,66 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27366" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2013-1812 -- firefox security update (critical)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 5</platform>
+      <platform>Oracle Linux 6</platform>
+      <product>firefox</product>
+    </affected>
+    <reference ref_id="ELSA-2013-1812" ref_url="http://linux.oracle.com/errata/ELSA-2013-1812.html" source="VENDOR" />
+    <reference ref_id="CVE-2013-5609" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5609" source="CVE" />
+    <reference ref_id="CVE-2013-5612" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5612" source="CVE" />
+    <reference ref_id="CVE-2013-5613" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5613" source="CVE" />
+    <reference ref_id="CVE-2013-5614" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5614" source="CVE" />
+    <reference ref_id="CVE-2013-5616" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5616" source="CVE" />
+    <reference ref_id="CVE-2013-5618" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-5618" source="CVE" />
+    <reference ref_id="CVE-2013-6671" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6671" source="CVE" />
+    <description>[24.2.0-1.0.1.el6_4]
+- Add firefox-oracle-default-prefs.js and remove the corresponding Red Hat one
+- Build with nspr-devel &gt;= 4.10.0 to fix build failure
+
+[24.2.0-1]
+- Update to 24.2.0 ESR
+
+[24.1.0-4]
+- Fixed mozbz#938730 - avoid mix of memory allocators (crashes)
+  when using system sqlite
+
+[24.1.0-3]
+- Fixed locale pickup (rhbz#1034541)
+
+[24.1.0-2]
+- Fixed package reinstall issue
+
+[24.1.0-1]
+- Update to 24.1.0 ESR
+
+[24.0-0.1]
+- Update to 24.0 ESR</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:22:13">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T17:51:26.674-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:04:00.881-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:01:37.525-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T12:29:48.438-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T12:29:48.438-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Oracle Linux 5 release section">
+      <extend_definition comment="Oracle Linux 5.x" definition_ref="oval:org.mitre.oval:def:15459" />
+      <criterion comment="firefox is earlier than 0:24.2.0-1.0.1.el5_10" test_ref="oval:org.mitre.oval:tst:128312" />
+    </criteria>
+    <criteria comment="Oracle Linux 6 release section">
+      <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+      <criterion comment="firefox is earlier than 0:24.2.0-1.0.1.el6_5" test_ref="oval:org.mitre.oval:tst:127750" />
+    </criteria>
+  </criteria>
+</definition>

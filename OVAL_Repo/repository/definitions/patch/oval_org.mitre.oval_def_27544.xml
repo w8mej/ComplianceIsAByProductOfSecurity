@@ -1,0 +1,58 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27544" version="16">
+  <metadata>
+    <title>DEPRECATED: ELSA-2013-0277 -- dnsmasq security, bug fix and enhancement update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>dnsmasq</product>
+    </affected>
+    <reference ref_id="ELSA-2013-0277" ref_url="http://linux.oracle.com/errata/ELSA-2013-0277.html" source="VENDOR" />
+    <reference ref_id="CVE-2012-3411" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3411" source="CVE" />
+    <description>[2.48-13]
+- Fix the DHCP RELEASE problem when two or more dnsmasq instances are running (rhbz#887156)
+
+[2.48-12]
+- Fixing initscript restart stop functions (rhbz#850944)
+
+[2.48-11]
+- Revert previous changes because of many problems with --bind-dynamic option backport.
+- Dropping dnsmasq-2.48-add-bind-dynamic-option.patch
+- Set SO_BINDTODEVICE socket option when using --bind-interfaces (rhbz#884957)
+
+[2.48-10]
+- Fixed dnsmasq-2.48-add-bind-dynamic-option.patch
+ - the option --bind-dynamic was not set correctly when used
+
+[2.48-9]
+- Added cc flag -fno-strict-aliasing to solve Testsuite regressions
+
+[2.48-8]
+- Fix CVE-2012-3411 (rhbz#882251)
+
+[2.48-7]
+- Fix lease-change script (rhbz#815819)
+- Check tftp-root exists and is accessible at startup (rhbz#824214)</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:23:56">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:14:37.792-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:05:00.198-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:02:12.520-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T11:27:27.780-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T11:27:27.780-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="dnsmasq is earlier than 0:2.48-13.el6" test_ref="oval:org.mitre.oval:tst:130328" />
+      <criterion comment="dnsmasq-utils is earlier than 0:2.48-13.el6" test_ref="oval:org.mitre.oval:tst:129534" />
+    </criteria>
+  </criteria>
+</definition>

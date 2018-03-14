@@ -1,0 +1,7 @@
+NOTICE: All sunset content has been removed from the SRG-STIG Library Compilations 
+to prevent outdated requirements being imported into STIG Viewer 
+when the compilation is opened with the app. 
+
+All sunset content is available from IASE at the following link:
+http://iase.disa.mil/stigs/sunset/Pages/index.aspx
+

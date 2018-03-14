@@ -1,0 +1,34 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27685" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2010-0567 -- lvm2-cluster security update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 5</platform>
+      <product>lvm2-cluster</product>
+    </affected>
+    <reference ref_id="ELSA-2010-0567" ref_url="http://linux.oracle.com/errata/ELSA-2010-0567.html" source="VENDOR" />
+    <reference ref_id="CVE-2010-2526" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2526" source="CVE" />
+    <description>[2.02.56-el5_5.4]
+- CVE-2010-2526: Fix insecurity when communicating between lvm2 and clvmd.
+  Resolves: #616044</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:26:08">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T19:06:09.253-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:05:38.651-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:02:38.189-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T20:40:59.890-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T20:40:59.890-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 5.x" definition_ref="oval:org.mitre.oval:def:15459" />
+    <criterion comment="lvm2-cluster is earlier than 0:2.02.56-7.el5_5.4" test_ref="oval:org.mitre.oval:tst:134908" />
+  </criteria>
+</definition>

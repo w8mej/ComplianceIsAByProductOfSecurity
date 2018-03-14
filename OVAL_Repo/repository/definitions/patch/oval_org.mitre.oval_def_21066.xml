@@ -1,0 +1,50 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:21066" version="58">
+  <metadata>
+    <title>RHSA-2013:0512: httpd security, bug fix, and enhancement update (Low)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 6</platform>
+      <platform>CentOS Linux 6</platform>
+      <product>httpd</product>
+    </affected>
+    <reference ref_id="RHSA-2013:0512-02" ref_url="https://rhn.redhat.com/errata/RHSA-2013-0512.html" source="VENDOR" />
+    <reference ref_id="CESA-2013:0512" source="CESA" />
+    <reference ref_id="CVE-2008-0455" ref_url="https://www.redhat.com/security/data/cve/CVE-2008-0455.html" source="CVE" />
+    <reference ref_id="CVE-2012-2687" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-2687.html" source="CVE" />
+    <reference ref_id="CVE-2012-4557" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-4557.html" source="CVE" />
+    <description>The mod_proxy_ajp module in the Apache HTTP Server 2.2.12 through 2.2.21 places a worker node into an error state upon detection of a long request-processing time, which allows remote attackers to cause a denial of service (worker consumption) via an expensive request.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-09T13:03:25">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-10T12:59:03.184-05:00">DRAFT</status_change>
+        <status_change date="2014-01-27T04:00:59.118-05:00">INTERIM</status_change>
+        <status_change date="2014-02-17T04:01:10.361-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Redhat 6 section" operator="AND">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 6" definition_ref="oval:org.mitre.oval:def:20273" />
+      <criteria comment="Packages section" operator="OR">
+        <criterion comment="httpd-devel is earlier than 0:2.2.15-26.el6" test_ref="oval:org.mitre.oval:tst:90533" />
+        <criterion comment="httpd-tools is earlier than 0:2.2.15-26.el6" test_ref="oval:org.mitre.oval:tst:90384" />
+        <criterion comment="httpd-manual is earlier than 0:2.2.15-26.el6" test_ref="oval:org.mitre.oval:tst:90558" />
+        <criterion comment="mod_ssl is earlier than 0:2.2.15-26.el6" test_ref="oval:org.mitre.oval:tst:90210" />
+        <criterion comment="httpd is earlier than 0:2.2.15-26.el6" test_ref="oval:org.mitre.oval:tst:90534" />
+      </criteria>
+    </criteria>
+    <criteria comment="Centos 6 section" operator="AND">
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 6.x" definition_ref="oval:org.mitre.oval:def:16337" />
+      <criteria comment="Packages section" operator="OR">
+        <criterion comment="httpd-devel is earlier than 0:2.2.15-26.el6.centos" test_ref="oval:org.mitre.oval:tst:92152" />
+        <criterion comment="httpd-tools is earlier than 0:2.2.15-26.el6.centos" test_ref="oval:org.mitre.oval:tst:91922" />
+        <criterion comment="httpd-manual is earlier than 0:2.2.15-26.el6.centos" test_ref="oval:org.mitre.oval:tst:91442" />
+        <criterion comment="mod_ssl is earlier than 0:2.2.15-26.el6.centos" test_ref="oval:org.mitre.oval:tst:91284" />
+        <criterion comment="httpd is earlier than 0:2.2.15-26.el6.centos" test_ref="oval:org.mitre.oval:tst:92214" />
+      </criteria>
+    </criteria>
+  </criteria>
+</definition>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HasRemovalPasscode</key>
+	<false/>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Configures Managed Domains</string>
+			<key>PayloadDisplayName</key>
+			<string>Domains</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.domains.D515A04C-0410-47E7-AA09-4197B67760D0</string>
+			<key>PayloadType</key>
+			<string>com.apple.domains</string>
+			<key>PayloadUUID</key>
+			<string>D515A04C-0410-47E7-AA09-4197B67760D0</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>WebDomains</key>
+			<array>
+				<string>*.mil</string>
+			</array>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>This profile will insure all DoD web sites (*.mil) will be desinated as "managed" so downloaded data will be managed.</string>
+	<key>PayloadDisplayName</key>
+	<string>DoD Managed Domain Configuration</string>
+	<key>PayloadIdentifier</key>
+	<string>w801834batq.local.A63904C9-2B3A-4EF2-87BF-EBC3340BA497</string>
+	<key>PayloadRemovalDisallowed</key>
+	<true/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>48500255-DE00-48D6-B4C3-EB8275FE7571</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

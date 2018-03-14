@@ -1,0 +1,52 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:27942" version="15">
+  <metadata>
+    <title>ELSA-2011-1749 -- libxml2 security and bug fix update (low)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>libxml2</product>
+    </affected>
+    <reference ref_id="ELSA-2011-1749" ref_url="http://linux.oracle.com/errata/ELSA-2011-1749.html" source="VENDOR" />
+    <reference ref_id="CVE-2010-4008" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4008" source="CVE" />
+    <reference ref_id="CVE-2010-4494" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-4494" source="CVE" />
+    <reference ref_id="CVE-2011-0216" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0216" source="CVE" />
+    <reference ref_id="CVE-2011-1944" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1944" source="CVE" />
+    <reference ref_id="CVE-2011-2821" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2821" source="CVE" />
+    <reference ref_id="CVE-2011-2834" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2834" source="CVE" />
+    <description>[2.7.6-4.0.1.el6]
+- Update doc/redhat.gif in tarball
+- Add libxml2-oracle-enterprise.patch and update logos in tarball
+
+[2.7.6-4]
+- Fixes another XPath problem CVE-2011-2834
+- Resolves: rhbz#732335
+
+[2.7.6-3]
+- Fixes various other issues in 2.7.6 XPath evaluation
+- Resolves: rhbz#732335
+
+[2.7.6-2]
+- Fix a potential crasher in XPath or XSLT, CVE-2011-1944
+- Resolves: rhbz#710397</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:25:26">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:53:15.311-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:06:53.992-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:03:15.758-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="libxml2 is earlier than 0:2.7.6-4.0.1.el6" test_ref="oval:org.mitre.oval:tst:133100" />
+      <criterion comment="libxml2-devel is earlier than 0:2.7.6-4.0.1.el6" test_ref="oval:org.mitre.oval:tst:132999" />
+      <criterion comment="libxml2-python is earlier than 0:2.7.6-4.0.1.el6" test_ref="oval:org.mitre.oval:tst:132966" />
+      <criterion comment="libxml2-static is earlier than 0:2.7.6-4.0.1.el6" test_ref="oval:org.mitre.oval:tst:133027" />
+    </criteria>
+  </criteria>
+</definition>

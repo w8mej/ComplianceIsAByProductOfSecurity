@@ -1,0 +1,63 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:27293" version="14">
+  <metadata>
+    <title>ELSA-2014-0865 -- tomcat6 security and bug fix update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>tomcat6</product>
+    </affected>
+    <reference ref_id="ELSA-2014-0865" ref_url="http://linux.oracle.com/errata/ELSA-2014-0865.html" source="VENDOR" />
+    <reference ref_id="CVE-2014-0075" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0075" source="CVE" />
+    <reference ref_id="CVE-2014-0096" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0096" source="CVE" />
+    <reference ref_id="CVE-2014-0099" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0099" source="CVE" />
+    <description>[0:6.0.24-72]
+- Related: CVE-2014-0075 - rebuild to generate javadoc
+- correctly. previous build generated 0-length javadoc
+
+[0:6.0.24-69]
+- Related: CVE-2014-0075 incomplete
+
+[0:6.0.24-68]
+- Related: CVE-2013-4322. arches needs to be specified
+- as in arches noarch, so docs/webapps will produce
+- full files. building for ppc will generate empty
+- javadoc.
+
+[0:6.0.24-67]
+- Related: CVE-2014-0050
+- Related: CVE-2013-4322
+
+[0:6.0.24-66]
+- Resolves: CVE-2014-0099
+- Resolves: CVE-2014-0096
+- Resolves: CVE-2014-0075
+
+[0:6.0.24-65]
+- Related: CVE-2014-0050 copy paste error</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:21:43">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T17:29:27.684-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:03:30.039-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:01:22.381-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="tomcat6 is earlier than 0:6.0.24-72.el6_5" test_ref="oval:org.mitre.oval:tst:127444" />
+      <criterion comment="tomcat6-admin-webapps is earlier than 0:6.0.24-72.el6_5" test_ref="oval:org.mitre.oval:tst:127367" />
+      <criterion comment="tomcat6-docs-webapp is earlier than 0:6.0.24-72.el6_5" test_ref="oval:org.mitre.oval:tst:127014" />
+      <criterion comment="tomcat6-el-2.1-api is earlier than 0:6.0.24-72.el6_5" test_ref="oval:org.mitre.oval:tst:127449" />
+      <criterion comment="tomcat6-javadoc is earlier than 0:6.0.24-72.el6_5" test_ref="oval:org.mitre.oval:tst:127258" />
+      <criterion comment="tomcat6-jsp-2.1-api is earlier than 0:6.0.24-72.el6_5" test_ref="oval:org.mitre.oval:tst:127141" />
+      <criterion comment="tomcat6-lib is earlier than 0:6.0.24-72.el6_5" test_ref="oval:org.mitre.oval:tst:127005" />
+      <criterion comment="tomcat6-servlet-2.5-api is earlier than 0:6.0.24-72.el6_5" test_ref="oval:org.mitre.oval:tst:127368" />
+      <criterion comment="tomcat6-webapps is earlier than 0:6.0.24-72.el6_5" test_ref="oval:org.mitre.oval:tst:127494" />
+    </criteria>
+  </criteria>
+</definition>

@@ -1,0 +1,51 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:21195" version="17">
+  <metadata>
+    <title>RHSA-2013:0983: curl security update (Moderate)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 5</platform>
+      <platform>Red Hat Enterprise Linux 6</platform>
+      <platform>CentOS Linux 5</platform>
+      <platform>CentOS Linux 6</platform>
+      <product>curl</product>
+    </affected>
+    <reference ref_id="RHSA-2013:0983-00" ref_url="https://rhn.redhat.com/errata/RHSA-2013-0983.html" source="VENDOR" />
+    <reference ref_id="CESA-2013:0983" source="CESA" />
+    <reference ref_id="CVE-2013-2174" ref_url="https://www.redhat.com/security/data/cve/CVE-2013-2174.html" source="CVE" />
+    <description>Heap-based buffer overflow in the curl_easy_unescape function in lib/escape.c in cURL and libcurl 7.7 through 7.30.0 allows remote attackers to cause a denial of service (application crash) or possibly execute arbitrary code via a crafted string ending in a "%" (percent) character.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-09T13:03:25">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-10T12:58:03.074-05:00">DRAFT</status_change>
+        <status_change date="2014-01-27T04:01:15.083-05:00">INTERIM</status_change>
+        <status_change date="2014-02-17T04:01:30.187-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Operation system section">
+      <criteria comment="Redhat 6 or Centos 6 release" operator="OR">
+        <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 6" definition_ref="oval:org.mitre.oval:def:20273" />
+        <extend_definition comment="The operating system installed on the system is CentOS Linux 6.x" definition_ref="oval:org.mitre.oval:def:16337" />
+      </criteria>
+      <criteria comment="Packages section" operator="OR">
+        <criterion comment="curl is earlier than 0:7.19.7-37.el6_4" test_ref="oval:org.mitre.oval:tst:91403" />
+        <criterion comment="libcurl-devel is earlier than 0:7.19.7-37.el6_4" test_ref="oval:org.mitre.oval:tst:91169" />
+        <criterion comment="libcurl is earlier than 0:7.19.7-37.el6_4" test_ref="oval:org.mitre.oval:tst:91055" />
+      </criteria>
+    </criteria>
+    <criteria comment="Operation system section">
+      <criteria comment="Redhat 5 or Centos 5 release" operator="OR">
+        <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 5" definition_ref="oval:org.mitre.oval:def:11414" />
+        <extend_definition comment="The operating system installed on the system is CentOS Linux 5.x" definition_ref="oval:org.mitre.oval:def:15802" />
+      </criteria>
+      <criteria comment="Packages section" operator="OR">
+        <criterion comment="curl is earlier than 0:7.15.5-17.el5_9" test_ref="oval:org.mitre.oval:tst:91095" />
+        <criterion comment="curl-devel is earlier than 0:7.15.5-17.el5_9" test_ref="oval:org.mitre.oval:tst:91111" />
+      </criteria>
+    </criteria>
+  </criteria>
+</definition>

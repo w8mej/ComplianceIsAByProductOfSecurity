@@ -1,0 +1,46 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27626" version="16">
+  <metadata>
+    <title>DEPRECATED: ELSA-2012-1326 -- freeradius security update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>freeradius</product>
+    </affected>
+    <reference ref_id="ELSA-2012-1326" ref_url="http://linux.oracle.com/errata/ELSA-2012-1326.html" source="VENDOR" />
+    <reference ref_id="CVE-2012-3547" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-3547" source="CVE" />
+    <description>[2.1.12-4]
+- resolves: bug#855316
+  CVE-2012-3547 freeradius: Stack-based buffer overflow by processing
+  certain expiration date fields of a certificate during x509 certificate
+  validation</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:24:20">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:23:23.733-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:05:23.355-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:02:28.403-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T12:52:15.866-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T12:52:15.866-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="freeradius is earlier than 0:2.1.12-4.el6_3" test_ref="oval:org.mitre.oval:tst:130918" />
+      <criterion comment="freeradius-krb5 is earlier than 0:2.1.12-4.el6_3" test_ref="oval:org.mitre.oval:tst:130658" />
+      <criterion comment="freeradius-ldap is earlier than 0:2.1.12-4.el6_3" test_ref="oval:org.mitre.oval:tst:131182" />
+      <criterion comment="freeradius-mysql is earlier than 0:2.1.12-4.el6_3" test_ref="oval:org.mitre.oval:tst:130875" />
+      <criterion comment="freeradius-perl is earlier than 0:2.1.12-4.el6_3" test_ref="oval:org.mitre.oval:tst:131144" />
+      <criterion comment="freeradius-postgresql is earlier than 0:2.1.12-4.el6_3" test_ref="oval:org.mitre.oval:tst:130909" />
+      <criterion comment="freeradius-python is earlier than 0:2.1.12-4.el6_3" test_ref="oval:org.mitre.oval:tst:131088" />
+      <criterion comment="freeradius-unixODBC is earlier than 0:2.1.12-4.el6_3" test_ref="oval:org.mitre.oval:tst:131057" />
+      <criterion comment="freeradius-utils is earlier than 0:2.1.12-4.el6_3" test_ref="oval:org.mitre.oval:tst:131089" />
+    </criteria>
+  </criteria>
+</definition>

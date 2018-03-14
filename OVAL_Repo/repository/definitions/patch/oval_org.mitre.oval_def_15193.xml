@@ -1,0 +1,34 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:15193" version="29">
+  <metadata>
+    <title>DSA-2320-1 dokuwiki -- regression fix</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 5.0</platform>
+      <product>dokuwiki</product>
+    </affected>
+    <reference ref_id="DSA-2320-1" ref_url="http://lists.debian.org/debian-security-announce/2011/msg00197.html" source="VENDOR" />
+    <reference ref_id="CVE-2011-2510" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2510" source="CVE" />
+    <description>The dokuwiki update included in Debian Lenny 5.0.9 to address a cross site scripting issue had a regression rendering links to external websites broken. This update corrects that regression.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2012-03-29T02:10:09-05:00">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2012-03-29T10:56:59.728-04:00">DRAFT</status_change>
+        <status_change date="2012-04-16T04:07:09.199-04:00">INTERIM</status_change>
+        <status_change date="2012-05-07T04:01:31.561-04:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:15193 - Debian Patch Update" date="2014-06-06T17:13:00.482-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-06T17:15:25.146-04:00">INTERIM</status_change>
+        <status_change date="2014-06-23T04:03:35.763-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian GNU/Linux 5.0 is installed" definition_ref="oval:org.mitre.oval:def:6513" />
+    <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+    <criterion comment="dokuwiki DPKG is earlier than 0.0.20080505-4+lenny4" test_ref="oval:org.mitre.oval:tst:78555" />
+  </criteria>
+</definition>

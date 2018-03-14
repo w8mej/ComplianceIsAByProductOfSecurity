@@ -1,0 +1,80 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:21071" version="222">
+  <metadata>
+    <title>RHSA-2012:1482: firefox security update (Critical)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 5</platform>
+      <platform>Red Hat Enterprise Linux 6</platform>
+      <platform>CentOS Linux 5</platform>
+      <platform>CentOS Linux 6</platform>
+      <product>firefox</product>
+      <product>xulrunner</product>
+    </affected>
+    <reference ref_id="RHSA-2012:1482-01" ref_url="https://rhn.redhat.com/errata/RHSA-2012-1482.html" source="VENDOR" />
+    <reference ref_id="CESA-2012:1482" source="CESA" />
+    <reference ref_id="CVE-2012-4201" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-4201.html" source="CVE" />
+    <reference ref_id="CVE-2012-4202" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-4202.html" source="CVE" />
+    <reference ref_id="CVE-2012-4207" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-4207.html" source="CVE" />
+    <reference ref_id="CVE-2012-4209" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-4209.html" source="CVE" />
+    <reference ref_id="CVE-2012-4210" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-4210.html" source="CVE" />
+    <reference ref_id="CVE-2012-4214" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-4214.html" source="CVE" />
+    <reference ref_id="CVE-2012-4215" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-4215.html" source="CVE" />
+    <reference ref_id="CVE-2012-4216" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-4216.html" source="CVE" />
+    <reference ref_id="CVE-2012-5829" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-5829.html" source="CVE" />
+    <reference ref_id="CVE-2012-5830" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-5830.html" source="CVE" />
+    <reference ref_id="CVE-2012-5833" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-5833.html" source="CVE" />
+    <reference ref_id="CVE-2012-5835" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-5835.html" source="CVE" />
+    <reference ref_id="CVE-2012-5839" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-5839.html" source="CVE" />
+    <reference ref_id="CVE-2012-5840" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-5840.html" source="CVE" />
+    <reference ref_id="CVE-2012-5841" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-5841.html" source="CVE" />
+    <reference ref_id="CVE-2012-5842" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-5842.html" source="CVE" />
+    <description>Multiple unspecified vulnerabilities in the browser engine in Mozilla Firefox before 17.0, Firefox ESR 10.x before 10.0.11, Thunderbird before 17.0, Thunderbird ESR 10.x before 10.0.11, and SeaMonkey before 2.14 allow remote attackers to cause a denial of service (memory corruption and application crash) or possibly execute arbitrary code via unknown vectors.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-14T18:40:22">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-15T12:18:41.005-05:00">DRAFT</status_change>
+        <status_change date="2014-02-03T04:01:28.686-05:00">INTERIM</status_change>
+        <status_change date="2014-02-24T04:00:46.000-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Redhat 5 and Centos 5 section" operator="AND">
+      <criteria comment="Redhat 5 or Centos 5 release" operator="OR">
+        <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 5" definition_ref="oval:org.mitre.oval:def:11414" />
+        <extend_definition comment="The operating system installed on the system is CentOS Linux 5.x" definition_ref="oval:org.mitre.oval:def:15802" />
+      </criteria>
+      <criteria comment="Packages section" operator="OR">
+        <criterion comment="xulrunner-devel is earlier than 0:10.0.11-1.el5_8" test_ref="oval:org.mitre.oval:tst:94503" />
+        <criterion comment="xulrunner is earlier than 0:10.0.11-1.el5_8" test_ref="oval:org.mitre.oval:tst:94930" />
+      </criteria>
+    </criteria>
+    <criteria comment="Centos 5 section" operator="AND">
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 5.x" definition_ref="oval:org.mitre.oval:def:15802" />
+      <criterion comment="firefox is earlier than 0:10.0.11-1.el5.centos" test_ref="oval:org.mitre.oval:tst:94533" />
+    </criteria>
+    <criteria comment="Redhat 5 section" operator="AND">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 5" definition_ref="oval:org.mitre.oval:def:11414" />
+      <criterion comment="firefox is earlier than 0:10.0.11-1.el5_8" test_ref="oval:org.mitre.oval:tst:94399" />
+    </criteria>
+    <criteria comment="Redhat 6 section" operator="AND">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 6" definition_ref="oval:org.mitre.oval:def:20273" />
+      <criteria comment="Packages section" operator="OR">
+        <criterion comment="xulrunner-devel is earlier than 0:10.0.11-1.el6_3" test_ref="oval:org.mitre.oval:tst:94944" />
+        <criterion comment="xulrunner is earlier than 0:10.0.11-1.el6_3" test_ref="oval:org.mitre.oval:tst:94847" />
+        <criterion comment="firefox is earlier than 0:10.0.11-1.el6_3" test_ref="oval:org.mitre.oval:tst:94355" />
+      </criteria>
+    </criteria>
+    <criteria comment="Centos 6 section" operator="AND">
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 6.x" definition_ref="oval:org.mitre.oval:def:16337" />
+      <criteria comment="Packages section" operator="OR">
+        <criterion comment="xulrunner-devel is earlier than 0:10.0.11-1.el6.centos" test_ref="oval:org.mitre.oval:tst:94784" />
+        <criterion comment="xulrunner is earlier than 0:10.0.11-1.el6.centos" test_ref="oval:org.mitre.oval:tst:94666" />
+        <criterion comment="firefox is earlier than 0:10.0.11-1.el6.centos" test_ref="oval:org.mitre.oval:tst:94518" />
+      </criteria>
+    </criteria>
+  </criteria>
+</definition>

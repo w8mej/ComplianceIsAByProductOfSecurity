@@ -1,0 +1,33 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:20369" version="6">
+  <metadata>
+    <title>DSA-1476-1 pulseaudio - programming error</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 4.0</platform>
+      <product>pulseaudio</product>
+    </affected>
+    <reference ref_id="DSA-1476-1" ref_url="http://www.debian.org/security/dsa-1476-1" source="VENDOR" />
+    <reference ref_id="CVE-2008-0008" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-0008" source="CVE" />
+    <description>Marcus Meissner discovered that the PulseAudio sound server performed insufficient checks when dropping privileges, which could lead to local privilege escalation.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2013-12-06T10:23:17">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2013-12-06T14:49:29.020-05:00">DRAFT</status_change>
+        <status_change date="2013-12-23T04:01:43.896-05:00">INTERIM</status_change>
+        <status_change date="2014-01-13T04:01:24.629-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:20369 - Debian Patch Update" date="2014-06-06T17:22:00.920-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-06T17:24:14.481-04:00">INTERIM</status_change>
+        <status_change date="2014-06-23T04:07:17.769-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian GNU/Linux 4.0 is installed." definition_ref="oval:org.mitre.oval:def:6461" />
+    <criterion comment="pulseaudio DPKG is earlier than 0:0.9.5-5etch1" test_ref="oval:org.mitre.oval:tst:89561" />
+  </criteria>
+</definition>

@@ -1,0 +1,27 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:19839" version="4">
+  <metadata>
+    <title>DSA-1494-1 linux-2.6 - privilege escalation</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 4.0</platform>
+      <product>linux-2.6</product>
+    </affected>
+    <reference ref_id="DSA-1494-1" ref_url="http://www.debian.org/security/dsa-1494-1" source="VENDOR" />
+    <description>The vmsplice system call did not properly verify address arguments passed by user space processes, which allowed local attackers to overwrite arbitrary kernel memory, gaining root privileges (&lt;a href="http://security-tracker.debian.org/tracker/CVE-2008-0010"&gt;CVE-2008-0010&lt;/a&gt;, &lt;a href="http://security-tracker.debian.org/tracker/CVE-2008-0600"&gt;CVE-2008-0600&lt;/a&gt;).</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2013-12-06T10:23:16">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2013-12-06T14:49:40.782-05:00">DRAFT</status_change>
+        <status_change date="2013-12-23T04:01:22.369-05:00">INTERIM</status_change>
+        <status_change date="2014-01-13T04:00:46.417-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian GNU/Linux 4.0 is installed." definition_ref="oval:org.mitre.oval:def:6461" />
+    <criterion comment="linux-2.6 DPKG is earlier than 0:2.6.18.dfsg.1-18etch1" test_ref="oval:org.mitre.oval:tst:89449" />
+  </criteria>
+</definition>

@@ -1,0 +1,38 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="inventory" id="oval:org.mitre.oval:def:3780" version="2">
+  <metadata>
+    <title>Package hplip is installed</title>
+    <affected family="unix">
+      <platform>openSUSE 10.2</platform>
+      <platform>SUSE Linux 10.0</platform>
+      <platform>SUSE Linux 10.1</platform>
+      <platform>SUSE Linux Enterprise Desktop 10</platform>
+      <platform>SUSE Linux Enterprise Server 10</platform>
+      <platform>openSUSE Factory</platform>
+    </affected>
+    <reference ref_id="cpe:/a:novell:hplip" source="CPE" />
+    <description>Package hplip is installed.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2007-11-14T16:28:55">
+          <contributor organization="Maitreya Security">Thomas R. Jones</contributor>
+        </submitted>
+        <status_change date="2007-12-14T15:38:22.786-05:00">DRAFT</status_change>
+        <status_change date="2007-12-31T04:00:13.140-05:00">INTERIM</status_change>
+        <status_change date="2008-02-04T10:16:18.668-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <affected_cpe_list>
+        <cpe>cpe:/o:novell:opensuse:10.2</cpe>
+        <cpe>cpe:/o:novell:suse_linux:10.0</cpe>
+        <cpe>cpe:/o:novell:suse_linux:10.1</cpe>
+        <cpe>cpe:/o:novell:suse_linux_enterprise:10:desktop</cpe>
+        <cpe>cpe:/o:novell:suse_linux_enterprise:10:server</cpe>
+        <cpe>cpe:/o:novell:opensuse:factory</cpe>
+      </affected_cpe_list>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criterion comment="hplip is installed" test_ref="oval:org.mitre.oval:tst:6307" />
+  </criteria>
+</definition>

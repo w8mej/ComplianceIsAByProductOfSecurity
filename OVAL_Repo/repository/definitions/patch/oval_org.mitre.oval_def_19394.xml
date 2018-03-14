@@ -1,0 +1,42 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:19394" version="6">
+  <metadata>
+    <title>DSA-1988-1 qt4-x11 - several vulnerabilities</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 5.0</platform>
+      <product>qt4-x11</product>
+    </affected>
+    <reference ref_id="DSA-1988-1" ref_url="http://www.debian.org/security/dsa-1988-1" source="VENDOR" />
+    <reference ref_id="CVE-2009-0945" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-0945" source="CVE" />
+    <reference ref_id="CVE-2009-1687" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1687" source="CVE" />
+    <reference ref_id="CVE-2009-1690" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1690" source="CVE" />
+    <reference ref_id="CVE-2009-1698" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1698" source="CVE" />
+    <reference ref_id="CVE-2009-1699" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1699" source="CVE" />
+    <reference ref_id="CVE-2009-1711" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1711" source="CVE" />
+    <reference ref_id="CVE-2009-1712" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1712" source="CVE" />
+    <reference ref_id="CVE-2009-1713" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1713" source="CVE" />
+    <reference ref_id="CVE-2009-1725" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-1725" source="CVE" />
+    <reference ref_id="CVE-2009-2700" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2009-2700" source="CVE" />
+    <description>Several vulnerabilities have been discovered in qt4-x11, a cross-platform C++ application framework.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2013-12-06T10:22:51">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2013-12-06T14:49:37.755-05:00">DRAFT</status_change>
+        <status_change date="2013-12-23T04:01:07.127-05:00">INTERIM</status_change>
+        <status_change date="2014-01-13T04:00:20.231-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:19394 - Debian Patch Update" date="2014-06-06T17:29:00.238-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-06T17:31:02.984-04:00">INTERIM</status_change>
+        <status_change date="2014-06-23T04:05:36.723-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian GNU/Linux 5.0 is installed" definition_ref="oval:org.mitre.oval:def:6513" />
+    <criterion comment="qt4-x11 DPKG is earlier than 0:4.4.3-1+lenny1" test_ref="oval:org.mitre.oval:tst:89061" />
+  </criteria>
+</definition>

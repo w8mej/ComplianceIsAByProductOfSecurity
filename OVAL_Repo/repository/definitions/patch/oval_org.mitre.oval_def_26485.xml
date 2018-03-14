@@ -1,0 +1,27 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:26485" version="4">
+  <metadata>
+    <title>SUSE-RU-2014:0970-1 -- Recommended update for release-notes-sles</title>
+    <affected family="unix">
+      <platform>SUSE Linux Enterprise Server 11</platform>
+      <product>release-notes-sles</product>
+    </affected>
+    <reference ref_id="SUSE-RU-2014:0970-1" ref_url="https://www.suse.com/support/update/announcement/2014/suse-ru-20140970-1.html" source="VENDOR" />
+    <description>This update provides the latest version of the release notes for SUSE Linux Enterprise Server 11 SP3.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-08-18T12:30:37">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-09-05T14:26:49.276-04:00">DRAFT</status_change>
+        <status_change date="2014-09-22T04:00:57.701-04:00">INTERIM</status_change>
+        <status_change date="2014-10-13T04:00:40.769-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="SUSE Linux Enterprise Server 11.x is installed" definition_ref="oval:org.mitre.oval:def:17270" />
+    <criterion comment="release-notes-sles RPM is earlier than 0:11.3.34-0.7.1" test_ref="oval:org.mitre.oval:tst:122439" />
+  </criteria>
+</definition>

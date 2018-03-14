@@ -1,0 +1,1 @@
+To configure/secure SQL Server 2008 R2, use the SQL Server 2012 STIG. 

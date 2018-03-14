@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type='text/xsl' href='STIG_unclass.xsl'?><Benchmark xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cpe="http://cpe.mitre.org/language/2.0" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:dc="http://purl.org/dc/elements/1.1/" id="MobileIron_Core_v9-x_MDM_STIG" xml:lang="en" xsi:schemaLocation="http://checklists.nist.gov/xccdf/1.1 http://nvd.nist.gov/schema/xccdf-1.1.4.xsd http://cpe.mitre.org/dictionary/2.0 http://cpe.mitre.org/files/cpe-dictionary_2.1.xsd" xmlns="http://checklists.nist.gov/xccdf/1.1"><status date="2017-06-02">accepted</status><title>MobileIron Core v9.x MDM Security Technical Implementation Guide</title><description>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DoD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via e-mail to the following address: disa.stig_spt@mail.mil.</description><notice id="terms-of-use" xml:lang="en"></notice><reference href="http://iase.disa.mil"><dc:publisher>DISA</dc:publisher><dc:source>STIG.DOD.MIL</dc:source></reference><plain-text id="release-info">Release: 3 Benchmark Date: 28 Jul 2017</plain-text><version>1</version><Profile id="MAC-1_Classified"><title>I - Mission Critical Classified</title><description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</description><select idref="V-70517" selected="true" /><select idref="V-70519" selected="true" /><select idref="V-70521" selected="true" /><select idref="V-70523" selected="true" /><select idref="V-70525" selected="true" /><select idref="V-70527" selected="true" /><select idref="V-70529" selected="true" /><select idref="V-70531" selected="true" /><select idref="V-70533" selected="true" /><select idref="V-70535" selected="true" /><select idref="V-70537" selected="true" /><select idref="V-70539" selected="true" /><select idref="V-70541" selected="true" /></Profile><Profile id="MAC-1_Public"><title>I - Mission Critical Public</title><description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</description><select idref="V-70517" selected="true" /><select idref="V-70519" selected="true" /><select idref="V-70521" selected="true" /><select idref="V-70523" selected="true" /><select idref="V-70525" selected="true" /><select idref="V-70527" selected="true" /><select idref="V-70529" selected="true" /><select idref="V-70531" selected="true" /><select idref="V-70533" selected="true" /><select idref="V-70535" selected="true" /><select idref="V-70537" selected="true" /><select idref="V-70539" selected="true" /><select idref="V-70541" selected="true" /></Profile><Profile id="MAC-1_Sensitive"><title>I - Mission Critical Sensitive</title><description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</description><select idref="V-70517" selected="true" /><select idref="V-70519" selected="true" /><select idref="V-70521" selected="true" /><select idref="V-70523" selected="true" /><select idref="V-70525" selected="true" /><select idref="V-70527" selected="true" /><select idref="V-70529" selected="true" /><select idref="V-70531" selected="true" /><select idref="V-70533" selected="true" /><select idref="V-70535" selected="true" /><select idref="V-70537" selected="true" /><select idref="V-70539" selected="true" /><select idref="V-70541" selected="true" /></Profile><Profile id="MAC-2_Classified"><title>II - Mission Support Classified</title><description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</description><select idref="V-70517" selected="true" /><select idref="V-70519" selected="true" /><select idref="V-70521" selected="true" /><select idref="V-70523" selected="true" /><select idref="V-70525" selected="true" /><select idref="V-70527" selected="true" /><select idref="V-70529" selected="true" /><select idref="V-70531" selected="true" /><select idref="V-70533" selected="true" /><select idref="V-70535" selected="true" /><select idref="V-70537" selected="true" /><select idref="V-70539" selected="true" /><select idref="V-70541" selected="true" /></Profile><Profile id="MAC-2_Public"><title>II - Mission Support Public</title><description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</description><select idref="V-70517" selected="true" /><select idref="V-70519" selected="true" /><select idref="V-70521" selected="true" /><select idref="V-70523" selected="true" /><select idref="V-70525" selected="true" /><select idref="V-70527" selected="true" /><select idref="V-70529" selected="true" /><select idref="V-70531" selected="true" /><select idref="V-70533" selected="true" /><select idref="V-70535" selected="true" /><select idref="V-70537" selected="true" /><select idref="V-70539" selected="true" /><select idref="V-70541" selected="true" /></Profile><Profile id="MAC-2_Sensitive"><title>II - Mission Support Sensitive</title><description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</description><select idref="V-70517" selected="true" /><select idref="V-70519" selected="true" /><select idref="V-70521" selected="true" /><select idref="V-70523" selected="true" /><select idref="V-70525" selected="true" /><select idref="V-70527" selected="true" /><select idref="V-70529" selected="true" /><select idref="V-70531" selected="true" /><select idref="V-70533" selected="true" /><select idref="V-70535" selected="true" /><select idref="V-70537" selected="true" /><select idref="V-70539" selected="true" /><select idref="V-70541" selected="true" /></Profile><Profile id="MAC-3_Classified"><title>III - Administrative Classified</title><description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</description><select idref="V-70517" selected="true" /><select idref="V-70519" selected="true" /><select idref="V-70521" selected="true" /><select idref="V-70523" selected="true" /><select idref="V-70525" selected="true" /><select idref="V-70527" selected="true" /><select idref="V-70529" selected="true" /><select idref="V-70531" selected="true" /><select idref="V-70533" selected="true" /><select idref="V-70535" selected="true" /><select idref="V-70537" selected="true" /><select idref="V-70539" selected="true" /><select idref="V-70541" selected="true" /></Profile><Profile id="MAC-3_Public"><title>III - Administrative Public</title><description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</description><select idref="V-70517" selected="true" /><select idref="V-70519" selected="true" /><select idref="V-70521" selected="true" /><select idref="V-70523" selected="true" /><select idref="V-70525" selected="true" /><select idref="V-70527" selected="true" /><select idref="V-70529" selected="true" /><select idref="V-70531" selected="true" /><select idref="V-70533" selected="true" /><select idref="V-70535" selected="true" /><select idref="V-70537" selected="true" /><select idref="V-70539" selected="true" /><select idref="V-70541" selected="true" /></Profile><Profile id="MAC-3_Sensitive"><title>III - Administrative Sensitive</title><description>&lt;ProfileDescription&gt;&lt;/ProfileDescription&gt;</description><select idref="V-70517" selected="true" /><select idref="V-70519" selected="true" /><select idref="V-70521" selected="true" /><select idref="V-70523" selected="true" /><select idref="V-70525" selected="true" /><select idref="V-70527" selected="true" /><select idref="V-70529" selected="true" /><select idref="V-70531" selected="true" /><select idref="V-70533" selected="true" /><select idref="V-70535" selected="true" /><select idref="V-70537" selected="true" /><select idref="V-70539" selected="true" /><select idref="V-70541" selected="true" /></Profile><Group id="V-70517"><title>PP-MDM-204100</title><description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</description><Rule id="SV-85139r1_rule" severity="medium" weight="10.0"><version>MICR-9X-100000</version><title>All MobileIron Core MDM server cryptography supporting DoD functionality must be configured to use FIPS 140-2 validated encryption modules.</title><description>&lt;VulnDiscussion&gt;Unapproved cryptographic algorithms cannot be relied upon to provide confidentiality or integrity, and DoD data could be compromised as a result. The most common vulnerabilities with cryptographic modules are those associated with poor implementation. FIPS 140-2 validation provides assurance that the relevant cryptography has been implemented correctly. FIPS 140-2 validation is also a strict requirement for use of cryptography in the Federal Government for protecting unclassified data.
+
+SFR ID: FCS&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</description><reference><dc:title>DPMS Target MobileIron v9.x MDM</dc:title><dc:publisher>DISA</dc:publisher><dc:type>DPMS Target</dc:type><dc:subject>MobileIron v9.x MDM</dc:subject><dc:identifier>3081</dc:identifier></reference><ident system="http://iase.disa.mil/cci">CCI-002450</ident><fixtext fixref="F-76755r1_fix">Configure the MobileIron Core Server to use a FIPS 140-2 validated cryptographic module.
+
+1. SSH to MobileIron Core Server from any SSH client.
+2. Enter the administrator credentials set up when the MobileIron Core was installed.
+3. Enter "enable".
+4. When prompted, enter the "enable" secret set up when the MobileIron Core was installed.
+5. Enter "configure terminal".
+6. Enter the following command to enable FIPS: "fips"
+7. Enter the following command to proceed with the necessary reload: "do reload"</fixtext><fix id="F-76755r1_fix" /><check system="C-70917r1_chk"><check-content-ref name="M" href="DPMS_XCCDF_Benchmark_MobileIron_Core_v9-x_MDM_STIG.xml" /><check-content>Check the MobileIron Core Server to verify it has been configured to use a FIPS 140-2 validated cryptographic module.
+
+1. SSH to MobileIron Core Server from any SSH client.
+2. Enter the administrator credentials you set when you installed MobileIron Core.
+3. Enter "show fips".
+4. Verify "FIPS 140 mode is enabled" is displayed.
+
+If the MobileIron Server Core does not report that fips mode is enabled, this is a finding.</check-content></check></Rule></Group><Group id="V-70519"><title>PP-MDM-204101</title><description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</description><Rule id="SV-85141r1_rule" severity="medium" weight="10.0"><version>MICR-9X-100010</version><title>The MobileIron Core MDM server must be configured to leverage the MDM Platform user accounts and groups for MDM Server user identification and authentication.</title><description>&lt;VulnDiscussion&gt;A comprehensive account management process that includes automation helps to ensure the accounts designated as requiring attention are consistently and promptly addressed. If an attacker compromises an account, the entire MDM server infrastructure is at risk. Providing automated support functions for the management of accounts will ensure only active accounts will be granted access with the proper authorization levels. These objectives are best achieved by configuring the MDM server to leverage an enterprise authentication mechanism (e.g., Microsoft Active Directory Kerberos). 
+
+SFR ID: FIA&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</description><reference><dc:title>DPMS Target MobileIron v9.x MDM</dc:title><dc:publisher>DISA</dc:publisher><dc:type>DPMS Target</dc:type><dc:subject>MobileIron v9.x MDM</dc:subject><dc:identifier>3081</dc:identifier></reference><ident system="http://iase.disa.mil/cci">CCI-000015</ident><fixtext fixref="F-76757r1_fix">Configure the MobileIron Core Server to leverage the MDM Platform user accounts and groups for MobileIron Core Server user identification and authentication.
+
+1. Login to the MobileIron Core Server administrator portal as a user with the security configuration administrator role using a web browser.
+2. Select "Services" on the web page.
+3. Select "LDAP" on the web page.
+4. Select "Add New" (or click the edit icon on an existing LDAP configuration).
+5. Complete the LDAP configuration dialog providing the URL for the LDAP server, alternate URL if there is a backup LDAP server, user ID and password for the LDAP server, and for additional settings see pg. 45 "Configuring LDAP Servers" of the On-Premise Installation Guide.
+6. Select "Save" to save the LDAP configuration.</fixtext><fix id="F-76757r1_fix" /><check system="C-70919r2_chk"><check-content-ref name="M" href="DPMS_XCCDF_Benchmark_MobileIron_Core_v9-x_MDM_STIG.xml" /><check-content>Review MobileIron Core Server configuration settings to determine if the server is configured to leverage the MDM Platform user accounts and groups for MDM Server user identification and authentication.
+
+Test the MobileIron Core Server LDAP configuration.
+1. Login to the MobileIron Core Server administrator portal as a user with the security configuration administrator role using a web browser.
+2. Select "Services" on the web page.
+3. Select "LDAP" on the web page.
+4. Click the edit icon on an existing LDAP configuration to be tested.
+5. Select "Test" on the LDAP server configuration dialog.
+6. Enter a valid LDAP User ID and optionally Group ID and select "Submit".
+7. Repeat step 6 above and then enter an invalid LDAP user ID and the verification should fail.
+8. Verify successful connection to an LDAP server.
+
+If there is no existing LDAP configuration or the existing configuration does not connect to an LDAP server, this is a finding.</check-content></check></Rule></Group><Group id="V-70521"><title>PP-MDM-201100</title><description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</description><Rule id="SV-85143r1_rule" severity="low" weight="10.0"><version>MICR-9X-100100</version><title>Before establishing a user session, the MobileIron Core MDM server must be configured to display an administrator-specified advisory notice and consent warning message regarding use of the MDM server.</title><description>&lt;VulnDiscussion&gt;Note: The advisory notice and consent warning message is not required if the General Purpose OS or Network Device displays an advisory notice and consent warning message when the administrator logs on to the General Purpose OS or Network Device prior to accessing the MDM server or MDM Server platform.
+
+The MDM server/server platform is required to display the DoD-approved system use notification message or banner before granting access to the system that provides privacy and security notices consistent with applicable federal laws, Executive Orders, directives, policies, regulations, standards, and guidance. This ensures the legal requirements for auditing and monitoring are met. 
+
+The approved DoD text must be used as specified in KS referenced in DoDI 8500.01.
+
+The non-bracketed text below must be used without any changes as the warning banner. 
+
+[A. Use this banner for desktops, laptops, and other devices accommodating banners of 1300 characters. The banner shall be implemented as a click-through banner at logon (to the extent permitted by the operating system), meaning it prevents further activity on the information system unless and until the user executes a positive action to manifest agreement by clicking on a box indicating “OK.”]
+
+You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only. 
+By using this IS (which includes any device attached to this IS), you consent to the following conditions: 
+-The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations. 
+-At any time, the USG may inspect and seize data stored on this IS. 
+-Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any USG-authorized purpose. 
+-This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy. 
+-Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details.
+
+SFR ID: FMT_SMF_EXT.1.1(2) Refinement d.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</description><reference><dc:title>DPMS Target MobileIron v9.x MDM</dc:title><dc:publisher>DISA</dc:publisher><dc:type>DPMS Target</dc:type><dc:subject>MobileIron v9.x MDM</dc:subject><dc:identifier>3081</dc:identifier></reference><ident system="http://iase.disa.mil/cci">CCI-000048</ident><fixtext fixref="F-76759r1_fix">Configure the MobileIron Core Server to display the appropriate warning banner text.
+
+1. Login to the MobileIron Core Server administrator portal as a user with the security configuration administrator role using a web browser.
+2. Select "Settings" on the web page.
+3. Select "General "on the web page.
+4. Select "Login" on the web page.
+5. Check the "Enable Login Text Box" on the web page.
+6. Type the required banner text in the "Text to Display" dialog on the web page.
+7. Select "Save" on the web page.
+
+You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only. 
+By using this IS (which includes any device attached to this IS), you consent to the following conditions: 
+-The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations. 
+-At any time, the USG may inspect and seize data stored on this IS. 
+-Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any USG-authorized purpose. 
+-This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy. 
+-Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details.</fixtext><fix id="F-76759r1_fix" /><check system="C-70921r1_chk"><check-content-ref name="M" href="DPMS_XCCDF_Benchmark_MobileIron_Core_v9-x_MDM_STIG.xml" /><check-content>Review MobileIron Core Server documentation and configuration settings to determine if a warning banner is displayed upon logon and the warning banner is using the appropriate designated wording.
+
+1. Connect to the MobileIron Core Server using SSH.
+2. Type in a user name and press enter. 
+3. Verify the required DoD banner is displayed before the password prompt.
+4. If the banner is not presented or does not have the required text, this is a finding.
+
+1. Connect to the MobileIron Core Server system manager portal using a web browser.
+2. Verify the required banner is displayed on the web page.
+3. If the banner is not presented or does not have the required text, this is a finding.
+
+1. Connect to the MobileIron Core Server administrator portal using a web browser.
+2. Verify the required banner is displayed on the web page.
+3. If the banner is not presented or does not have the required text, this is a finding.
+
+You are accessing a U.S. Government (USG) Information System (IS) that is provided for USG-authorized use only. 
+By using this IS (which includes any device attached to this IS), you consent to the following conditions: 
+-The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing, COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI) investigations. 
+-At any time, the USG may inspect and seize data stored on this IS. 
+-Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search, and may be disclosed or used for any USG-authorized purpose. 
+-This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit or privacy. 
+-Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists, or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details.</check-content></check></Rule></Group><Group id="V-70523"><title>PP-MDM-991000</title><description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</description><Rule id="SV-85145r1_rule" severity="medium" weight="10.0"><version>MICR-9X-100120</version><title>The MobileIron Core MDM server must be configured to block mobile devices that do not have required OS type and version.</title><description>&lt;VulnDiscussion&gt;Unapproved mobile device OS types and versions may have vulnerabilities and need to be prohibited to mitigate these risks to sensitive DoD data and DoD networks.
+
+SFR ID: FMT_SMF.1.1(2) Refinement f.&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</description><reference><dc:title>DPMS Target MobileIron v9.x MDM</dc:title><dc:publisher>DISA</dc:publisher><dc:type>DPMS Target</dc:type><dc:subject>MobileIron v9.x MDM</dc:subject><dc:identifier>3081</dc:identifier></reference><ident system="http://iase.disa.mil/cci">CCI-000366</ident><fixtext fixref="F-76761r1_fix">Configure the MobileIron Core Server to block mobile devices that do not have required OS types and version.
+
+Task 1: Configure Operating Systems allowed to register
+1. Log in to the MobileIron Core Admin Portal. 
+2. In the Admin Portal, go to Settings &gt;&gt; Users &amp; Devices &gt;&gt; Registration
+3. Scroll to the Platforms for Registration section.
+4. In the Enabled Platforms list, select the platforms that are not approved: Windows, etc.
+Note: Shift-click platforms to select more than one.
+5. Click the left arrow button to move the selected platforms to the Disabled Platforms list.
+6. Click Save.
+
+Task 2: Configure OS version alert
+1. Log in to the MobileIron Core Admin Portal.
+2. In the Admin Portal, go to Logs &gt;&gt; Event Settings.
+3. Select Add New &gt;&gt; Policy Violations Event.
+4. Enter a name for the event (for example: OS Event).
+5. For an Android OS version alert: 
+a. In the Security Policy Triggers section, look for the Android heading.
+b. Confirm that the app control alert "Disallowed Android OS version found" is selected.
+6. For an iOS OS version alert: 
+a. In the Security Policy Triggers section, look for the iOS heading.
+b. Confirm that the app control alert "Disallowed iOS version found" is selected. 
+7. Deselect all the other checkboxes on the screen.
+8. In the Apply to Labels section, select the appropriate labels in the Available column, and click the right arrow to move them to the selected column.
+9. Click Save.
+
+Task 3: Define a custom compliance action 
+1. Go to Policies &amp; Configs &gt;&gt; Compliance Actions.
+2. Click Add+ to open the Add Compliance Action dialog.
+3. Enter a name for the compliance action (for example: OS Compliance Alert).
+4. In the Alert section, select Send a compliance notification or alert to the user.
+5. In the Block Access section, select Block email access and AppConnect apps.
+6. In the Quarantine section, select Quarantine.
+7. Select Remove All Configurations.
+8. Select Enforce Compliance Actions Locally on Devices.
+9. Click Save.
+
+Task 4: Set up the security policy to trigger the compliance action when the violations occur:
+1. In Admin Portal, go to Policies &amp; Configs &gt;&gt; Policies.
+2. Select the security policy you want to work with.
+3. Click Edit.
+4. Scroll down to the Access Control section of the Modifying Security Policy dialog.
+8. If the security policy is to be applied to Android devices: 
+a. Under For Android devices, select the checkbox for when Android version is less than.
+b. On the same line, in the dropdown list, select the custom compliance action that you just created.
+c. On the same line, in the dropdown list for Android OS versions, select the appropriate OS version.
+9. If the security policy is to be applied to iOS devices: 
+a. Under For iOS devices, select the checkbox for when iOS version is less than.
+b. On the same line, in the dropdown list, select the custom compliance action that you just created.
+c. On the same line, in the dropdown list for iOS versions, select the appropriate OS version.
+10.Click Save.
+11.Apply the security policy to a label that is also applied to the target devices. Click More Actions &gt;&gt; Apply to Label.</fixtext><fix id="F-76761r1_fix" /><check system="C-70923r1_chk"><check-content-ref name="M" href="DPMS_XCCDF_Benchmark_MobileIron_Core_v9-x_MDM_STIG.xml" /><check-content>Review MobileIron Core Server documentation and configuration settings to determine if the server blocks mobile devices that do not have required OS types and version.
+
+Task 1: Verify only allowed Operating Systems can register
+1. Log in to the MobileIron Core Admin Portal
+2. In the Admin Portal, go to Settings &gt;&gt; Users &amp; Devices &gt;&gt; Registration
+3. Scroll to the Platforms for Registration section.
+4. Verify that only approved operating systems appear in the Enabled Platforms list
+
+Task 2: Verify the configuration of the OS version alert
+1. Log in to the MobileIron Core Admin Portal.
+2. In the Admin Portal, go to Logs &gt;&gt; Event Settings.
+3. Select the Policy Violation Event that has been configured for sending an alert.
+4. Click Edit.
+5. For an Android OS version alert: 
+a. In the Security Policy Triggers section, look for the Android heading.
+b. Confirm that the app control alert "Disallowed Android OS version found" is selected.
+6. For an iOS OS version alert: 
+a. In the Security Policy Triggers section, look for the iOS heading.
+b. Confirm that the app control alert "Disallowed iOS version found" is selected. 
+7. In the Apply to Labels section, verify that the appropriate labels are in the Selected column.
+8. Click Cancel.
+
+Task 3: Verify the custom compliance action
+1. Go to Policies &amp; Configs &gt;&gt; Compliance Actions.
+2. Select the compliance action that was configured for when a required app is not installed.
+3. Click Actions &gt;&gt; Edit.
+4. In the Alert section, verify that “Send a compliance notification or alert to the user” is selected.
+5. In the Block Access section, verify Block email access and AppConnect apps has been selected.
+6. In the Quarantine section, verify the following are selected: 
+a. Quarantine the device
+b. Remove All Configurations
+c. Do not remove Wi-Fi settings for all devices (iOS and Android only)
+7. Verify “Enforce Compliance Actions Locally on Devices” is selected.
+8. Click Cancel.
+
+Task 4: Verify the security policy is set up to trigger the compliance action when violations occur: 
+1. In Admin Portal, go to Policies &amp; Configs &gt;&gt; Policies.
+2. Select the security policy that is to be verified.
+3. Click Edit.
+4. Scroll down to the Access Control section of the Modifying Security Policy dialog.
+5. If the security policy is applied to Android devices:
+a. Under For iOS devices, verify the checkbox for when iOS version is less than is selected.
+b. On the same line, in the dropdown list, verify the custom compliance action that you just created is selected.
+c. On the same line, in the dropdown list for iOS OS versions, verify the appropriate OS version is selected.
+6. If the security policy is applied to iOS devices:
+a. Under For Android devices, verify the checkbox for when Android version is less than is selected.
+b. On the same line, in the dropdown list, verify the custom compliance action that you just created is selected.
+c. On the same line, in the dropdown list for Android OS versions, verify the appropriate OS version is selected.
+7. Click Cancel.
+8. Click More Actions &gt;&gt; Apply to Label.
+9. Verify the appropriate labels are selected.
+10.Close the Apply to Label dialog.
+
+If the MobileIron Core Admin Portal is not configured so that only approved OS types are listed on the "Enabled Platforms" list, or is not configured to alert when disallowed OS versions are found, or “Enforce Compliance Actions Locally on Devices” is not selected, or a compliance trigger is not enabled, this is a finding.</check-content></check></Rule></Group><Group id="V-70525"><title>PP-MDM-203107</title><description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</description><Rule id="SV-85147r1_rule" severity="medium" weight="10.0"><version>MICR-9X-102120</version><title>The MobileIron Core MDM server must be configured to record within each audit record required information: a. date and time of the event; b. type of event; c. mobile device identity; and d. [no other audit relevant information].</title><description>&lt;VulnDiscussion&gt;Audit records must contain basic data fields so they contain enough information to support identification and investigation of attempted or successful compromises. Failure to have these data fields in audit records makes it more difficult to identify or investigate attempted or successful compromises, potentially causing incidents to last longer than necessary.
+
+SFR ID: FAU_GEN.1.2(1) Refinement&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</description><reference><dc:title>DPMS Target MobileIron v9.x MDM</dc:title><dc:publisher>DISA</dc:publisher><dc:type>DPMS Target</dc:type><dc:subject>MobileIron v9.x MDM</dc:subject><dc:identifier>3081</dc:identifier></reference><ident system="http://iase.disa.mil/cci">CCI-000130</ident><ident system="http://iase.disa.mil/cci">CCI-000131</ident><ident system="http://iase.disa.mil/cci">CCI-000134</ident><ident system="http://iase.disa.mil/cci">CCI-000135</ident><ident system="http://iase.disa.mil/cci">CCI-001487</ident><fixtext fixref="F-76763r1_fix">These procedures are the same as MICR-9X-102150. They only have to be performed once.
+
+Configure MobileIron Core Server Common Criteria mode:
+
+1. SSH to MobileIron Core from any SSH client.
+2. Enter the administrator credentials set up when the MobileIron Core was installed.
+3. Enter "enable".
+4. When prompted, enter the "enable" secret set up when the MobileIron Core was installed.
+5. Enter "configure terminal".
+6. Enter "common_criteria_mode".
+7. Enter the following command to proceed with the necessary reload:
+
+do reload
+
+The system will not be reachable until the reboot is complete.</fixtext><fix id="F-76763r1_fix" /><check system="C-70925r1_chk"><check-content-ref name="M" href="DPMS_XCCDF_Benchmark_MobileIron_Core_v9-x_MDM_STIG.xml" /><check-content>These procedures are the same as MICR-9X-102150. They only have to be performed once.
+
+Review MobileIron Core Server documentation and configuration settings to determine if the server is configured to record required audit information.
+
+Check MobileIron Core Server Common Criteria mode:
+
+1. SSH to MobileIron Core from any SSH client.
+2. Enter the administrator credentials set up when the MobileIron Core was installed.
+3. Enter "show common_criteria_mode_status".
+4. The following message should appear: "Common Criteria Mode is enabled".
+
+If on the MobileIron Core server the Common Criteria Mode is not enabled, this is a finding.</check-content></check></Rule></Group><Group id="V-70527"><title>PP-MDM-991000</title><description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</description><Rule id="SV-85149r1_rule" severity="low" weight="10.0"><version>MICR-9X-102130</version><title>The MobileIron Core MDM server must be configured to block mobile devices that do not have required applications installed.</title><description>&lt;VulnDiscussion&gt;The security baseline of managed mobile devices could be compromised if key required applications are not installed, including device monitoring and management applications. This requirement mitigates that risk.
+
+SFR ID: FMT_SMF.1.1(1) Refinement #28&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</description><reference><dc:title>DPMS Target MobileIron v9.x MDM</dc:title><dc:publisher>DISA</dc:publisher><dc:type>DPMS Target</dc:type><dc:subject>MobileIron v9.x MDM</dc:subject><dc:identifier>3081</dc:identifier></reference><ident system="http://iase.disa.mil/cci">CCI-000366</ident><fixtext fixref="F-76765r1_fix">To configure a compliance action that is triggered if a required app is not installed:
+
+Task 1: Configure app control alert 
+1. Log in to the MobileIron Core Admin Portal.
+2. In the Admin Portal, go to Logs &gt;&gt; Event Settings.
+3. Select Add New &gt;&gt; Policy Violations Event.
+4. Enter a name for the event (for example: App Control Alert).
+5. In the Security Policy Triggers section, look for the App Control – All Platforms heading.
+6. Confirm that the app control alert “Required app not found” is selected.
+7. Deselect all the other checkboxes. 
+8. In the Apply to Labels section, select the appropriate labels in the Available column, and click the right arrow to move them to the selected column.
+9. Click Save.
+
+Task 2: Define a custom compliance action 
+1. Go to Policies &amp; Configs &gt;&gt; Compliance Actions.
+2. Click Add+ to open the Add Compliance Action dialog.
+3. Enter a name for the compliance action (for example: Required App Alert).
+4. In the Alert section, select Send a compliance notification or alert to the user.
+5. In the Block Access section, select Block email access and AppConnect apps.
+6. In the Quarantine section, select Quarantine.
+7. Select Remove All Configurations.
+8. Select Enforce Compliance Actions Locally on Devices.
+9. Click Save.
+
+Task 3: Define app control rule
+1. In the Admin Portal, go to Apps &gt;&gt; App Control.
+2. Click Add.
+3. Enter a name for this rule (for example: Required Application(s)). Note: the name cannot be changed once the app control rule is saved.
+4. For the Type option, select Required: (iOS and Android only)
+5. Under Rule Entries for App, select Identifier Equals.
+6. Enter the app ID in the App identifier/Name field.
+7. Select the desired Device Platform (All).
+8. To add another app, click the "+" icon and repeat steps 5 and 6.
+9. Click Save.
+
+Task 4: Apply the app control rule to a security policy
+1. In Admin Portal, go to Policies &amp; Configs &gt;&gt; Policies.
+2. Select the security policy you want to work with.
+3. Click Edit.
+4. Scroll down to the Access Control section of the Modifying Security Policy dialog.
+5. Under the For All Platforms heading, select the checkbox for the app control rules option, which says “when a device violates following App Control rules:”.
+6. In the dropdown list, select the custom compliance action that you just created.
+7. Under Rule Type: Required, select the app control rule that you just created, and click the arrow button to move it to the Enabled list.
+8. Click Save.
+9. Apply the security policy to a label that is also applied to the target devices. Click More Actions &gt;&gt; Apply to Label.</fixtext><fix id="F-76765r1_fix" /><check system="C-70927r1_chk"><check-content-ref name="M" href="DPMS_XCCDF_Benchmark_MobileIron_Core_v9-x_MDM_STIG.xml" /><check-content>Review MobileIron Core Server documentation and configuration settings to determine if the server blocks mobile devices that do not have required applications installed.
+
+Task 1: Verify the configuration of the app control alert
+1. Log in to the MobileIron Core Admin Portal.
+2. In the Admin Portal, go to Logs &gt;&gt; Event Settings.
+3. Select the Policy Violation Event that has been set up for sending an alert.
+4. Click Edit.
+5. In the Security Policy Triggers section, look for the App Control – All Platforms heading.
+6. Confirm that the app control alert “Required app not found” is selected.
+7. In the Apply to Labels section, verify that the appropriate labels are in the Selected column. Note: need to specifically state the "appropriate labels". &lt;-- The labels are admin defined... (this verifies the policy has been applied to the appropriate set of devices).
+8. Click Cancel.
+
+Task 2: Verify the custom compliance action
+1. Go to Policies &amp; Configs &gt;&gt; Compliance Actions.
+2. Select the compliance action that was configured for when a required app is not installed.
+3. Click Actions &gt;&gt; Edit.
+4. In the Alert section, verify that “Send a compliance notification or alert to the user” is selected.
+5. In the Block Access section, verify Block email access and AppConnect apps has been selected.
+6. In the Quarantine section, verify the following are selected: 
+a. Quarantine the device
+b. Remove All Configurations
+c. Do not remove Wi-Fi settings for all devices (iOS and Android only)
+7. Verify “Enforce Compliance Actions Locally on Devices” is selected.
+8. Click Cancel.
+
+Task 3: Verify the app control rule
+1. In the Admin Portal, go to Apps &gt;&gt; App Control.
+2. Select the App Control Rule that was configured for checking that the required app is installed.
+3. Click the edit icon.
+4. Verify that the selected Type option is Required: (iOS and Android only)
+5. Under Rule Entries for App, verify that Identifier Equals is selected.
+6. Verify that the correct app ID is in the App identifier/Name field.
+7. Verify that the desired Device Platform (All) is selected
+8. To verify each additional required app, repeat steps 4 through 6.
+9. Click Cancel.
+
+Task 4: Verify the app control rule in the security policy
+1. In Admin Portal, go to Policies &amp; Configs &gt;&gt; Policies.
+2. Select the security policy you want to work with. Note: this needs more explanation.
+3. Click Edit.
+4. Scroll down to the Access Control section of the Modifying Security Policy dialog.
+5. Under the For All Platforms heading, verify that the checkbox for the app control rules option which says “when a device violates following App Control rules:” is selected.
+6. In the dropdown list, verify the custom compliance action that was created for this purpose was selected.
+7. Under Rule Type: Required, verify that the app control rule created for this purpose is in the Enabled list.
+8. Click Cancel.
+9. Click More Actions &gt;&gt; Apply to Label.
+10.Verify the appropriate labels are selected.
+11.Close the Apply to Label dialog.
+
+If on the MobileIron Core Admin Portal, 
+-For Task 1, if the app control alert “Required app not found” is not selected or the policy has not been applied to the appropriate set of devices (by labels), this is a finding.
+-If the compliance action has not been configured as specified in Task 2, this is a finding.
+-For Task 3, if all required apps are not listed in the App Control Rule and the App Control Rule is not a "Required" type, this is a finding.
+-For Task 4, if the security policy does not map the custom app control rule (Task 3) to the custom compliance action (Task 2), this is a finding.</check-content></check></Rule></Group><Group id="V-70529"><title>PP-MDM-202101</title><description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</description><Rule id="SV-85151r1_rule" severity="medium" weight="10.0"><version>MICR-9X-102150</version><title>The MobileIron Core MDM server must be configured to enable an audit record for the following auditable events: any event selected in the ST under FAU_ALT_EXT.2.1.</title><description>&lt;VulnDiscussion&gt;Failure to generate these audit records makes it more difficult to identify or investigate attempted or successful compromises, potentially causing incidents to last longer than necessary.
+
+SFR ID: FAU_GEN.1.1(1) Refinement&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</description><reference><dc:title>DPMS Target MobileIron v9.x MDM</dc:title><dc:publisher>DISA</dc:publisher><dc:type>DPMS Target</dc:type><dc:subject>MobileIron v9.x MDM</dc:subject><dc:identifier>3081</dc:identifier></reference><ident system="http://iase.disa.mil/cci">CCI-000128</ident><ident system="http://iase.disa.mil/cci">CCI-000129</ident><ident system="http://iase.disa.mil/cci">CCI-000169</ident><ident system="http://iase.disa.mil/cci">CCI-000366</ident><ident system="http://iase.disa.mil/cci">CCI-001571</ident><fixtext fixref="F-76767r1_fix">These procedures are the same as MICR-9X-103107. They only have to be performed once.
+
+Configure MobileIron Core Server Common Criteria mode
+
+1. SSH to MobileIron Core from any SSH client.
+2. Enter the administrator credentials you set when you installed MobileIron Core.
+3. Enter "enable".
+4. When prompted, enter the "enable" secret you set when you installed MobileIron Core.
+5. Enter "configure terminal".
+6. Enter "common_criteria_mode".
+7. Enter the following command to proceed with the necessary reload:
+
+do reload
+
+The system will not be reachable until the reboot is complete.</fixtext><fix id="F-76767r1_fix" /><check system="C-70929r1_chk"><check-content-ref name="M" href="DPMS_XCCDF_Benchmark_MobileIron_Core_v9-x_MDM_STIG.xml" /><check-content>These procedures are the same as MICR-9X-103107. They only have to be performed once.
+
+Review MobileIron Core Server documentation and configuration settings to determine if the server is configured to enable an audit record for the following auditable events: any event selected in the ST under FAU_ALT_EXT.2.1.
+
+Check MobileIron Core Server Common Criteria mode
+1. SSH to MobileIron Core from any SSH client.
+2. Enter the administrator credentials that were set up when the MobileIron Core was installed.
+3. Enter "show common_criteria_mode_status".
+4. The following message should appear: "Common Criteria Mode is enabled".
+
+If on the MobileIron Core server the Common Criteria Mode is not enabled, this is a finding.</check-content></check></Rule></Group><Group id="V-70531"><title>PP-MDM-202105</title><description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</description><Rule id="SV-85153r1_rule" severity="medium" weight="10.0"><version>MICR-9X-104110</version><title>The MobileIron Core MDM server must be configured with the Administrator roles: a. MD user. b. Server primary administrator. c. Security configuration administrator. d. Device user group administrator. e. Auditor.</title><description>&lt;VulnDiscussion&gt;Having several roles for the MDM server supports separation of duties. This allows administrator-level privileges to be granted granularly, such as giving application management privileges to one group and security policy privileges to another group. This helps prevent administrators from intentionally or inadvertently altering other settings and configurations they may not understand or approve of, which can weaken overall security and increase the risk of compromise.
+
+SFR ID: FMT_SMR.1.1(1) Refinement&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</description><reference><dc:title>DPMS Target MobileIron v9.x MDM</dc:title><dc:publisher>DISA</dc:publisher><dc:type>DPMS Target</dc:type><dc:subject>MobileIron v9.x MDM</dc:subject><dc:identifier>3081</dc:identifier></reference><ident system="http://iase.disa.mil/cci">CCI-000366</ident><fixtext fixref="F-76769r1_fix">Configure the MobileIron Core Server with the Administrator roles: 
+
+1. Follow the instructions in the MobileIron Core and Android Client Mobile Device Management Protection Profile Guide beginning on pg. 13 "Configuring administrators to have roles defined by federal requirements":
+1a. Follow the instructions on page 16 "Configuring administrators to be a server primary administrator"
+1b. Follow the instructions on page 17 "Configuring administrators to be a security configuration administrator"
+1c. Follow the instructions on page 21 "Configuring administrators to be a device user group administrator"
+1d. Follow the instructions on page 23 "Configuring administrators to be an auditor"
+2. In each case instructions are provided to create a new user with the identified role.</fixtext><fix id="F-76769r1_fix" /><check system="C-70931r1_chk"><check-content-ref name="M" href="DPMS_XCCDF_Benchmark_MobileIron_Core_v9-x_MDM_STIG.xml" /><check-content>Review the MobileIron Core Server configuration settings, and verify the server is configured with the Administrator roles. 
+
+Note: Reviewers should reference the following document to see which roles must be assigned to each type of server administrator (these are the DoD required roles for each type of administrator): MobileIron Core and Android Client Mobile Device Management Protection Profile Guide.
+
+Note: any user of a registered MD is automatically assigned the MD User role (applicable-Inherently Meets).
+
+1. Verify at least one user is in the Server primary administrator role.
+1a. Login to the MobileIron Core Server's system manager portal as a user with the server primary administrator role using a web browser.
+1b. Select Security &gt;&gt; Identity Source &gt;&gt; Local Users
+1c. Verify at least one user is listed under "Local User". All local users are automatically assigned the Server primary administrator role.
+
+If there are no users in the server primary administrator role, this is a finding.
+
+2. Verify at least one user is in the Security configuration administrator role and has been assigned required roles.
+2a. Login to the MobileIron Core Server's system manager portal as a user with the server primary administrator role using a web browser.
+2b. Select Security &gt;&gt; Identity Source &gt;&gt; Local Users
+2c. Verify a User ID of a user expected to be in the server configuration administrator role is listed. 
+2d. Login to the MobileIron Core Server's administrator portal as a user with the server primary administrator role using a web browser.
+2e. Select Admin &gt;&gt; Admins.
+2f. Find a server configuration administrator user and verify their assigned roles match the DoD definition of server configuration administrator as follows: Select the user and click Actions &gt;&gt; Edit Roles.
+
+If there are no users assigned the server configuration administrator role or the roles assigned to any server configuration administrator user are not correct, this is a finding.
+
+3. Verify a user is in the Device user group administrator role and has been assigned required roles.
+3a. Login to the MobileIron Core Server's system manager portal as a user with the server primary administrator role using a web browser.
+3b. Select Security &gt;&gt; Identity Source &gt;&gt; Local Users
+3c. Verify a User ID of a user expected to be in the Device user group administrator role is listed. 
+3d. Login to the MobileIron Core Server's administrator portal as a user with the server primary administrator role using a web browser.
+3e. Select Admin &gt;&gt; Admins.
+3f. Find a Device user group administrator user and verify their assigned roles match the DoD definition of Device user group administrator as follows: Select the user and click Actions &gt;&gt; Edit Roles.
+
+If there are no users assigned the Device user group administrator role or the roles assigned to any Device user group administrator user are not correct, this is a finding. 
+
+4. Verify a user is in the Auditor role and has been assigned required roles.
+4a. Login to the MobileIron Core Server's system manager portal as a user with the server primary administrator role using a web browser.
+4b. Select Security &gt;&gt; Identity Source &gt;&gt; Local Users
+4c. Verify a User ID of a user expected to be in the Auditor role is listed. 
+4d. Login to the MobileIron Core Server's administrator portal as a user with the server primary administrator role using a web browser.
+4e. Select Admin &gt;&gt; Admins.
+4f. Find an Auditor user and verify their assigned roles match the DoD definition of Device user group administrator as follows: Select the user and click Actions &gt;&gt; Edit Roles.
+
+If there are no users assigned the Auditor role or the roles assigned to any Auditor user are not correct, this is a finding.</check-content></check></Rule></Group><Group id="V-70533"><title>PP-MDM-991000</title><description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</description><Rule id="SV-85155r1_rule" severity="medium" weight="10.0"><version>MICR-9X-110100</version><title>The MobileIron Core MDM server or platform must be configured to initiate a session lock after a 15-minute period of inactivity.</title><description>&lt;VulnDiscussion&gt;A session time-out lock is a temporary action taken when a user stops work and moves away from the immediate physical vicinity of the information system but does not log out because of the temporary nature of the absence. Rather than relying on the user to manually lock their application session prior to vacating the vicinity, applications need to be able to identify when a user's application session has idled and take action to initiate the session lock.
+
+The session lock is implemented at the point where session activity can be determined and/or controlled. This is typically at the operating system-level and results in a system lock but may be at the application-level where the application interface window is secured instead.
+
+SFR ID: FMT_SMF.1.1(1) Refinement&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</description><reference><dc:title>DPMS Target MobileIron v9.x MDM</dc:title><dc:publisher>DISA</dc:publisher><dc:type>DPMS Target</dc:type><dc:subject>MobileIron v9.x MDM</dc:subject><dc:identifier>3081</dc:identifier></reference><ident system="http://iase.disa.mil/cci">CCI-000057</ident><fixtext fixref="F-76771r1_fix">Configure the MobileIron Core Server to initiate a session lock after a 15-minute period of inactivity.
+
+1. Login to the MobileIron Core Server administrator portal as a user with the security configuration administrator role using a web browser.
+2. Select "Settings" on the web page.
+3. Select "General" on the web page.
+4. Select "Timeout "on the web page.
+5. Set the "Idle Session Timeout" value to "15" on the web page.
+6. Select "Save" on the web page.</fixtext><fix id="F-76771r1_fix" /><check system="C-70933r1_chk"><check-content-ref name="M" href="DPMS_XCCDF_Benchmark_MobileIron_Core_v9-x_MDM_STIG.xml" /><check-content>Login to each of the MobileIron Core Server portals (system manager portal and server administrator portal) and wait for 15 minutes without performing any operation.
+
+If the session lock does not occur after 15 minutes of inactivity on each MobileIron Core Server portal, this is a finding.</check-content></check></Rule></Group><Group id="V-70535"><title>PP-MDM-991000</title><description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</description><Rule id="SV-85157r1_rule" severity="medium" weight="10.0"><version>MICR-9X-110130</version><title>The MobileIron Core MDM server platform must be protected by a DoD-approved firewall.</title><description>&lt;VulnDiscussion&gt;Most information systems are capable of providing a wide variety of functions and services. Some of the functions and services provided by default may not be necessary to support essential organizational operations. Unneeded services and processes provide additional threat vectors and avenues of attack to the information system. The MDM server is a critical component of the mobility architecture and must be configured to only those ports, protocols, and services (PPS) necessary to support functionality, all others must be expressly disabled or removed. A DoD-approved firewall implements the required network restrictions. A host-based firewall is appropriate where the MDM server runs on a standalone platform. Network firewalls or other architectures may be preferred where the MDM server runs in a cloud or virtualized solution.
+
+SFR ID: FMT_SMF.1.1(1) Refinement&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</description><reference><dc:title>DPMS Target MobileIron v9.x MDM</dc:title><dc:publisher>DISA</dc:publisher><dc:type>DPMS Target</dc:type><dc:subject>MobileIron v9.x MDM</dc:subject><dc:identifier>3081</dc:identifier></reference><ident system="http://iase.disa.mil/cci">CCI-000382</ident><fixtext fixref="F-76773r1_fix">Install a DoD-approved firewall to protect the network segment the MobileIron Core MDM appliance is installed on.</fixtext><fix id="F-76773r1_fix" /><check system="C-70935r1_chk"><check-content-ref name="M" href="DPMS_XCCDF_Benchmark_MobileIron_Core_v9-x_MDM_STIG.xml" /><check-content>Review the network configuration of the network segment the MobileIron Core MDM server appliance is installed on to determine whether a DoD-approved firewall is installed to filter all IP traffic to/from the MDM appliance.
+
+If there is not a firewall present on the network segment the MobileIron Core MDM server appliance is installed on, or if it is not configured to prohibit or restrict the use of organization-defined functions, ports, protocols, and/or services, as defined in the PPSM CAL and vulnerability assessments, this is a finding.</check-content></check></Rule></Group><Group id="V-70537"><title>PP-MDM-991000</title><description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</description><Rule id="SV-85159r2_rule" severity="medium" weight="10.0"><version>MICR-9X-110140</version><title>The firewall protecting the MobileIron Core MDM server platform must be configured to restrict all network traffic to and from all addresses with the exception of ports, protocols, and IP address ranges required to support MDM server and platform functions.</title><description>&lt;VulnDiscussion&gt;Most information systems are capable of providing a wide variety of functions and services. Some of the functions and services, provided by default, may not be necessary to support essential organizational operations. Since the MDM server is a critical component of the mobility architecture and must be configured to only those ports, protocols, and services (PPS) necessary to support functionality, all others must be expressly disabled or removed. A firewall installed on the MDM server provides a protection mechanism to ensure unwanted service requests do not reach the MDM server and outbound traffic is limited to only MDM server functionality.
+
+SFR ID: FMT_SMF.1.1(1) Refinement&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</description><reference><dc:title>DPMS Target MobileIron v9.x MDM</dc:title><dc:publisher>DISA</dc:publisher><dc:type>DPMS Target</dc:type><dc:subject>MobileIron v9.x MDM</dc:subject><dc:identifier>3081</dc:identifier></reference><ident system="http://iase.disa.mil/cci">CCI-000382</ident><fixtext fixref="F-76775r1_fix">Configure the DoD-approved firewall to deny all except for ports listed in the STIG Supplemental document.</fixtext><fix id="F-76775r1_fix" /><check system="C-70937r2_chk"><check-content-ref name="M" href="DPMS_XCCDF_Benchmark_MobileIron_Core_v9-x_MDM_STIG.xml" /><check-content>Ask the MobileIron administrator for a list of ports, protocols and IP address ranges necessary to support MDM server and platform functionality (should also be listed in the STIG Supplemental Procedures document).
+
+Review the list to determine if the stated required configuration is appropriate:
+
+22/tcp open ssh
+80/tcp open http
+443/tcp open https
+8443/tcp open https-alt
+
+Compare the list against the configuration of the firewall, and identify discrepancies.
+
+If the network firewall protecting the MobileIron Core MDM appliance is not configured to support only those ports, protocols, and IP address ranges necessary for operation, then this is a finding.</check-content></check></Rule></Group><Group id="V-70539"><title>PP-MDM-991000</title><description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</description><Rule id="SV-85161r1_rule" severity="medium" weight="10.0"><version>MICR-9X-110150</version><title>The MobileIron Core MDM server appliance must be configured to terminate the network connection associated with a communications session at the end of any transaction with an MDM agent or other server or after 10 minutes of inactivity.</title><description>&lt;VulnDiscussion&gt;If communications sessions remain open for extended periods of time even when unused, there is the potential for an adversary to highjack the session and use it to gain access to the device or networks to which it is attached. Terminating sessions after a certain period of inactivity is a method for mitigating the risk of this vulnerability.
+
+SFR ID: FMT_SMF.1.1(1) Refinement&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</description><reference><dc:title>DPMS Target MobileIron v9.x MDM</dc:title><dc:publisher>DISA</dc:publisher><dc:type>DPMS Target</dc:type><dc:subject>MobileIron v9.x MDM</dc:subject><dc:identifier>3081</dc:identifier></reference><ident system="http://iase.disa.mil/cci">CCI-001133</ident><fixtext fixref="F-76777r1_fix">Configure MobileIron Core Server to timeout after 10 minutes of inactivity.
+
+1. SSH to MobileIron Core from any SSH client.
+2. Enter the administrator credentials you set when you installed MobileIron Core.
+3. Type 'timeout 10'
+4. exit</fixtext><fix id="F-76777r1_fix" /><check system="C-70939r1_chk"><check-content-ref name="M" href="DPMS_XCCDF_Benchmark_MobileIron_Core_v9-x_MDM_STIG.xml" /><check-content>Review MobileIron Core Server documentation and configuration settings to determine if the server appliance terminates the network connection associated with a communications session at the end of any transaction with the MDM agent or other server or after 10 minutes of inactivity.
+
+SSH to MobileIron Core from any SSH client and enter the administrator credentials set up when the MobileIron Core was installed. 
+
+If communications are not terminated at the end of a session or after 10 minutes of inactivity, this is a finding.</check-content></check></Rule></Group><Group id="V-70541"><title>PP-MDM-201101</title><description>&lt;GroupDescription&gt;&lt;/GroupDescription&gt;</description><Rule id="SV-85163r2_rule" severity="low" weight="10.0"><version>MICR-9X-120100</version><title>The MobileIron Core MDM agent must be configured for the periodicity of reachability events for six hours or less.</title><description>&lt;VulnDiscussion&gt;Mobile devices that do not enforce security policy or verify the status of the device are vulnerable to a variety of attacks. The key security function of MDM technology is to distribute mobile device security polices in such a manner that they are enforced on managed mobile devices. To accomplish this function, the MDM agent must verify the status and other key information of the managed device and report that status to the MDM server periodically.
+
+SFR ID: FMT_SMF_EXT.3.2&lt;/VulnDiscussion&gt;&lt;FalsePositives&gt;&lt;/FalsePositives&gt;&lt;FalseNegatives&gt;&lt;/FalseNegatives&gt;&lt;Documentable&gt;false&lt;/Documentable&gt;&lt;Mitigations&gt;&lt;/Mitigations&gt;&lt;SeverityOverrideGuidance&gt;&lt;/SeverityOverrideGuidance&gt;&lt;PotentialImpacts&gt;&lt;/PotentialImpacts&gt;&lt;ThirdPartyTools&gt;&lt;/ThirdPartyTools&gt;&lt;MitigationControl&gt;&lt;/MitigationControl&gt;&lt;Responsibility&gt;&lt;/Responsibility&gt;&lt;IAControls&gt;&lt;/IAControls&gt;</description><reference><dc:title>DPMS Target MobileIron v9.x MDM</dc:title><dc:publisher>DISA</dc:publisher><dc:type>DPMS Target</dc:type><dc:subject>MobileIron v9.x MDM</dc:subject><dc:identifier>3081</dc:identifier></reference><ident system="http://iase.disa.mil/cci">CCI-002696</ident><fixtext fixref="F-76779r2_fix">Configure the MobileIron Core Server for the periodicity of reachability events for six hours or less.
+
+1. Log into the MobileIron Core Server Admin Portal using a web browser.
+2. Select "Policies &amp; Configs" on the web page.
+3. Select "Policies" on the web page.
+4. Select and edit each applicable Sync policy on the web page.
+5. Set the Sync Interval in each case to six hours or less as required.</fixtext><fix id="F-76779r2_fix" /><check system="C-70941r2_chk"><check-content-ref name="M" href="DPMS_XCCDF_Benchmark_MobileIron_Core_v9-x_MDM_STIG.xml" /><check-content>Configure the MobileIron Core Server for the periodicity of reachability events for six hours or less.
+
+1. Log into the MobileIron Core Server Admin Portal using a web browser.
+2. Select "Policies &amp; Configs" on the web page.
+3. Select "Policies" on the web page.
+4. Select each applicable Sync policy on the web page.
+5. Examine the Sync Interval in each case to ensure it is less than six hours as required.
+
+If the Sync Interval is more than six hours for any Sync policy, this is a finding.</check-content></check></Rule></Group></Benchmark>

@@ -1,0 +1,65 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:28226" version="5">
+  <metadata>
+    <title>SUSE-SU-2014:1520-1 -- Security update for wireshark (moderate)</title>
+    <affected family="unix">
+      <platform>SUSE Linux Enterprise Server 11</platform>
+      <platform>SUSE Linux Enterprise Desktop 11</platform>
+      <product>wireshark</product>
+    </affected>
+    <reference ref_id="SUSE-SU-2014:1520-1" ref_url="https://www.suse.com/support/update/announcement/2014/suse-su-20141520-1.html" source="VENDOR" />
+    <reference ref_id="CVE-2014-8711" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8711" source="CVE" />
+    <reference ref_id="CVE-2014-8710" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8710" source="CVE" />
+    <reference ref_id="CVE-2014-8714" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8714" source="CVE" />
+    <reference ref_id="CVE-2014-8712" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8712" source="CVE" />
+    <reference ref_id="CVE-2014-8713" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8713" source="CVE" />
+    <description>wireshark has been updated to version 1.10.11 to fix five security issues.
+
+These security issues have been fixed:
+
+    * SigComp UDVM buffer overflow (CVE-2014-8710).
+    * AMQP dissector crash (CVE-2014-8711).
+    * NCP dissector crashes (CVE-2014-8712, CVE-2014-8713).
+    * TN5250 infinite loops (CVE-2014-8714).
+
+This non-security issue has been fixed:
+
+    * enable zlib (bnc#899303).
+
+Further bug fixes and updated protocol support as listed in:
+
+https://www.wireshark.org/docs/relnotes/wireshark-1.10.11.html
+&lt;https://www.wireshark.org/docs/relnotes/wireshark-1.10.11.html&gt;
+
+Security Issues:
+
+    * CVE-2014-8711
+      &lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8711&gt;
+    * CVE-2014-8710
+      &lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8710&gt;
+    * CVE-2014-8714
+      &lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8714&gt;
+    * CVE-2014-8712
+      &lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8712&gt;
+    * CVE-2014-8713
+      &lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-8713&gt;</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-12-08T11:14:21">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-12-19T17:38:03.088-05:00">DRAFT</status_change>
+        <status_change date="2015-01-05T04:00:25.112-05:00">INTERIM</status_change>
+        <status_change date="2015-01-26T04:00:29.113-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Operation system section" operator="OR">
+      <extend_definition comment="SUSE Linux Enterprise Server 11.x is installed" definition_ref="oval:org.mitre.oval:def:17270" />
+      <extend_definition comment="SUSE Linux Enterprise Desktop 11.x is installed" definition_ref="oval:org.mitre.oval:def:25140" />
+    </criteria>
+    <criterion comment="wireshark is earlier than 0:1.10.11-0.2.1" test_ref="oval:org.mitre.oval:tst:136147" />
+  </criteria>
+</definition>

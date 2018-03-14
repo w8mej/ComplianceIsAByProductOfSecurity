@@ -1,0 +1,28 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="inventory" id="oval:org.mitre.oval:def:2843" version="2">
+  <metadata>
+    <title>Package axis is installed</title>
+    <affected family="unix">
+      <platform>openSUSE Factory</platform>
+    </affected>
+    <reference ref_id="cpe:/a:novell:axis" source="CPE" />
+    <description>Package axis is installed.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2007-10-18T12:06:51">
+          <contributor organization="Maitreya Security">Thomas R. Jones</contributor>
+        </submitted>
+        <status_change date="2007-10-18T21:53:31.423-04:00">DRAFT</status_change>
+        <status_change date="2007-11-02T07:18:41.271-04:00">INTERIM</status_change>
+        <status_change date="2007-11-19T04:04:23.230-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <affected_cpe_list>
+        <cpe>cpe:/o:novell:opensuse:factory</cpe>
+      </affected_cpe_list>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="AND">
+    <criterion comment="axis is installed" test_ref="oval:org.mitre.oval:tst:5321" />
+  </criteria>
+</definition>

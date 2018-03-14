@@ -1,0 +1,39 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:21243" version="16">
+  <metadata>
+    <title>RHSA-2013:0831: libvirt security and bug fix update (Moderate)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 6</platform>
+      <platform>CentOS Linux 6</platform>
+      <product>libvirt</product>
+    </affected>
+    <reference ref_id="RHSA-2013:0831-01" ref_url="https://rhn.redhat.com/errata/RHSA-2013-0831.html" source="VENDOR" />
+    <reference ref_id="CESA-2013:0831" source="CESA" />
+    <reference ref_id="CVE-2013-1962" ref_url="https://www.redhat.com/security/data/cve/CVE-2013-1962.html" source="CVE" />
+    <description>The remoteDispatchStoragePoolListAllVolumes function in the storage pool manager in libvirt 1.0.5 allows remote attackers to cause a denial of service (file descriptor consumption) via a large number of requests "to list all volumes for the particular pool."</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-09T13:03:25">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-10T12:58:36.293-05:00">DRAFT</status_change>
+        <status_change date="2014-01-27T04:01:23.495-05:00">INTERIM</status_change>
+        <status_change date="2014-02-17T04:01:36.839-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Redhat 6 or Centos 6 release" operator="OR">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 6" definition_ref="oval:org.mitre.oval:def:20273" />
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 6.x" definition_ref="oval:org.mitre.oval:def:16337" />
+    </criteria>
+    <criteria comment="Packages section" operator="OR">
+      <criterion comment="libvirt-devel is earlier than 0:0.10.2-18.el6_4.5" test_ref="oval:org.mitre.oval:tst:91206" />
+      <criterion comment="libvirt-client is earlier than 0:0.10.2-18.el6_4.5" test_ref="oval:org.mitre.oval:tst:90509" />
+      <criterion comment="libvirt-python is earlier than 0:0.10.2-18.el6_4.5" test_ref="oval:org.mitre.oval:tst:90308" />
+      <criterion comment="libvirt-lock-sanlock is earlier than 0:0.10.2-18.el6_4.5" test_ref="oval:org.mitre.oval:tst:90865" />
+      <criterion comment="libvirt is earlier than 0:0.10.2-18.el6_4.5" test_ref="oval:org.mitre.oval:tst:91231" />
+    </criteria>
+  </criteria>
+</definition>

@@ -1,0 +1,46 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:24225" version="7">
+  <metadata>
+    <title>DSA-2881-1 iceweasel - security update</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 7</platform>
+      <platform>Debian GNU/kFreeBSD 7</platform>
+      <product>iceweasel</product>
+    </affected>
+    <reference ref_id="DSA-2881-1" ref_url="http://www.debian.org/security/dsa-2881-1" source="VENDOR" />
+    <reference ref_id="CVE-2014-1493" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1493" source="CVE" />
+    <reference ref_id="CVE-2014-1497" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1497" source="CVE" />
+    <reference ref_id="CVE-2014-1505" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1505" source="CVE" />
+    <reference ref_id="CVE-2014-1508" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1508" source="CVE" />
+    <reference ref_id="CVE-2014-1510" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1510" source="CVE" />
+    <reference ref_id="CVE-2014-1511" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1511" source="CVE" />
+    <reference ref_id="CVE-2014-1512" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1512" source="CVE" />
+    <reference ref_id="CVE-2014-1513" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1513" source="CVE" />
+    <reference ref_id="CVE-2014-1514" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1514" source="CVE" />
+    <description>Multiple security issues have been found in Iceweasel, Debian's version of the Mozilla Firefox web browser: Multiple memory safety errors, out of bound reads, use-after-frees and other implementation errors may lead to the execution of arbitrary code, information disclosure, denial of service.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-03-24T12:06:22">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-04-01T10:01:38.704-04:00">DRAFT</status_change>
+        <status_change date="2014-04-21T04:00:39.838-04:00">INTERIM</status_change>
+        <status_change date="2014-05-12T04:00:39.398-04:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:24225 - Debian Patch Update" date="2014-06-06T17:29:00.238-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-06T17:31:21.828-04:00">INTERIM</status_change>
+        <status_change date="2014-06-23T04:07:40.923-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.6</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian 7 is installed" definition_ref="oval:org.mitre.oval:def:19338" />
+    <criteria comment="GNU/Linux or GNU/kFreeBSD kernel" operator="OR">
+      <extend_definition comment="Debian GNU/Linux is installed" definition_ref="oval:org.mitre.oval:def:24894" />
+      <extend_definition comment="Debian GNU/kFreeBSD is installed" definition_ref="oval:org.mitre.oval:def:24698" />
+    </criteria>
+    <criterion comment="iceweasel DPKG is earlier than 0:24.4.0esr-1~deb7u2" test_ref="oval:org.mitre.oval:tst:113207" />
+  </criteria>
+</definition>

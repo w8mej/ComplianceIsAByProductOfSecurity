@@ -1,0 +1,41 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:20737" version="16">
+  <metadata>
+    <title>RHSA-2013:0528: ipa security, bug fix and enhancement update (Low)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 6</platform>
+      <platform>CentOS Linux 6</platform>
+      <product>ipa</product>
+    </affected>
+    <reference ref_id="RHSA-2013:0528-02" ref_url="https://rhn.redhat.com/errata/RHSA-2013-0528.html" source="VENDOR" />
+    <reference ref_id="CESA-2013:0528" source="CESA" />
+    <reference ref_id="CVE-2012-4546" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-4546.html" source="CVE" />
+    <description>The default configuration for IPA servers in Red Hat Enterprise Linux 6, when revoking a certificate from an Identity Management replica, does not properly update another Identity Management replica, which causes inconsistent Certificate Revocation Lists (CRLs) to be used and might allow remote attackers to bypass intended access restrictions via a revoked certificate.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-09T13:03:25">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-10T12:57:31.150-05:00">DRAFT</status_change>
+        <status_change date="2014-01-27T04:00:23.452-05:00">INTERIM</status_change>
+        <status_change date="2014-02-17T04:00:30.480-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Redhat 6 or Centos 6 release" operator="OR">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 6" definition_ref="oval:org.mitre.oval:def:20273" />
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 6.x" definition_ref="oval:org.mitre.oval:def:16337" />
+    </criteria>
+    <criteria comment="Packages section" operator="OR">
+      <criterion comment="ipa-server-trust-ad is earlier than 0:3.0.0-25.el6" test_ref="oval:org.mitre.oval:tst:90711" />
+      <criterion comment="ipa-python is earlier than 0:3.0.0-25.el6" test_ref="oval:org.mitre.oval:tst:90431" />
+      <criterion comment="ipa-admintools is earlier than 0:3.0.0-25.el6" test_ref="oval:org.mitre.oval:tst:90450" />
+      <criterion comment="ipa-client is earlier than 0:3.0.0-25.el6" test_ref="oval:org.mitre.oval:tst:90105" />
+      <criterion comment="ipa-server-selinux is earlier than 0:3.0.0-25.el6" test_ref="oval:org.mitre.oval:tst:90460" />
+      <criterion comment="ipa-server is earlier than 0:3.0.0-25.el6" test_ref="oval:org.mitre.oval:tst:89737" />
+      <criterion comment="ipa is earlier than 0:3.0.0-25.el6" test_ref="oval:org.mitre.oval:tst:90510" />
+    </criteria>
+  </criteria>
+</definition>

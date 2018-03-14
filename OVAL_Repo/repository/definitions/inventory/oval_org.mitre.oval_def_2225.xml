@@ -1,0 +1,25 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="inventory" id="oval:org.mitre.oval:def:2225" version="12">
+  <metadata>
+    <title>Server is a Server2003 Domain Controller</title>
+    <affected family="windows">
+      <platform>Microsoft Windows Server 2003</platform>
+    </affected>
+    <description>Server is a Server 2003 Domain Controller</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2007-09-25T05:47:58">
+          <contributor organization="ThreatGuard, Inc.">Robert L. Hollis</contributor>
+        </submitted>
+        <status_change date="2007-09-27T08:47:05.252-04:00">DRAFT</status_change>
+        <status_change date="2007-10-12T07:56:14.568-04:00">INTERIM</status_change>
+        <status_change date="2007-10-28T20:27:12.336-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Microsoft Windows Server 2003 (32-bit) is installed" definition_ref="oval:org.mitre.oval:def:1870" />
+    <extend_definition comment="Server is a Domain Controller" definition_ref="oval:org.mitre.oval:def:2118" />
+  </criteria>
+</definition>

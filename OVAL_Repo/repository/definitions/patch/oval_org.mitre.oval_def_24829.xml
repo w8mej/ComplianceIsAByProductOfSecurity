@@ -1,0 +1,92 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:24829" version="14">
+  <metadata>
+    <title>RHSA-2014:0449: thunderbird security update (Important)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 5</platform>
+      <platform>Red Hat Enterprise Linux 6</platform>
+      <platform>CentOS Linux 5</platform>
+      <platform>CentOS Linux 6</platform>
+      <product>thunderbird</product>
+    </affected>
+    <reference ref_id="RHSA-2014:0449-00" ref_url="https://rhn.redhat.com/errata/RHSA-2014-0449.html" source="VENDOR" />
+    <reference ref_id="CESA-2014:0449" source="CESA" />
+    <reference ref_id="CVE-2014-1518" ref_url="https://www.redhat.com/security/data/cve/CVE-2014-1518.html" source="CVE" />
+    <reference ref_id="CVE-2014-1523" ref_url="https://www.redhat.com/security/data/cve/CVE-2014-1523.html" source="CVE" />
+    <reference ref_id="CVE-2014-1524" ref_url="https://www.redhat.com/security/data/cve/CVE-2014-1524.html" source="CVE" />
+    <reference ref_id="CVE-2014-1529" ref_url="https://www.redhat.com/security/data/cve/CVE-2014-1529.html" source="CVE" />
+    <reference ref_id="CVE-2014-1530" ref_url="https://www.redhat.com/security/data/cve/CVE-2014-1530.html" source="CVE" />
+    <reference ref_id="CVE-2014-1531" ref_url="https://www.redhat.com/security/data/cve/CVE-2014-1531.html" source="CVE" />
+    <reference ref_id="CVE-2014-1532" ref_url="https://www.redhat.com/security/data/cve/CVE-2014-1532.html" source="CVE" />
+    <description>Mozilla Thunderbird is a standalone mail and newsgroup client.
+
+Several flaws were found in the processing of malformed web content. A web
+page containing malicious content could cause Thunderbird to crash or,
+potentially, execute arbitrary code with the privileges of the user running
+Thunderbird. (CVE-2014-1518, CVE-2014-1524, CVE-2014-1529, CVE-2014-1531)
+
+A use-after-free flaw was found in the way Thunderbird resolved hosts in
+certain circumstances. An attacker could use this flaw to crash Thunderbird
+or, potentially, execute arbitrary code with the privileges of the user
+running Thunderbird. (CVE-2014-1532)
+
+An out-of-bounds read flaw was found in the way Thunderbird decoded JPEG
+images. Loading an email or a web page containing a specially crafted JPEG
+image could cause Thunderbird to crash. (CVE-2014-1523)
+
+A flaw was found in the way Thunderbird handled browser navigations through
+history. An attacker could possibly use this flaw to cause the address bar
+of the browser to display a web page name while loading content from an
+entirely different web page, which could allow for cross-site scripting
+(XSS) attacks. (CVE-2014-1530)
+
+Red Hat would like to thank the Mozilla project for reporting these issues.
+Upstream acknowledges Bobby Holley, Carsten Book, Christoph Diehl, Gary
+Kwong, Jan de Mooij, Jesse Ruderman, Nathan Froyd, Christian Holler,
+Abhishek Arya, Mariusz Mlynski, moz_bug_r_a4, Nils, Tyson Smith and Jesse
+Schwartzentrube as the original reporters of these issues.
+
+Note: All of the above issues cannot be exploited by a specially crafted
+HTML mail message as JavaScript is disabled by default for mail messages.
+They could be exploited another way in Thunderbird, for example, when
+viewing the full remote content of an RSS feed.
+
+For technical details regarding these flaws, refer to the Mozilla security
+advisories for Thunderbird 24.5.0. You can find a link to the Mozilla
+advisories in the References section of this erratum.
+
+All Thunderbird users should upgrade to this updated package, which
+contains Thunderbird version 24.5.0, which corrects these issues.
+After installing the update, Thunderbird must be restarted for the changes
+to take effect.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-05-21T16:07:28">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-05-23T10:29:07.788-04:00">DRAFT</status_change>
+        <status_change date="2014-06-09T04:01:40.996-04:00">INTERIM</status_change>
+        <status_change date="2014-06-30T04:10:55.081-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Redhat 5 section" operator="AND">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 5" definition_ref="oval:org.mitre.oval:def:11414" />
+      <criterion comment="thunderbird is earlier than 0:24.5.0-1.el5_10" test_ref="oval:org.mitre.oval:tst:114348" />
+    </criteria>
+    <criteria comment="Centos 5 section" operator="AND">
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 5.x" definition_ref="oval:org.mitre.oval:def:15802" />
+      <criterion comment="thunderbird is earlier than 0:24.5.0-1.el5.centos" test_ref="oval:org.mitre.oval:tst:113987" />
+    </criteria>
+    <criteria comment="Redhat 6 section" operator="AND">
+      <criterion comment="thunderbird is earlier than 0:24.5.0-1.el6_5" test_ref="oval:org.mitre.oval:tst:114036" />
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 6" definition_ref="oval:org.mitre.oval:def:20273" />
+    </criteria>
+    <criteria comment="Centos 6 section" operator="AND">
+      <criterion comment="thunderbird is earlier than 0:24.5.0-1.el6.centos" test_ref="oval:org.mitre.oval:tst:114360" />
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 6.x" definition_ref="oval:org.mitre.oval:def:16337" />
+    </criteria>
+  </criteria>
+</definition>

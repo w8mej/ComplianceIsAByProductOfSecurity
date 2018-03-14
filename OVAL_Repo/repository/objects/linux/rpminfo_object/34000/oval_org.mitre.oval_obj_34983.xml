@@ -1,0 +1,3 @@
+<rpminfo_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" comment="mysql55-mysql-server package information" id="oval:org.mitre.oval:obj:34983" version="2">
+  <name>mysql55-mysql-server</name>
+</rpminfo_object>

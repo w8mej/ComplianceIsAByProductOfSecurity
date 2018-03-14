@@ -1,0 +1,58 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:13635" version="29">
+  <metadata>
+    <title>USN-1150-1 -- thunderbird vulnerabilities</title>
+    <affected family="unix">
+      <platform>Ubuntu 11.04</platform>
+      <platform>Ubuntu 10.04</platform>
+      <platform>Ubuntu 10.10</platform>
+      <product>thunderbird</product>
+    </affected>
+    <reference ref_id="USN-1150-1" ref_url="https://lists.ubuntu.com/archives/ubuntu-security-announce/2011-July/001391.html" source="VENDOR" />
+    <reference ref_id="CVE-2011-2364" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2364" source="CVE" />
+    <reference ref_id="CVE-2011-2365" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2365" source="CVE" />
+    <reference ref_id="CVE-2011-2374" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2374" source="CVE" />
+    <reference ref_id="CVE-2011-2376" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2376" source="CVE" />
+    <reference ref_id="CVE-2011-2373" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2373" source="CVE" />
+    <reference ref_id="CVE-2011-2377" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2377" source="CVE" />
+    <reference ref_id="CVE-2011-2371" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2371" source="CVE" />
+    <reference ref_id="CVE-2011-0083" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0083" source="CVE" />
+    <reference ref_id="CVE-2011-0085" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0085" source="CVE" />
+    <reference ref_id="CVE-2011-2363" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2363" source="CVE" />
+    <reference ref_id="CVE-2011-2362" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2362" source="CVE" />
+    <description>thunderbird: Mozilla Open Source mail and newsgroup client Multiple vulnerabilities were fixed in Thunderbird.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2011-10-18T15:55:55">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2011-11-02T16:13:34.276-04:00">DRAFT</status_change>
+        <status_change date="2011-11-21T04:09:32.243-05:00">INTERIM</status_change>
+        <status_change date="2011-12-12T04:07:13.952-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:13635 - added CVE references; also made minor updates" date="2014-06-13T15:19:00.449-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-13T15:21:11.343-04:00">INTERIM</status_change>
+        <status_change date="2014-06-30T04:03:33.248-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 11.04 is installed" definition_ref="oval:org.mitre.oval:def:14150" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criterion comment="thunderbird DPKG is earlier than 3.1.11+build2+nobinonly-0ubuntu0.11.04.1" test_ref="oval:org.mitre.oval:tst:75213" />
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.04 is installed" definition_ref="oval:org.mitre.oval:def:13089" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criterion comment="thunderbird DPKG is earlier than 3.1.11+build2+nobinonly-0ubuntu0.10.04.1" test_ref="oval:org.mitre.oval:tst:75119" />
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.10 is installed" definition_ref="oval:org.mitre.oval:def:13134" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criterion comment="thunderbird DPKG is earlier than 3.1.11+build2+nobinonly-0ubuntu0.10.10.1" test_ref="oval:org.mitre.oval:tst:74956" />
+    </criteria>
+  </criteria>
+</definition>

@@ -1,0 +1,42 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:21585" version="15">
+  <metadata>
+    <title>RHSA-2012:1461: libproxy security update (Moderate)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 6</platform>
+      <platform>CentOS Linux 6</platform>
+      <product>libproxy</product>
+    </affected>
+    <reference ref_id="RHSA-2012:1461-01" ref_url="https://rhn.redhat.com/errata/RHSA-2012-1461.html" source="VENDOR" />
+    <reference ref_id="CESA-2012:1461" source="CESA" />
+    <reference ref_id="CVE-2012-4505" ref_url="https://www.redhat.com/security/data/cve/CVE-2012-4505.html" source="CVE" />
+    <description>Heap-based buffer overflow in the px_pac_reload function in lib/pac.c in libproxy 0.2.x and 0.3.x allows remote servers to have an unspecified impact via a crafted Content-Length size in an HTTP response header for a proxy.pac file request, a different vulnerability than CVE-2012-4504.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-14T18:40:22">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-15T12:19:22.261-05:00">DRAFT</status_change>
+        <status_change date="2014-02-03T04:03:19.932-05:00">INTERIM</status_change>
+        <status_change date="2014-02-24T04:01:44.339-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Redhat 6 or Centos 6 release" operator="OR">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 6" definition_ref="oval:org.mitre.oval:def:20273" />
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 6.x" definition_ref="oval:org.mitre.oval:def:16337" />
+    </criteria>
+    <criteria comment="Packages section" operator="OR">
+      <criterion comment="libproxy-bin is earlier than 0:0.3.0-3.el6_3" test_ref="oval:org.mitre.oval:tst:94812" />
+      <criterion comment="libproxy-mozjs is earlier than 0:0.3.0-3.el6_3" test_ref="oval:org.mitre.oval:tst:94742" />
+      <criterion comment="libproxy-devel is earlier than 0:0.3.0-3.el6_3" test_ref="oval:org.mitre.oval:tst:94584" />
+      <criterion comment="libproxy-webkit is earlier than 0:0.3.0-3.el6_3" test_ref="oval:org.mitre.oval:tst:94787" />
+      <criterion comment="libproxy is earlier than 0:0.3.0-3.el6_3" test_ref="oval:org.mitre.oval:tst:94057" />
+      <criterion comment="libproxy-gnome is earlier than 0:0.3.0-3.el6_3" test_ref="oval:org.mitre.oval:tst:94708" />
+      <criterion comment="libproxy-python is earlier than 0:0.3.0-3.el6_3" test_ref="oval:org.mitre.oval:tst:94799" />
+      <criterion comment="libproxy-kde is earlier than 0:0.3.0-3.el6_3" test_ref="oval:org.mitre.oval:tst:94190" />
+    </criteria>
+  </criteria>
+</definition>

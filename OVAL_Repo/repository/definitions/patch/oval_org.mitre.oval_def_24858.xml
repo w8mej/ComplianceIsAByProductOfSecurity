@@ -1,0 +1,61 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:24858" version="7">
+  <metadata>
+    <title>SUSE-SU-2014:0418-1 -- Security update for MozillaFirefox</title>
+    <affected family="unix">
+      <platform>SUSE Linux Enterprise Server 11</platform>
+      <platform>SUSE Linux Enterprise Desktop 11</platform>
+      <product>MozillaFirefox</product>
+    </affected>
+    <reference ref_id="SUSE-SU-2014:0418-1" ref_url="https://www.suse.com/support/update/announcement/2014/suse-su-20140418-1.html" source="VENDOR" />
+    <reference ref_id="CVE-2014-1493" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1493" source="CVE" />
+    <reference ref_id="CVE-2014-1494" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1494" source="CVE" />
+    <reference ref_id="CVE-2014-1496" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1496" source="CVE" />
+    <reference ref_id="CVE-2014-1497" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1497" source="CVE" />
+    <reference ref_id="CVE-2014-1498" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1498" source="CVE" />
+    <reference ref_id="CVE-2014-1499" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1499" source="CVE" />
+    <reference ref_id="CVE-2014-1500" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1500" source="CVE" />
+    <reference ref_id="CVE-2014-1501" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1501" source="CVE" />
+    <reference ref_id="CVE-2014-1502" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1502" source="CVE" />
+    <reference ref_id="CVE-2014-1504" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1504" source="CVE" />
+    <reference ref_id="CVE-2014-1508" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1508" source="CVE" />
+    <reference ref_id="CVE-2014-1509" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1509" source="CVE" />
+    <reference ref_id="CVE-2014-1505" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1505" source="CVE" />
+    <reference ref_id="CVE-2014-1510" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1510" source="CVE" />
+    <reference ref_id="CVE-2014-1511" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1511" source="CVE" />
+    <reference ref_id="CVE-2014-1512" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1512" source="CVE" />
+    <reference ref_id="CVE-2014-1513" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1513" source="CVE" />
+    <reference ref_id="CVE-2014-1514" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1514" source="CVE" />
+    <description>Mozilla Firefox was updated to 24.4.0ESR release, fixing
+various security  issues and bugs.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-07-15T17:16:27">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-07-29T19:13:14.212-04:00">DRAFT</status_change>
+        <status_change date="2014-08-18T04:02:51.543-04:00">INTERIM</status_change>
+        <status_change date="2014-09-08T04:00:31.730-04:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:24858 - Corrected package names in objects and versions in states." date="2015-02-26T18:54:00.627-05:00">
+          <contributor organization="ALTX-SOFT">Maria Kedovskaya</contributor>
+        </modified>
+        <status_change date="2015-02-26T19:18:43.513-05:00">INTERIM</status_change>
+        <status_change date="2015-03-16T04:00:22.127-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Operation system section" operator="OR">
+      <extend_definition comment="SUSE Linux Enterprise Server 11.x is installed" definition_ref="oval:org.mitre.oval:def:17270" />
+      <extend_definition comment="SUSE Linux Enterprise Desktop 11.x is installed" definition_ref="oval:org.mitre.oval:def:25140" />
+    </criteria>
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="MozillaFirefox RPM is earlier than 0:24.4.0esr-0.8.1" test_ref="oval:org.mitre.oval:tst:117339" />
+      <criterion comment="MozillaFirefox-branding-SLED RPM is earlier than 0:24-0.7.23" test_ref="oval:org.mitre.oval:tst:117417" />
+      <criterion comment="MozillaFirefox-translations RPM is earlier than 0:24.4.0esr-0.8.1" test_ref="oval:org.mitre.oval:tst:116481" />
+      <criterion comment="mozilla-nspr RPM is earlier than 0:4.10.4-0.3.1" test_ref="oval:org.mitre.oval:tst:117157" />
+      <criterion comment="mozilla-nspr-32bit RPM is earlier than 0:4.10.4-0.3.1" test_ref="oval:org.mitre.oval:tst:117451" />
+    </criteria>
+  </criteria>
+</definition>

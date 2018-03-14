@@ -1,0 +1,56 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:25946" version="6">
+  <metadata>
+    <title>SUSE-SU-2013:0320-1 -- Security update for libvirt</title>
+    <affected family="unix">
+      <platform>SUSE Linux Enterprise Server 11</platform>
+      <platform>SUSE Linux Enterprise Desktop 11</platform>
+      <product>libvirt</product>
+    </affected>
+    <reference ref_id="SUSE-SU-2013:0320-1" ref_url="https://www.suse.com/support/update/announcement/2013/suse-su-20130320-1.html" source="VENDOR" />
+    <reference ref_id="CVE-2013-0170" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0170" source="CVE" />
+    <description>libvirt was updated to fix the following security issue:
+
+    * A flaw was found in the way message freeing on
+connection cleanup was handled under certain error
+conditions. A remote user able to issue commands to libvirt
+daemon could use this flaw to crash libvirtd or,
+potentially, escalate their privilages to that of libvirtd
+process. (CVE-2013-0170)
+
+Also following bug has been fixed:
+
+    * Add managedSave functions to legacy xen driver
+bnc#782311
+
+Security Issue reference:
+
+    * CVE-2013-0170
+&lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0170
+&gt;</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-07-15T17:41:49">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-07-29T19:38:12.678-04:00">DRAFT</status_change>
+        <status_change date="2014-08-18T04:05:37.066-04:00">INTERIM</status_change>
+        <status_change date="2014-09-08T04:03:41.232-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Operation system section" operator="OR">
+      <extend_definition comment="SUSE Linux Enterprise Server 11.x is installed" definition_ref="oval:org.mitre.oval:def:17270" />
+      <extend_definition comment="SUSE Linux Enterprise Desktop 11.x is installed" definition_ref="oval:org.mitre.oval:def:25140" />
+    </criteria>
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="libvirt RPM is earlier than 0:0.9.6-0.25.1" test_ref="oval:org.mitre.oval:tst:120955" />
+      <criterion comment="libvirt-client RPM is earlier than 0:0.9.6-0.25.1" test_ref="oval:org.mitre.oval:tst:121134" />
+      <criterion comment="libvirt-doc RPM is earlier than 0:0.9.6-0.25.1" test_ref="oval:org.mitre.oval:tst:120702" />
+      <criterion comment="libvirt-python RPM is earlier than 0:0.9.6-0.25.1" test_ref="oval:org.mitre.oval:tst:120361" />
+      <criterion comment="libvirt-client-32bit RPM is earlier than 0:0.9.6-0.25.1" test_ref="oval:org.mitre.oval:tst:121087" />
+    </criteria>
+  </criteria>
+</definition>

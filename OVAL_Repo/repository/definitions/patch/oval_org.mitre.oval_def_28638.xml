@@ -1,0 +1,40 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:28638" version="14">
+  <metadata>
+    <title>ELSA-2015-0090 -- glibc security update (critical)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 5</platform>
+      <product>glibc</product>
+    </affected>
+    <reference ref_id="ELSA-2015-0090" ref_url="http://linux.oracle.com/errata/ELSA-2015-0090.html" source="VENDOR" />
+    <reference ref_id="CVE-2015-0235" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-0235" source="CVE" />
+    <description>[2.5-123.0.1.el5_11.1]
+- Switch to use malloc when the input line is too long [Orabug 19951108]
+- Use a /sys/devices/system/cpu/online for _SC_NPROCESSORS_ONLN implementation [Orabug 17642251] (Joe Jin)
+
+[2.5-123.1]
+- Fix parsing of numeric hosts in gethostbyname_r (CVE-2015-0235, #1183532).</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2015-01-28T12:52:20">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2015-01-29T16:29:55.995-05:00">DRAFT</status_change>
+        <status_change date="2015-02-16T04:00:09.919-05:00">INTERIM</status_change>
+        <status_change date="2015-03-09T04:01:47.380-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 5.x" definition_ref="oval:org.mitre.oval:def:15459" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="glibc is earlier than 0:2.5-123.0.1.el5_11.1" test_ref="oval:org.mitre.oval:tst:137594" />
+      <criterion comment="glibc-common is earlier than 0:2.5-123.0.1.el5_11.1" test_ref="oval:org.mitre.oval:tst:137078" />
+      <criterion comment="glibc-devel is earlier than 0:2.5-123.0.1.el5_11.1" test_ref="oval:org.mitre.oval:tst:137669" />
+      <criterion comment="glibc-headers is earlier than 0:2.5-123.0.1.el5_11.1" test_ref="oval:org.mitre.oval:tst:137563" />
+      <criterion comment="glibc-utils is earlier than 0:2.5-123.0.1.el5_11.1" test_ref="oval:org.mitre.oval:tst:137321" />
+      <criterion comment="nscd is earlier than 0:2.5-123.0.1.el5_11.1" test_ref="oval:org.mitre.oval:tst:137590" />
+    </criteria>
+  </criteria>
+</definition>

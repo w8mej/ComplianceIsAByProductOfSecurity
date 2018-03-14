@@ -1,0 +1,38 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:26296" version="13">
+  <metadata>
+    <title>ELSA-2014-1795 -- cups-filters security update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 7</platform>
+      <product>cups-filters</product>
+    </affected>
+    <reference ref_id="ELSA-2014-1795" ref_url="http://linux.oracle.com/errata/ELSA-2014-1795.html" source="VENDOR" />
+    <reference ref_id="CVE-2014-4337" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4337" source="CVE" />
+    <reference ref_id="CVE-2014-4338" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4338" source="CVE" />
+    <description>[1.0.35-15:.1]
+- Applied upstream patch to fix BrowseAllow parsing issue
+  (CVE-2014-4338, bug #1091568).
+- Applied upstream patch for cups-browsed DoS via
+  process_browse_data() out-of-bounds read (CVE-2014-4337,
+  bug #1111510).</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:20:13">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T17:20:05.847-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:00:15.496-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:00:06.466-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 7.x" definition_ref="oval:org.mitre.oval:def:25183" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="cups-filters is earlier than 0:1.0.35-15.el7_0.1" test_ref="oval:org.mitre.oval:tst:126527" />
+      <criterion comment="cups-filters-devel is earlier than 0:1.0.35-15.el7_0.1" test_ref="oval:org.mitre.oval:tst:126532" />
+      <criterion comment="cups-filters-libs is earlier than 0:1.0.35-15.el7_0.1" test_ref="oval:org.mitre.oval:tst:126253" />
+    </criteria>
+  </criteria>
+</definition>

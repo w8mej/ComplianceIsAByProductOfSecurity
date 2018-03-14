@@ -1,0 +1,11 @@
+The Arista MLS DCS-7000 Series switches incorporate both Layer 2 and Layer 3 capabilities. 
+
+Because of the flexible nature of the Arista multilayer switches, these products may be used in several different configurations for multiple purposes. 
+
+Therefore, it is critical to assess Arista MLS DCS-7000 Series switches using all three STIGs provided in the package to prevent gaps in security. 
+
+> Arista MLS DCS-7000 Series Network Device Management (NDM) STIG, 
+> Arista MLS DCS-7000 Series Layer 2 Switch (L2S) STIG, 
+> Arista MLS DCS-7000 Series Router (RTR) STIG 
+
+contain the specific configuration guidance for each of these functional areas.

@@ -1,0 +1,35 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27519" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2013-0218 -- xorg-x11-drv-qxl security update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>xorg-x11-drv-qxl</product>
+    </affected>
+    <reference ref_id="ELSA-2013-0218" ref_url="http://linux.oracle.com/errata/ELSA-2013-0218.html" source="VENDOR" />
+    <reference ref_id="CVE-2013-0241" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0241" source="CVE" />
+    <description>[0.0.14-14.el6]
+- backport of upstream commit 30b4b72cdbdf9f0e92a8d1c4e01779f60f15a741
+  support _ASYNC io calls and interrupt handling (busy wait)
+  Related: #888364</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:24:09">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:19:28.627-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:04:55.231-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:02:09.008-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T19:13:01.357-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T19:13:01.357-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criterion comment="xorg-x11-drv-qxl is earlier than 0:0.0.14-14.el6_3" test_ref="oval:org.mitre.oval:tst:129764" />
+  </criteria>
+</definition>

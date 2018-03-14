@@ -1,0 +1,73 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:15243" version="27">
+  <metadata>
+    <title>USN-1375-1 -- httplib2 vulnerability</title>
+    <affected family="unix">
+      <platform>Ubuntu 11.04</platform>
+      <platform>Ubuntu 11.10</platform>
+      <platform>Ubuntu 10.04</platform>
+      <platform>Ubuntu 10.10</platform>
+      <product>httplib2</product>
+    </affected>
+    <reference ref_id="USN-1375-1" ref_url="https://lists.ubuntu.com/archives/ubuntu-security-announce/2012-February/001619.html" source="VENDOR" />
+    <description>python-httplib2: comprehensive HTTP client library written for Python httplib2 could be made to expose sensitive information over the network.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2012-03-31T03:11:26-05:00">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2012-03-31T09:16:49.524-04:00">DRAFT</status_change>
+        <status_change date="2012-04-16T04:07:16.354-04:00">INTERIM</status_change>
+        <status_change date="2012-05-07T04:01:39.769-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 11.04 is installed" definition_ref="oval:org.mitre.oval:def:14150" />
+      <criteria comment="Architecture section" operator="OR">
+        <criteria comment="Architecture independent section" operator="AND">
+          <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+          <criteria comment="Packages section" operator="OR">
+            <criterion comment="python-httplib2 DPKG is earlier than 0.7.2-1ubuntu2~0.11.04.1" test_ref="oval:org.mitre.oval:tst:79252" />
+            <criterion comment="python3-httplib2 DPKG is earlier than 0.7.2-1ubuntu2~0.11.04.1" test_ref="oval:org.mitre.oval:tst:79157" />
+          </criteria>
+        </criteria>
+      </criteria>
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 11.10 is installed" definition_ref="oval:org.mitre.oval:def:14657" />
+      <criteria comment="Architecture section" operator="OR">
+        <criteria comment="Architecture independent section" operator="AND">
+          <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+          <criteria comment="Packages section" operator="OR">
+            <criterion comment="python-httplib2 DPKG is earlier than 0.7.2-1ubuntu2~0.11.10.1" test_ref="oval:org.mitre.oval:tst:79028" />
+            <criterion comment="python3-httplib2 DPKG is earlier than 0.7.2-1ubuntu2~0.11.10.1" test_ref="oval:org.mitre.oval:tst:78568" />
+          </criteria>
+        </criteria>
+      </criteria>
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.04 is installed" definition_ref="oval:org.mitre.oval:def:13089" />
+      <criteria comment="Architecture section" operator="OR">
+        <criteria comment="Architecture independent section" operator="AND">
+          <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+          <criterion comment="python-httplib2 DPKG is earlier than 0.7.2-1ubuntu2~0.10.04.1" test_ref="oval:org.mitre.oval:tst:78578" />
+        </criteria>
+      </criteria>
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.10 is installed" definition_ref="oval:org.mitre.oval:def:13134" />
+      <criteria comment="Architecture section" operator="OR">
+        <criteria comment="Architecture independent section" operator="AND">
+          <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+          <criteria comment="Packages section" operator="OR">
+            <criterion comment="python-httplib2 DPKG is earlier than 0.7.2-1ubuntu2~0.10.10.1" test_ref="oval:org.mitre.oval:tst:79264" />
+            <criterion comment="python3-httplib2 DPKG is earlier than 0.7.2-1ubuntu2~0.10.10.1" test_ref="oval:org.mitre.oval:tst:79298" />
+          </criteria>
+        </criteria>
+      </criteria>
+    </criteria>
+  </criteria>
+</definition>

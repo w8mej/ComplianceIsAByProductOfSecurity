@@ -1,0 +1,55 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:26968" version="13">
+  <metadata>
+    <title>ELSA-2013-2576 -- unbreakable enterprise kernel security update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 5</platform>
+      <platform>Oracle Linux 6</platform>
+      <product>kernel-uek</product>
+      <product>kernel-uek-debug</product>
+      <product>kernel-uek-debug-devel</product>
+      <product>kernel-uek-devel</product>
+      <product>kernel-uek-doc</product>
+      <product>kernel-uek-firmware</product>
+    </affected>
+    <reference ref_id="ELSA-2013-2576" ref_url="http://linux.oracle.com/errata/ELSA-2013-2576.html" source="VENDOR" />
+    <reference ref_id="CVE-2013-4299" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4299" source="CVE" />
+    <description>[2.6.39-400.209.2]
+- dm snapshot: fix data corruption (Mikulas Patocka) [Orabug: 17618492] {CVE-2013-4299}</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:23:09">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T17:59:13.948-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:01:32.877-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:00:35.029-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Oracle Linux 5 release section">
+      <extend_definition comment="Oracle Linux 5.x" definition_ref="oval:org.mitre.oval:def:15459" />
+      <criteria comment="Packages match section" operator="OR">
+        <criterion comment="kernel-uek is earlier than 0:2.6.39-400.209.2.el5uek" test_ref="oval:org.mitre.oval:tst:128138" />
+        <criterion comment="kernel-uek-debug is earlier than 0:2.6.39-400.209.2.el5uek" test_ref="oval:org.mitre.oval:tst:128768" />
+        <criterion comment="kernel-uek-debug-devel is earlier than 0:2.6.39-400.209.2.el5uek" test_ref="oval:org.mitre.oval:tst:128526" />
+        <criterion comment="kernel-uek-devel is earlier than 0:2.6.39-400.209.2.el5uek" test_ref="oval:org.mitre.oval:tst:128929" />
+        <criterion comment="kernel-uek-doc is earlier than 0:2.6.39-400.209.2.el5uek" test_ref="oval:org.mitre.oval:tst:128552" />
+        <criterion comment="kernel-uek-firmware is earlier than 0:2.6.39-400.209.2.el5uek" test_ref="oval:org.mitre.oval:tst:129070" />
+      </criteria>
+    </criteria>
+    <criteria comment="Oracle Linux 6 release section">
+      <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+      <criteria comment="Packages match section" operator="OR">
+        <criterion comment="kernel-uek is earlier than 0:2.6.39-400.209.2.el6uek" test_ref="oval:org.mitre.oval:tst:129005" />
+        <criterion comment="kernel-uek-debug is earlier than 0:2.6.39-400.209.2.el6uek" test_ref="oval:org.mitre.oval:tst:128847" />
+        <criterion comment="kernel-uek-debug-devel is earlier than 0:2.6.39-400.209.2.el6uek" test_ref="oval:org.mitre.oval:tst:129074" />
+        <criterion comment="kernel-uek-devel is earlier than 0:2.6.39-400.209.2.el6uek" test_ref="oval:org.mitre.oval:tst:129003" />
+        <criterion comment="kernel-uek-doc is earlier than 0:2.6.39-400.209.2.el6uek" test_ref="oval:org.mitre.oval:tst:128955" />
+        <criterion comment="kernel-uek-firmware is earlier than 0:2.6.39-400.209.2.el6uek" test_ref="oval:org.mitre.oval:tst:128958" />
+      </criteria>
+    </criteria>
+  </criteria>
+</definition>

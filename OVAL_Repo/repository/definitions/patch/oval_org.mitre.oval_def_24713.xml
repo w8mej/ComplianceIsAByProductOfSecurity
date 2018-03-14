@@ -1,0 +1,27 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:24713" version="6">
+  <metadata>
+    <title>DSA-2929-1 ruby-actionpack-3.2 - security update</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 7</platform>
+      <product>ruby-actionpack-3.2</product>
+    </affected>
+    <reference ref_id="DSA-2929-1" ref_url="http://www.debian.org/security/dsa-2929-1" source="VENDOR" />
+    <description>Several vulnerabilities were discovered in Action Pack, a componentof Ruby on Rails.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-05-21T14:54:05">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-05-23T10:33:16.905-04:00">DRAFT</status_change>
+        <status_change date="2014-06-09T04:01:26.101-04:00">INTERIM</status_change>
+        <status_change date="2014-06-30T04:10:40.020-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian 7 is installed" definition_ref="oval:org.mitre.oval:def:19338" />
+    <criterion comment="ruby-actionpack-3.2 DPKG is earlier than 0:3.2.6-6+deb7u2" test_ref="oval:org.mitre.oval:tst:114522" />
+  </criteria>
+</definition>

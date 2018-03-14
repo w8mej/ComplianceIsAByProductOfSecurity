@@ -1,0 +1,52 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27536" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2013-0982 -- thunderbird security update (important)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 5</platform>
+      <platform>Oracle Linux 6</platform>
+      <product>thunderbird</product>
+    </affected>
+    <reference ref_id="ELSA-2013-0982" ref_url="http://linux.oracle.com/errata/ELSA-2013-0982.html" source="VENDOR" />
+    <reference ref_id="CVE-2013-1682" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1682" source="CVE" />
+    <reference ref_id="CVE-2013-1684" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1684" source="CVE" />
+    <reference ref_id="CVE-2013-1685" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1685" source="CVE" />
+    <reference ref_id="CVE-2013-1686" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1686" source="CVE" />
+    <reference ref_id="CVE-2013-1687" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1687" source="CVE" />
+    <reference ref_id="CVE-2013-1690" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1690" source="CVE" />
+    <reference ref_id="CVE-2013-1692" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1692" source="CVE" />
+    <reference ref_id="CVE-2013-1693" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1693" source="CVE" />
+    <reference ref_id="CVE-2013-1694" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1694" source="CVE" />
+    <reference ref_id="CVE-2013-1697" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1697" source="CVE" />
+    <description>[17.0.7-1.0.1.el6_4]
+- Replaced thunderbird-redhat-default-prefs.js with thunderbird-oracle-default-prefs.js
+
+[17.0.7-1]
+- Update to 17.0.7 ESR</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:23:19">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:03:16.032-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:04:58.316-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:02:11.364-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T16:22:17.752-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T16:22:17.752-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Oracle Linux 5 release section">
+      <extend_definition comment="Oracle Linux 5.x" definition_ref="oval:org.mitre.oval:def:15459" />
+      <criterion comment="thunderbird is earlier than 0:17.0.7-1.0.1.el5_9" test_ref="oval:org.mitre.oval:tst:129369" />
+    </criteria>
+    <criteria comment="Oracle Linux 6 release section">
+      <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+      <criterion comment="thunderbird is earlier than 0:17.0.7-1.0.1.el6_4" test_ref="oval:org.mitre.oval:tst:128850" />
+    </criteria>
+  </criteria>
+</definition>

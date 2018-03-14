@@ -1,0 +1,29 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:27080" version="14">
+  <metadata>
+    <title>ELSA-2014-0680 -- openssl098e security update (important)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 7</platform>
+      <product>openssl098e</product>
+    </affected>
+    <reference ref_id="ELSA-2014-0680" ref_url="http://linux.oracle.com/errata/ELSA-2014-0680.html" source="VENDOR" />
+    <reference ref_id="CVE-2014-0224" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0224" source="CVE" />
+    <description>[0.9.8e-29.2]
+- fix for CVE-2014-0224 - SSL/TLS MITM vulnerability</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:21:35">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T17:29:04.938-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:02:07.769-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:00:46.183-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 7.x" definition_ref="oval:org.mitre.oval:def:25183" />
+    <criterion comment="openssl098e is earlier than 0:0.9.8e-29.el7_0.2" test_ref="oval:org.mitre.oval:tst:126913" />
+  </criteria>
+</definition>

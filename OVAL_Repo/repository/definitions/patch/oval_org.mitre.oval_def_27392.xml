@@ -1,0 +1,43 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27392" version="16">
+  <metadata>
+    <title>DEPRECATED: ELSA-2014-0222 -- libtiff security update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>libtiff</product>
+    </affected>
+    <reference ref_id="ELSA-2014-0222" ref_url="http://linux.oracle.com/errata/ELSA-2014-0222.html" source="VENDOR" />
+    <reference ref_id="CVE-2010-2596" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2596" source="CVE" />
+    <reference ref_id="CVE-2013-1960" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1960" source="CVE" />
+    <reference ref_id="CVE-2013-1961" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1961" source="CVE" />
+    <reference ref_id="CVE-2013-4231" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4231" source="CVE" />
+    <reference ref_id="CVE-2013-4232" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4232" source="CVE" />
+    <reference ref_id="CVE-2013-4243" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4243" source="CVE" />
+    <reference ref_id="CVE-2013-4244" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4244" source="CVE" />
+    <description>[3.9.4-10]
+- Resolves: #1063464. Several CVEs for libtiff</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:22:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T17:44:36.018-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:04:10.046-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:01:42.486-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T21:33:06.032-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T21:33:06.032-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="libtiff is earlier than 0:3.9.4-10.el6_5" test_ref="oval:org.mitre.oval:tst:127968" />
+      <criterion comment="libtiff-devel is earlier than 0:3.9.4-10.el6_5" test_ref="oval:org.mitre.oval:tst:128001" />
+      <criterion comment="libtiff-static is earlier than 0:3.9.4-10.el6_5" test_ref="oval:org.mitre.oval:tst:127981" />
+    </criteria>
+  </criteria>
+</definition>

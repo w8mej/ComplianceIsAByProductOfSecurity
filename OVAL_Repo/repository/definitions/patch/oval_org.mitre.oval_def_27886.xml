@@ -1,0 +1,61 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:27886" version="14">
+  <metadata>
+    <title>ELSA-2011-1691 -- util-linux-ng security, bug fix, and enhancement update (low)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>util-linux-ng</product>
+    </affected>
+    <reference ref_id="ELSA-2011-1691" ref_url="http://linux.oracle.com/errata/ELSA-2011-1691.html" source="VENDOR" />
+    <reference ref_id="CVE-2011-1675" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1675" source="CVE" />
+    <reference ref_id="CVE-2011-1677" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-1677" source="CVE" />
+    <description>[2.17.2-12.4]
+- fix CVE-2011-1675 - mount fails to anticipate RLIMIT_FSIZE
+- fix CVE-2011-1677 - umount may fail to remove /etc/mtab~ lock file
+
+[2.17.2-12.3]
+- fix fatal typos in patch for #723546
+
+[2.17.2-12.2]
+- rename /etc/hushlogin to /etc/hushlogins (#696731)
+
+[2.17.2-12.1]
+- fix #723546 - Defects revealed by Coverity scan
+- fix #723352 - cfdisk cannot read default installer partitioning
+- fix #712158 - uid/gid overflow in ipcs
+- fix #696959 - wipefs(8) reject partitioned devices
+- fix #694648 - document blank line at head of fstab
+- fix #684203 - umount fails on inconsistent fstab
+- fix #679831 --lines does not work
+- fix #679741 - canonicalize swap device
+- fix #692119 - include fstrim tool
+- fix #675999 - blkid crashes on a server with more than 128 storage devices
+- fix #696731 - display failed login attempts
+- fix #726092 - Pass host name from agetty to login
+- fix #716995 - Remove Deprecation Statement in /etc/udev/rules.d/60-raw.rules
+- fix #712808 - uuidd should depend on chkconfig
+- fix #723638 - Backport upstream extensions for lsblk (RHEL6.2)</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:25:27">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:53:30.992-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:06:42.837-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:03:10.144-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="util-linux-ng is earlier than 0:2.17.2-12.4.el6" test_ref="oval:org.mitre.oval:tst:132653" />
+      <criterion comment="libblkid is earlier than 0:2.17.2-12.4.el6" test_ref="oval:org.mitre.oval:tst:133095" />
+      <criterion comment="libblkid-devel is earlier than 0:2.17.2-12.4.el6" test_ref="oval:org.mitre.oval:tst:132797" />
+      <criterion comment="libuuid is earlier than 0:2.17.2-12.4.el6" test_ref="oval:org.mitre.oval:tst:132954" />
+      <criterion comment="libuuid-devel is earlier than 0:2.17.2-12.4.el6" test_ref="oval:org.mitre.oval:tst:132337" />
+      <criterion comment="uuidd is earlier than 0:2.17.2-12.4.el6" test_ref="oval:org.mitre.oval:tst:133078" />
+    </criteria>
+  </criteria>
+</definition>

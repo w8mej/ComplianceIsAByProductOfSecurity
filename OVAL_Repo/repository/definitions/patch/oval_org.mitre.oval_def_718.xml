@@ -1,0 +1,31 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:718" version="59">
+  <metadata>
+    <title>patch IE7-KB928090-WindowsServer2003-x64-enu.exe should be installed</title>
+    <affected family="windows">
+      <platform>Microsoft Windows Server 2003</platform>
+      <product>Microsoft Internet Explorer 7</product>
+    </affected>
+    <reference ref_id="IE7-KB928090-WindowsServer2003-x64-enu.exe" source="VENDOR" />
+    <description>The patch IE7-KB928090-WindowsServer2003-x64-enu.exe that addresses the vulnerabilities discussed in Microsoft Security Bulletin MS07-016 should be installed.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2007-03-05T09:00:00">
+          <contributor organization="The MITRE Corporation">Andrew Buttner</contributor>
+        </submitted>
+        <status_change date="2007-03-05T09:00:00">DRAFT</status_change>
+        <status_change date="2007-03-21T16:17:24.794-04:00">INTERIM</status_change>
+        <status_change date="2007-04-10T13:44:27.752-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Microsoft Windows Server 2003 (x64) is installed" definition_ref="oval:org.mitre.oval:def:730" />
+    <extend_definition comment="Microsoft Internet Explorer 7 is installed" definition_ref="oval:org.mitre.oval:def:627" />
+    <criteria comment="vulnerable versions" operator="OR">
+      <criterion comment="the version of Iexplore.exe is less than 7.0.6000.16414" test_ref="oval:org.mitre.oval:tst:3721" />
+      <criterion comment="the version of Mshtml.dll is less than 7.0.6000.16414" test_ref="oval:org.mitre.oval:tst:3876" />
+    </criteria>
+  </criteria>
+</definition>

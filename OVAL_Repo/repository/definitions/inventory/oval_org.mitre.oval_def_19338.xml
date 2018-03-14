@@ -1,0 +1,35 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="inventory" id="oval:org.mitre.oval:def:19338" version="28">
+  <metadata>
+    <title>Debian 7 is installed</title>
+    <affected family="unix">
+      <platform>Debian 7</platform>
+    </affected>
+    <reference ref_id="cpe:/o:debian:debian:7" source="CPE" />
+    <description>Debian 7 (wheezy) is installed</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2013-10-24T16:31:26.748+04:00">
+          <contributor organization="ALTX-SOFT">Maria Kedovskaya</contributor>
+        </submitted>
+        <status_change date="2013-11-21T13:32:29.313-05:00">DRAFT</status_change>
+        <status_change date="2013-12-09T04:00:17.274-05:00">INTERIM</status_change>
+        <status_change date="2013-12-30T04:00:22.941-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:19338 - New definitions (patch) for the Debian DSA" date="2014-02-19T08:00:00.123-05:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-02-19T08:04:26.432-05:00">INTERIM</status_change>
+        <status_change date="2014-03-10T04:00:21.467-04:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:ste:24187 - inventory updates for Debian 6.0, 7" date="2014-06-02T14:43:00.817-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-02T14:45:00.369-04:00">INTERIM</status_change>
+        <status_change date="2014-06-23T04:05:36.645-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criterion comment="Debian 7 is installed" test_ref="oval:org.mitre.oval:tst:87585" />
+  </criteria>
+</definition>

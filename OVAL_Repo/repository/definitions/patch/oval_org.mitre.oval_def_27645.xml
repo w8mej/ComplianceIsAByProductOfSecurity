@@ -1,0 +1,54 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27645" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2013-0521 -- pam security, bug fix, and enhancement update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>pam</product>
+    </affected>
+    <reference ref_id="ELSA-2013-0521" ref_url="http://linux.oracle.com/errata/ELSA-2013-0521.html" source="VENDOR" />
+    <reference ref_id="CVE-2011-3148" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3148" source="CVE" />
+    <reference ref_id="CVE-2011-3149" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3149" source="CVE" />
+    <description>[1.1.1-13]
+- fix environment file handling problems - CVE-2011-3148 (#746619) and
+  CVE-2011-3148 (#746620)
+
+[1.1.1-12]
+- add character sequence test to pam_cracklib
+- drop unused difignore option from pam_cracklib (#811243)
+- add enforce_for_root option to pam_cracklib (#588893)
+- mention limits.d in the limits.conf(5) manpage (#723297)
+- add ability to lock out inactive accounts to pam_lastlog
+- fix require_selinux option in pam_namespace (#750601)
+- add mntopts flag for tmpfs polyinstantiation method
+- preserve authtok_type in pam_get_authtok() (#811168)
+- fix username mismatch in pam_unix remember feature (#815516)
+- relax restriction of root in pam_pwhistory
+- relax soft nproc limit for root in 90-nproc.conf
+
+[1.1.1-11]
+- additional password checks in pam_cracklib</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:23:57">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:15:03.321-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:05:28.227-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:02:31.509-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T11:46:03.831-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T11:46:03.831-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="pam is earlier than 0:1.1.1-13.el6" test_ref="oval:org.mitre.oval:tst:130330" />
+      <criterion comment="pam-devel is earlier than 0:1.1.1-13.el6" test_ref="oval:org.mitre.oval:tst:130024" />
+    </criteria>
+  </criteria>
+</definition>

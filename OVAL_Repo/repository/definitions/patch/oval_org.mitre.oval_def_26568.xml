@@ -1,0 +1,48 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:26568" version="6">
+  <metadata>
+    <title>SUSE-SU-2014:1012-1 -- Security update for Python</title>
+    <affected family="unix">
+      <platform>SUSE Linux Enterprise Server 11</platform>
+      <product>Python</product>
+    </affected>
+    <reference ref_id="SUSE-SU-2014:1012-1" ref_url="https://www.suse.com/support/update/announcement/2014/suse-su-20141012-1.html" source="VENDOR" />
+    <reference ref_id="CVE-2014-1912" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-1912" source="CVE" />
+    <reference ref_id="CVE-2013-1752" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1752" source="CVE" />
+    <reference ref_id="CVE-2013-4238" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4238" source="CVE" />
+    <reference ref_id="CVE-2014-4650" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4650" source="CVE" />
+    <description>Python has been updated to version 2.6.9, which brings many fixes for bugs
+and security issues.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-09-08T15:55:10">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-09-17T10:50:29.579-04:00">DRAFT</status_change>
+        <status_change date="2014-10-06T04:03:46.357-04:00">INTERIM</status_change>
+        <status_change date="2014-10-27T04:01:03.962-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="SUSE Linux Enterprise Server 11.x is installed" definition_ref="oval:org.mitre.oval:def:17270" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="libpython2_6-1_0 RPM is earlier than 0:2.6.9-0.31.1" test_ref="oval:org.mitre.oval:tst:123484" />
+      <criterion comment="python RPM is earlier than 0:2.6.9-0.31.1" test_ref="oval:org.mitre.oval:tst:123056" />
+      <criterion comment="python-base RPM is earlier than 0:2.6.9-0.31.1" test_ref="oval:org.mitre.oval:tst:123247" />
+      <criterion comment="python-curses RPM is earlier than 0:2.6.9-0.31.1" test_ref="oval:org.mitre.oval:tst:123146" />
+      <criterion comment="python-demo RPM is earlier than 0:2.6.9-0.31.1" test_ref="oval:org.mitre.oval:tst:123320" />
+      <criterion comment="python-devel RPM is earlier than 0:2.6.9-0.31.1" test_ref="oval:org.mitre.oval:tst:123261" />
+      <criterion comment="python-gdbm RPM is earlier than 0:2.6.9-0.31.1" test_ref="oval:org.mitre.oval:tst:123049" />
+      <criterion comment="python-idle RPM is earlier than 0:2.6.9-0.31.1" test_ref="oval:org.mitre.oval:tst:122678" />
+      <criterion comment="python-tk RPM is earlier than 0:2.6.9-0.31.1" test_ref="oval:org.mitre.oval:tst:122815" />
+      <criterion comment="python-xml RPM is earlier than 0:2.6.9-0.31.1" test_ref="oval:org.mitre.oval:tst:123176" />
+      <criterion comment="libpython2_6-1_0-32bit RPM is earlier than 0:2.6.9-0.31.1" test_ref="oval:org.mitre.oval:tst:122968" />
+      <criterion comment="python-32bit RPM is earlier than 0:2.6.9-0.31.1" test_ref="oval:org.mitre.oval:tst:123503" />
+      <criterion comment="python-base-32bit RPM is earlier than 0:2.6.9-0.31.1" test_ref="oval:org.mitre.oval:tst:123393" />
+      <criterion comment="python-doc RPM is earlier than 0:2.6-8.31.1" test_ref="oval:org.mitre.oval:tst:123499" />
+      <criterion comment="python-doc-pdf RPM is earlier than 0:2.6-8.31.1" test_ref="oval:org.mitre.oval:tst:123351" />
+    </criteria>
+  </criteria>
+</definition>

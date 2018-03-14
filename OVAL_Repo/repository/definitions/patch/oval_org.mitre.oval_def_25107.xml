@@ -1,0 +1,54 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:25107" version="6">
+  <metadata>
+    <title>SUSE-SU-2014:0188-2 -- Security update for hplip</title>
+    <affected family="unix">
+      <platform>SUSE Linux Enterprise Server 11</platform>
+      <platform>SUSE Linux Enterprise Desktop 11</platform>
+      <product>hplip</product>
+    </affected>
+    <reference ref_id="SUSE-SU-2014:0188-2" ref_url="https://www.suse.com/support/update/announcement/2014/suse-su-20140188-2.html" source="VENDOR" />
+    <reference ref_id="CVE-2013-0200" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0200" source="CVE" />
+    <reference ref_id="CVE-2013-4325" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4325" source="CVE" />
+    <reference ref_id="CVE-2013-6402" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6402" source="CVE" />
+    <description>hplip was updated to fix three security issues:
+
+    * 
+
+      CVE-2013-0200: Some local file overwrite problems via
+predictable /tmp filenames were fixed.
+
+    * 
+
+      CVE-2013-4325: hplip used an insecure polkit DBUS API
+(polkit-process subject race condition) which could lead to
+local privilege escalation.
+
+    * 
+
+      CVE-2013-6402: hplip uses arbitrary file
+creation/overwrite (via hardcoded file name
+/tmp/hp-pkservice.log).</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-07-15T17:19:20">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-07-29T19:19:01.393-04:00">DRAFT</status_change>
+        <status_change date="2014-08-18T04:03:15.160-04:00">INTERIM</status_change>
+        <status_change date="2014-09-08T04:00:58.947-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Operation system section" operator="OR">
+      <extend_definition comment="SUSE Linux Enterprise Server 11.x is installed" definition_ref="oval:org.mitre.oval:def:17270" />
+      <extend_definition comment="SUSE Linux Enterprise Desktop 11.x is installed" definition_ref="oval:org.mitre.oval:def:25140" />
+    </criteria>
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="hplip RPM is earlier than 0:3.11.10-0.6.11.1" test_ref="oval:org.mitre.oval:tst:117638" />
+      <criterion comment="hplip-hpijs RPM is earlier than 0:3.11.10-0.6.11.1" test_ref="oval:org.mitre.oval:tst:117797" />
+    </criteria>
+  </criteria>
+</definition>

@@ -1,0 +1,39 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:27782" version="13">
+  <metadata>
+    <title>ELSA-2011-1694 -- libcap security and bug fix update (low)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>libcap</product>
+    </affected>
+    <reference ref_id="ELSA-2011-1694" ref_url="http://linux.oracle.com/errata/ELSA-2011-1694.html" source="VENDOR" />
+    <reference ref_id="CVE-2011-4099" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-4099" source="CVE" />
+    <description>[2.16-5.5]
+- remove some obsolete parameters from capsh manpage
+
+[2.16-5.4]
+- add capsh manpage (#730957)
+
+[2.16-5.3]
+- make sure to chdir ('/') after calling chroot
+  http://cwe.mitre.org/data/definitions/243.html</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:25:25">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T18:53:18.353-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:06:13.043-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:02:56.753-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="libcap is earlier than 0:2.16-5.5.el6" test_ref="oval:org.mitre.oval:tst:132597" />
+      <criterion comment="libcap-devel is earlier than 0:2.16-5.5.el6" test_ref="oval:org.mitre.oval:tst:132648" />
+    </criteria>
+  </criteria>
+</definition>

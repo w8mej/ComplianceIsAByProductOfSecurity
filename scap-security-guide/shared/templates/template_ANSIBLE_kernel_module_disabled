@@ -1,0 +1,16 @@
+# platform = Red Hat Enterprise Linux 6, Red Hat Enterprise Linux 7, multi_platform_fedora
+# reboot = true
+# strategy = disable
+# complexity = low
+# disruption = medium
+- name: Ensure kernel module '%KERNMODULE%' is disabled
+  lineinfile:
+    create=yes
+    dest="/etc/modprobe.d/{{item}}.conf"
+    regexp="{{item}}"
+    line="install {{item}} /bin/true"
+  with_items:
+    - %KERNMODULE%
+  tags:
+    @ANSIBLE_TAGS@
+

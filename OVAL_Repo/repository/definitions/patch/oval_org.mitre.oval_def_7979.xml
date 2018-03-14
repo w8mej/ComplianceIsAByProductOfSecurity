@@ -1,0 +1,62 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:7979" version="28">
+  <metadata>
+    <title>DSA-1483 net-snmp -- design error</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 4.0</platform>
+      <product>net-snmp</product>
+    </affected>
+    <reference ref_id="DSA-1483" ref_url="http://www.debian.org/security/2008/dsa-1483" source="VENDOR" />
+    <reference ref_id="CVE-2007-5846" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5846" source="CVE" />
+    <description>The SNMP agent (snmp_agent.c) in net-snmp before 5.4.1 allows remote attackers to cause a denial of service (CPU and memory consumption) via a GETBULK request with a large max-repeaters value.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2009-12-15T20:12:05-05:00">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2009-12-28T07:52:57.679-05:00">DRAFT</status_change>
+        <status_change date="2010-01-18T04:03:11.545-05:00">INTERIM</status_change>
+        <status_change date="2010-02-08T04:02:21.898-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:7979 - Debian Patch Update" date="2014-06-06T16:37:00.188-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-06T16:39:28.104-04:00">INTERIM</status_change>
+        <status_change date="2014-06-23T04:09:39.053-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian GNU/Linux 4.0 is installed." definition_ref="oval:org.mitre.oval:def:6461" />
+    <criteria comment="Architecture section" operator="OR">
+      <criteria comment="Architecture independent section" operator="AND">
+        <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+        <criteria comment="Packages section" operator="OR">
+          <criterion comment="libsnmp-base is earlier than 5.2.3-7etch2" test_ref="oval:org.mitre.oval:tst:14578" />
+          <criterion comment="tkmib is earlier than 5.2.3-7etch2" test_ref="oval:org.mitre.oval:tst:14701" />
+        </criteria>
+      </criteria>
+      <criteria comment="Architecture dependent section" operator="AND">
+        <criteria comment="Supported architectures section" operator="OR">
+          <criterion comment="Installed architecture is s390" test_ref="oval:org.mitre.oval:tst:11024" />
+          <criterion comment="Installed architecture is amd64" test_ref="oval:org.mitre.oval:tst:10392" />
+          <criterion comment="Installed architecture is sparc" test_ref="oval:org.mitre.oval:tst:2465" />
+          <criterion comment="Installed architecture is powerpc" test_ref="oval:org.mitre.oval:tst:11168" />
+          <criterion comment="Installed architecture is i386" test_ref="oval:org.mitre.oval:tst:10864" />
+          <criterion comment="Installed architecture is mips" test_ref="oval:org.mitre.oval:tst:11195" />
+          <criterion comment="Installed architecture is ia64" test_ref="oval:org.mitre.oval:tst:10830" />
+          <criterion comment="Installed architecture is alpha" test_ref="oval:org.mitre.oval:tst:10654" />
+          <criterion comment="Installed architecture is mipsel" test_ref="oval:org.mitre.oval:tst:11110" />
+          <criterion comment="Installed architecture is arm" test_ref="oval:org.mitre.oval:tst:10933" />
+        </criteria>
+        <criteria comment="Packages section" operator="OR">
+          <criterion comment="libsnmp-perl is earlier than 5.2.3-7etch2" test_ref="oval:org.mitre.oval:tst:14732" />
+          <criterion comment="libsnmp9 is earlier than 5.2.3-7etch2" test_ref="oval:org.mitre.oval:tst:14879" />
+          <criterion comment="snmp is earlier than 5.2.3-7etch2" test_ref="oval:org.mitre.oval:tst:14506" />
+          <criterion comment="libsnmp9-dev is earlier than 5.2.3-7etch2" test_ref="oval:org.mitre.oval:tst:14583" />
+          <criterion comment="snmpd is earlier than 5.2.3-7etch2" test_ref="oval:org.mitre.oval:tst:14760" />
+        </criteria>
+      </criteria>
+    </criteria>
+  </criteria>
+</definition>

@@ -1,0 +1,16 @@
+# platform = multi_platform_all
+# reboot = false
+# strategy = disable
+# complexity = low
+# disruption = low
+- name: Disable service %SERVICENAME%
+  service:
+    name="{{item}}"
+    enabled="no"
+    state="stopped"
+  register: service_result
+  failed_when: "service_result|failed and ('Could not find the requested service' not in service_result.msg)"
+  with_items:
+    - %DAEMONNAME%
+  tags:
+    @ANSIBLE_TAGS@

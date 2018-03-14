@@ -1,0 +1,41 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:22143" version="92">
+  <metadata>
+    <title>RHSA-2010:0519: libtiff security update (Important)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 5</platform>
+      <platform>CentOS Linux 5</platform>
+      <product>libtiff</product>
+    </affected>
+    <reference ref_id="RHSA-2010:0519-01" ref_url="https://rhn.redhat.com/errata/RHSA-2010-0519.html" source="VENDOR" />
+    <reference ref_id="CESA-2010:0519" source="CESA" />
+    <reference ref_id="CVE-2010-1411" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-1411.html" source="CVE" />
+    <reference ref_id="CVE-2010-2481" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-2481.html" source="CVE" />
+    <reference ref_id="CVE-2010-2483" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-2483.html" source="CVE" />
+    <reference ref_id="CVE-2010-2595" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-2595.html" source="CVE" />
+    <reference ref_id="CVE-2010-2597" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-2597.html" source="CVE" />
+    <reference ref_id="CVE-2010-4665" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-4665.html" source="CVE" />
+    <description>Integer overflow in the ReadDirectory function in tiffdump.c in tiffdump in LibTIFF before 3.9.5 allows remote attackers to cause a denial of service (application crash) or possibly have unspecified other impact via a crafted TIFF file containing a directory data structure with many directory entries.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-15T12:48:40">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-15T12:45:31.537-05:00">DRAFT</status_change>
+        <status_change date="2014-02-03T04:04:25.670-05:00">INTERIM</status_change>
+        <status_change date="2014-02-24T04:02:48.926-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Redhat 5 or Centos 5 release" operator="OR">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 5" definition_ref="oval:org.mitre.oval:def:11414" />
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 5.x" definition_ref="oval:org.mitre.oval:def:15802" />
+    </criteria>
+    <criteria comment="Packages section" operator="OR">
+      <criterion comment="libtiff is earlier than 0:3.8.2-7.el5_5.5" test_ref="oval:org.mitre.oval:tst:99465" />
+      <criterion comment="libtiff-devel is earlier than 0:3.8.2-7.el5_5.5" test_ref="oval:org.mitre.oval:tst:99485" />
+    </criteria>
+  </criteria>
+</definition>

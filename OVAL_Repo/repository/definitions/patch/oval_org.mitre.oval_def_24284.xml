@@ -1,0 +1,27 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:24284" version="6">
+  <metadata>
+    <title>DSA-2880-1 python2.7 - security update</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 7</platform>
+      <product>python2.7</product>
+    </affected>
+    <reference ref_id="DSA-2880-1" ref_url="http://www.debian.org/security/dsa-2880-1" source="VENDOR" />
+    <description>Multiple security issues were discovered in Python.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-03-24T12:06:23">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-04-01T10:01:38.821-04:00">DRAFT</status_change>
+        <status_change date="2014-04-21T04:00:42.674-04:00">INTERIM</status_change>
+        <status_change date="2014-05-12T04:00:44.041-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian 7 is installed" definition_ref="oval:org.mitre.oval:def:19338" />
+    <criterion comment="python2.7 DPKG is earlier than 0:2.7.3-6+deb7u2" test_ref="oval:org.mitre.oval:tst:112560" />
+  </criteria>
+</definition>

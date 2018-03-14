@@ -1,0 +1,58 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:15222" version="29">
+  <metadata>
+    <title>USN-1261-1 -- Quagga vulnerabilities</title>
+    <affected family="unix">
+      <platform>Ubuntu 11.04</platform>
+      <platform>Ubuntu 11.10</platform>
+      <platform>Ubuntu 10.04</platform>
+      <platform>Ubuntu 10.10</platform>
+      <product>Quagga</product>
+    </affected>
+    <reference ref_id="USN-1261-1" ref_url="https://lists.ubuntu.com/archives/ubuntu-security-announce/2011-November/001494.html" source="VENDOR" />
+    <reference ref_id="CVE-2011-3323" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3323" source="CVE" />
+    <reference ref_id="CVE-2011-3324" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3324" source="CVE" />
+    <reference ref_id="CVE-2011-3325" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3325" source="CVE" />
+    <reference ref_id="CVE-2011-3326" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3326" source="CVE" />
+    <reference ref_id="CVE-2011-3327" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3327" source="CVE" />
+    <description>quagga: BGP/OSPF/RIP routing daemon Quagga could be made to crash or run programs if it received specially crafted network traffic.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2012-03-31T03:11:26-05:00">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2012-03-31T09:15:55.676-04:00">DRAFT</status_change>
+        <status_change date="2012-04-16T04:07:13.272-04:00">INTERIM</status_change>
+        <status_change date="2012-05-07T04:01:36.393-04:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:15222 - updates for Ubuntu patches" date="2014-06-20T11:37:00.128-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-20T11:46:17.015-04:00">INTERIM</status_change>
+        <status_change date="2014-07-07T04:00:36.486-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 11.04 is installed" definition_ref="oval:org.mitre.oval:def:14150" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criterion comment="quagga DPKG is earlier than 0.99.17-4ubuntu1.1" test_ref="oval:org.mitre.oval:tst:78625" />
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 11.10 is installed" definition_ref="oval:org.mitre.oval:def:14657" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criterion comment="quagga DPKG is earlier than 0.99.18-2ubuntu0.1" test_ref="oval:org.mitre.oval:tst:78825" />
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.04 is installed" definition_ref="oval:org.mitre.oval:def:13089" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criterion comment="quagga DPKG is earlier than 0.99.15-1ubuntu0.3" test_ref="oval:org.mitre.oval:tst:79010" />
+    </criteria>
+    <criteria comment="Release section" operator="AND">
+      <extend_definition comment="Ubuntu 10.10 is installed" definition_ref="oval:org.mitre.oval:def:13134" />
+      <criterion comment="Installed architecture is all" test_ref="oval:org.mitre.oval:tst:10881" />
+      <criterion comment="quagga DPKG is earlier than 0.99.17-1ubuntu0.2" test_ref="oval:org.mitre.oval:tst:78857" />
+    </criteria>
+  </criteria>
+</definition>

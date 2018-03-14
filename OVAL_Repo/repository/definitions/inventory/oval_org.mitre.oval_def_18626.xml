@@ -1,0 +1,29 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="inventory" id="oval:org.mitre.oval:def:18626" version="26">
+  <metadata>
+    <title>Microsoft Exchange Server 2013 is installed</title>
+    <affected family="windows">
+      <platform>Microsoft Windows 7</platform>
+      <platform>Microsoft Windows Server 2008</platform>
+      <platform>Microsoft Windows Server 2008 R2</platform>
+      <platform>Microsoft Windows Server 2012</platform>
+      <product>Microsoft Exchange Server 2013</product>
+    </affected>
+    <reference ref_id="cpe:/a:microsoft:exchange_server:2013" source="CPE" />
+    <description>Microsoft Exchange Server 2013 is installed</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2013-09-03T10:20:20">
+          <contributor organization="SecPod Technologies">SecPod Team</contributor>
+        </submitted>
+        <status_change date="2013-09-04T14:49:15.323-04:00">DRAFT</status_change>
+        <status_change date="2013-09-23T04:05:38.765-04:00">INTERIM</status_change>
+        <status_change date="2013-10-14T04:00:17.937-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="AND">
+    <criterion comment="Check if Exchange Server 2013 is installed" test_ref="oval:org.mitre.oval:tst:86283" />
+  </criteria>
+</definition>

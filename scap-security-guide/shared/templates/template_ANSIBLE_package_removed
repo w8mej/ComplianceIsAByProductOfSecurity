@@ -1,0 +1,14 @@
+# platform = multi_platform_all
+# reboot = false
+# strategy = disable
+# complexity = low
+# disruption = low
+- name: Ensure %PKGNAME% is removed
+  package:
+    name="{{item}}"
+    state=absent
+  with_items:
+    - %PKGNAME%
+  tags:
+    @ANSIBLE_TAGS@
+

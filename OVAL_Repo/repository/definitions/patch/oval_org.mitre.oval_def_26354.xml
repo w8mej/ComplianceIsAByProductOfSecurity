@@ -1,0 +1,25 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:26354" version="13">
+  <metadata>
+    <title>End of life cycle for Microsoft Windows 2000</title>
+    <affected family="windows">
+      <platform>Microsoft Windows 2000</platform>
+    </affected>
+    <reference ref_id="Microsoft Windows 2000" ref_url="http://support.microsoft.com/lifecycle/?p1=3075" source="VENDOR" />
+    <description>Platform Microsoft Windows 2000 not longer supported</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-08-04T14:38:52">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </submitted>
+        <status_change date="2014-08-13T10:30:18.511-04:00">DRAFT</status_change>
+        <status_change date="2014-09-01T04:03:12.399-04:00">INTERIM</status_change>
+        <status_change date="2014-09-22T04:00:47.934-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Microsoft Windows 2000 is installed" definition_ref="oval:org.mitre.oval:def:85" />
+  </criteria>
+</definition>

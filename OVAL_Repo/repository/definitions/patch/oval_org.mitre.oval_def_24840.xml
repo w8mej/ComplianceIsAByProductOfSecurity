@@ -1,0 +1,27 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:24840" version="6">
+  <metadata>
+    <title>DSA-2923-1 openjdk-7 - security update</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 7</platform>
+      <product>openjdk-7</product>
+    </affected>
+    <reference ref_id="DSA-2923-1" ref_url="http://www.debian.org/security/dsa-2923-1" source="VENDOR" />
+    <description>Several vulnerabilities have been discovered in OpenJDK, animplementation of the Oracle Java platform, resulting in the executionof arbitrary code, breakouts of the Java sandbox, information disclosureor denial of service.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-05-21T14:54:11">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-05-23T10:33:15.852-04:00">DRAFT</status_change>
+        <status_change date="2014-06-09T04:01:41.824-04:00">INTERIM</status_change>
+        <status_change date="2014-06-30T04:10:55.968-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian 7 is installed" definition_ref="oval:org.mitre.oval:def:19338" />
+    <criterion comment="openjdk-7 DPKG is earlier than 0:7u55-2.4.7-1~deb7u1" test_ref="oval:org.mitre.oval:tst:114136" />
+  </criteria>
+</definition>

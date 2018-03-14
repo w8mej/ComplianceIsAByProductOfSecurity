@@ -1,0 +1,33 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:20456" version="6">
+  <metadata>
+    <title>DSA-1380-1 elinks - information disclosure</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 4.0</platform>
+      <product>elinks</product>
+    </affected>
+    <reference ref_id="DSA-1380-1" ref_url="http://www.debian.org/security/dsa-1380-1" source="VENDOR" />
+    <reference ref_id="CVE-2007-5034" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-5034" source="CVE" />
+    <description>Kalle Olavi Niemitalo discovered that elinks, an advanced text-mode WWW browser, sent HTTP POST data in cleartext when using an HTTPS proxy server potentially allowing private information to be disclosed.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2013-12-06T10:23:27">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2013-12-06T14:49:06.783-05:00">DRAFT</status_change>
+        <status_change date="2013-12-23T04:01:45.523-05:00">INTERIM</status_change>
+        <status_change date="2014-01-13T04:01:26.378-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:20456 - Debian Patch Update" date="2014-06-06T17:22:00.920-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-06T17:24:22.354-04:00">INTERIM</status_change>
+        <status_change date="2014-06-23T04:07:23.121-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian GNU/Linux 4.0 is installed." definition_ref="oval:org.mitre.oval:def:6461" />
+    <criterion comment="elinks DPKG is earlier than 0:0.11.1-1.2etch1" test_ref="oval:org.mitre.oval:tst:89548" />
+  </criteria>
+</definition>

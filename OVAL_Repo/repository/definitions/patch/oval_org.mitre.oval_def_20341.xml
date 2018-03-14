@@ -1,0 +1,33 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:20341" version="6">
+  <metadata>
+    <title>DSA-1548-1 xpdf</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 4.0</platform>
+      <product>xpdf</product>
+    </affected>
+    <reference ref_id="DSA-1548-1" ref_url="http://www.debian.org/security/dsa-1548-1" source="VENDOR" />
+    <reference ref_id="CVE-2008-1693" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1693" source="CVE" />
+    <description>Kees Cook discovered a vulnerability in xpdf, a set of tools for display and conversion of Portable Document Format (PDF) files.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2013-12-06T10:23:10">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2013-12-06T14:49:52.016-05:00">DRAFT</status_change>
+        <status_change date="2013-12-23T04:01:43.166-05:00">INTERIM</status_change>
+        <status_change date="2014-01-13T04:01:23.857-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:20341 - Debian Patch Update" date="2014-06-06T17:22:00.920-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-06T17:24:28.107-04:00">INTERIM</status_change>
+        <status_change date="2014-06-23T04:07:15.363-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian GNU/Linux 4.0 is installed." definition_ref="oval:org.mitre.oval:def:6461" />
+    <criterion comment="xpdf DPKG is earlier than 0:3.01-9.1+etch3" test_ref="oval:org.mitre.oval:tst:89047" />
+  </criteria>
+</definition>

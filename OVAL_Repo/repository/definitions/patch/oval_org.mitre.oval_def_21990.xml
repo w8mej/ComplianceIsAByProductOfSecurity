@@ -1,0 +1,33 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:21990" version="31">
+  <metadata>
+    <title>RHSA-2010:0924: wireshark security update (Moderate)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 6</platform>
+      <product>wireshark</product>
+    </affected>
+    <reference ref_id="RHSA-2010:0924-01" ref_url="https://rhn.redhat.com/errata/RHSA-2010-0924.html" source="VENDOR" />
+    <reference ref_id="CVE-2010-3445" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-3445.html" source="CVE" />
+    <reference ref_id="CVE-2010-4300" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-4300.html" source="CVE" />
+    <description>Heap-based buffer overflow in the dissect_ldss_transfer function (epan/dissectors/packet-ldss.c) in the LDSS dissector in Wireshark 1.2.0 through 1.2.12 and 1.4.0 through 1.4.1 allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via an LDSS packet with a long digest line that triggers memory corruption.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-15T12:48:40">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-15T12:45:19.946-05:00">DRAFT</status_change>
+        <status_change date="2014-02-03T04:04:09.898-05:00">INTERIM</status_change>
+        <status_change date="2014-02-24T04:02:30.106-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 6" definition_ref="oval:org.mitre.oval:def:20273" />
+    <criteria comment="Packages section" operator="OR">
+      <criterion comment="wireshark is earlier than 0:1.2.13-1.el6_0.1" test_ref="oval:org.mitre.oval:tst:99663" />
+      <criterion comment="wireshark-devel is earlier than 0:1.2.13-1.el6_0.1" test_ref="oval:org.mitre.oval:tst:99743" />
+      <criterion comment="wireshark-gnome is earlier than 0:1.2.13-1.el6_0.1" test_ref="oval:org.mitre.oval:tst:99502" />
+    </criteria>
+  </criteria>
+</definition>

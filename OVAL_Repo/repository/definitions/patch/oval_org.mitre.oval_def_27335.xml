@@ -1,0 +1,47 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27335" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2014-0018 -- libxfont security update (important)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 5</platform>
+      <platform>Oracle Linux 6</platform>
+      <product>libXfont</product>
+    </affected>
+    <reference ref_id="ELSA-2014-0018" ref_url="http://linux.oracle.com/errata/ELSA-2014-0018.html" source="VENDOR" />
+    <reference ref_id="CVE-2013-6462" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-6462" source="CVE" />
+    <description>[1.4.5-3]
+- cve-2013-6462.patch: sscanf overflow (bug 1049684)
+- sscanf-hardening.patch: Some other sscanf hardening fixes (1049684)</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:22:09">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T17:51:30.896-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:03:48.318-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:01:31.217-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T11:13:30.905-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T11:13:30.905-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria operator="OR">
+    <criteria comment="Oracle Linux 5 release section">
+      <extend_definition comment="Oracle Linux 5.x" definition_ref="oval:org.mitre.oval:def:15459" />
+      <criteria comment="Packages match section" operator="OR">
+        <criterion comment="libXfont is earlier than 0:1.2.2-1.0.5.el5_10" test_ref="oval:org.mitre.oval:tst:127927" />
+        <criterion comment="libXfont-devel is earlier than 0:1.2.2-1.0.5.el5_10" test_ref="oval:org.mitre.oval:tst:128067" />
+      </criteria>
+    </criteria>
+    <criteria comment="Oracle Linux 6 release section">
+      <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+      <criteria comment="Packages match section" operator="OR">
+        <criterion comment="libXfont is earlier than 0:1.4.5-3.el6_5" test_ref="oval:org.mitre.oval:tst:128215" />
+        <criterion comment="libXfont-devel is earlier than 0:1.4.5-3.el6_5" test_ref="oval:org.mitre.oval:tst:127999" />
+      </criteria>
+    </criteria>
+  </criteria>
+</definition>

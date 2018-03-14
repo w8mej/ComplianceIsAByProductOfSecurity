@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oval_definitions xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-common-5 http://oval.mitre.org/language/download/schema/version5.8/ovaldefinition/complete/oval-common-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5 http://oval.mitre.org/language/download/schema/version5.8/ovaldefinition/complete/oval-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#windows http://oval.mitre.org/language/download/schema/version5.8/ovaldefinition/complete/windows-definitions-schema.xsd">
+  <generator>
+    <oval:product_name>DISA</oval:product_name>
+    <oval:schema_version>5.8</oval:schema_version>
+    <oval:timestamp>2016-12-21T10:55:53.281-05:00</oval:timestamp>
+  </generator>
+  <definitions>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:1" version="1" class="compliance">
+      <metadata>
+        <title>DTOO191 - ActiveX control initialization for Office</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>ActiveX controls can adversely affect a computer directly. In addition, malicious code can be used to compromise an ActiveX control and attack a computer. To indicate the safety of an ActiveX control, developers can denote them as Safe For Initialization (SFI). SFI indicates a control is safe to open and run, and it is not capable of causing a problem for any computer, regardless of whether it has persisted data values or not. If a control is not marked SFI, it is possible the control could adversely affect a computer-or it could mean the developers did not test the control in all situations and are not sure whether it might be compromised in the future. By default, if a control is marked SFI, the application loads the control in safe mode and uses persisted values (if any). If the control is not marked SFI, the application loads the control in unsafe mode with persisted values (if any), or uses the default (first-time initialization) settings. In both situations, the Message Bar informs users the controls have been disabled and prompts them to respond.</description>
+      </metadata>
+      <criteria operator="AND" negate="false" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\ActiveX Control Initialization">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\ActiveX Control Initialization" test_ref="oval:mil.disa.stig.officesystem2016:tst:1000" />
+      </criteria>
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:2" version="1" class="compliance">
+      <metadata>
+        <title>DTOO196 - Mix of policy and user locations</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>When Microsoft Office files are opened from trusted locations, all the content in the files is enabled and active. Users are not notified about any potential risks that might be contained in the files, such as unsigned macros, ActiveX controls, or links to content on the Internet.
+By default, users can specify any location as a trusted location, and a computer can have a combination of user-created, OCT-created, and Group Policy-created trusted locations.</description>
+      </metadata>
+      <criteria operator="AND" negate="false" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Trust Center\Allow mix of policy and user locations">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Trust Center\Allow mix of policy and user locations" test_ref="oval:mil.disa.stig.officesystem2016:tst:2000" />
+      </criteria>
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:6" version="1" class="compliance">
+      <metadata>
+        <title>DTOO186 - Trust Bar Notifications</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>The Message Bar in Office applications is used to identify security issues, such as unsigned macros or potentially unsafe add-ins. When such issues are detected, the application disables the unsafe feature or content and displays the Message Bar at the top of the active window. The Message Bar informs the users about the nature of the security issue and, in some cases, provides the users with an option to enable the potentially unsafe feature or content, which could harm the user's computer.
+By default, if an Office application detects a security issue, the Message Bar is displayed. However, this configuration can be modified by users in the Trust Center.</description>
+      </metadata>
+      <criteria operator="AND" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Disable all Trust Bar notifications for security issues" negate="false">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Disable all Trust Bar notifications for security issues" test_ref="oval:mil.disa.stig.officesystem2016:tst:6000" />
+      </criteria>
+        </definition>
+      <definition id="oval:mil.disa.stig.officesystem2016:def:9" version="1" class="compliance">
+      <metadata>
+        <title>DTOO190 - Encr. type for Password Protected files</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>If unencrypted files are intercepted, sensitive information in the files can be compromised. To protect information confidentiality, Microsoft Office application files can be encrypted and password protected. Only users who know the correct password will be able to decrypt such files. Since some encryption types are less secure and easier to breach, Microsoft Enhanced RSA and AES Cryptographic Provider, AES-256, 256-bit should be used when encrypting documents.</description>
+      </metadata>
+      <criteria operator="AND" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encryption type for password protected Office 97-2003 files" negate="false">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encryption type for password protected Office 97-2003 files" test_ref="oval:mil.disa.stig.officesystem2016:tst:9000" />
+      </criteria>
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:10" version="1" class="compliance">
+      <metadata>
+        <title>DTOO189 - Encryption Type for Pwd Protected Files</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>If unencrypted files are intercepted, sensitive information in the files can be compromised. To protect information confidentiality, Microsoft Office application files can be encrypted and password protected. Only users who know the correct password will be able to decrypt such files. Since some encryption types are less secure and easier to breach, Microsoft Enhanced RSA and AES Cryptographic Provider, AES-256, 256-bit should be used when encrypting documents.</description>
+      </metadata>
+      <criteria operator="AND" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encryption type for password protected Office Open XML files" negate="false">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encryption type for password protected Office Open XML files" test_ref="oval:mil.disa.stig.officesystem2016:tst:10000" />
+      </criteria>
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:11" version="1" class="compliance">
+      <metadata>
+        <title>DTOO182 - Improve Proofing Tools</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>The "Help Improve Proofing Tools" feature collects data about use of the Proofing Tools, such as additions to the custom dictionary, and sends it to Microsoft. After about six months, the feature stops sending data to Microsoft and deletes the data collection file from the user's computer. Although this feature does not intentionally collect personal information, some of the content sent could include items that were marked as spelling or grammar errors, such as proper names and account numbers. However, any numbers such as account numbers, street addresses, and phone numbers are converted to zeroes when the data is collected. Microsoft uses this information solely to improve the effectiveness of the Office Proofing Tools, not to identify users.
+By default, this feature is enabled, if users choose to participate in the Customer Experience Improvement Program (CEIP). If an organization has policies that govern the use of external resources such as the CEIP, allowing the use of the "Help Improve Proofing Tools" feature might cause them to violate these policies..</description>
+      </metadata>
+      <criteria operator="AND" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Tools \ Options \ Spelling\Proofing Data Collection\Improve Proofing Tools" negate="false">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Tools \ Options \ Spelling\Proofing Data Collection\Improve Proofing Tools" test_ref="oval:mil.disa.stig.officesystem2016:tst:11000" />
+      </criteria>      
+         </definition>
+     <definition id="oval:mil.disa.stig.officesystem2016:def:13" version="1" class="compliance">
+      <metadata>
+        <title>DTOO206 - Incl. Doc. properties for PDF and XPS</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>If the Microsoft Save as PDF or XPS Add-in for Microsoft Office Programs is installed, document properties are saved as metadata when users save or publish files using the PDF or XPS commands in Access 2016, Excel 2016, PowerPoint 2016, and Word 2016 using the PDF or XPS or Publish. If this metadata contains sensitive information, saving it with the file could compromise security.</description>
+      </metadata>
+      <criteria operator="AND" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Microsoft Save As PDF and XPS add-ins\Disable inclusion of document properties in PDF and XPS output"  negate="false">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Microsoft Save As PDF and XPS add-ins\Disable inclusion of document properties in PDF and XPS output" test_ref="oval:mil.disa.stig.officesystem2016:tst:13000" />
+      </criteria> 
+        </definition>
+     <definition id="oval:mil.disa.stig.officesystem2016:def:17" version="1" class="compliance">
+      <metadata>
+        <title>DTOO197 - Document Manifests</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>An XML expansion pack is the group of files that constitutes a Smart Document in Excel and Word. One or more components that provide the logic needed for a Smart Document are packaged by using an XML expansion pack. These components can include any type of file, including XML schemas, Extensible Stylesheet Language Transforms (XSLTs), dynamic-link libraries (DLLs), and image files, as well as additional XML files, HTML files, Word files, Excel files, and text files.
+The key component to building an XML expansion pack is creating an XML expansion pack manifest file. By creating this file, the locations of all files that make up the XML expansion pack are specified, as well as information that instructs Office 2016 how to set up the files for the Smart Document. The XML expansion pack can also contain information about how to set up other files, such as how to install and register a COM object required by the XML expansion pack.
+XML expansion packs can be used to initialize and load malicious code, which might affect the stability of a computer and lead to data loss. Office applications can load an XML expansion pack manifest file with a Smart Document.</description>
+      </metadata>
+      <criteria operator="AND" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Smart Documents (Word, Excel\Disable Smart Document's use of manifests"  negate="false">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Smart Documents (Word, Excel\Disable Smart Document's use of manifests" test_ref="oval:mil.disa.stig.officesystem2016:tst:17000" />
+      </criteria>  
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:19" version="1" class="compliance">
+      <metadata>
+        <title>DTOO201 - Connection permissions verification</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 8</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <platform>Microsoft Windows 7</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>Users are not required to connect to the network to verify permissions. If users do not need their licenses confirmed when attempting to open Office documents, they might be able to access documents after their licenses have been revoked. Also, it is not possible to log the usage of files with restricted permissions if users' licenses are not confirmed.</description>
+      </metadata>
+      <criteria operator="AND" negate="false" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Manage Restricted Permissions\Always require users to connect to verify permission">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Manage Restricted Permissions\Always require users to connect to verify permission" test_ref="oval:mil.disa.stig.officesystem2016:tst:19000" />
+      </criteria>
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:21" version="1" class="compliance"> 
+      <metadata>  
+      <title>DTOO193 - Automation Security</title>
+      <affected family="windows">  
+      <platform>Microsoft Windows 7</platform>
+      <platform>Microsoft Windows 10</platform>  
+      <platform>Microsoft Windows Server 2008 R2</platform>  
+      <platform>Microsoft Windows Server 2012</platform>  
+      <platform>Microsoft Windows 8</platform>
+      <platform>Microsoft Windows 8.1</platform>   
+      <product>Microsoft Office System 2016</product>
+      </affected>  
+      <description>When a separate program is used to launch Microsoft Office Excel, PowerPoint, or Word programmatically, any macros can run in the programmatically opened application without being blocked. This functionality could allow an attacker to use automation to run malicious code in Excel, PowerPoint, or Word.</description> 
+      </metadata> 
+      <criteria operator="AND" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Automation Security" negate="false"> 
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Automation Security" test_ref="oval:mil.disa.stig.officesystem2016:tst:21000" />  
+        </criteria> 
+        </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:23" version="1" class="compliance">
+      <metadata>
+        <title>DTOO192 - Load controls for forms3</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>ActiveX controls are Component Object Model (COM) objects and have unrestricted access to users' computers. ActiveX controls can access the local file system and change the registry settings of the operating system. If a malicious user repurposes an ActiveX control to take over a user's computer, the effect could be significant.
+To help improve security, ActiveX developers can mark controls as Safe For Initialization (SFI), which means that the developer states that the controls are safe to open and run and not capable of causing harm to any computers. If a control is not marked SFI, the control could adversely affect a computer--or it could mean the developers did not test the control in all situations and are not sure whether their control might be compromised at some future date.
+SFI controls run in safe mode, which limits their access to the computer. For example, a worksheet control can both read and write files when it is in unsafe mode, but perhaps only read from files when it is in safe mode. This functionality allows the control to be used in very powerful ways when safety is not important, but the control would still be safe for use in a Web page.
+If a control is not marked as SFI, it is marked Unsafe For Initialization (UFI), which means that it is capable of affecting a user's computer. If UFI ActiveX controls are loaded, they are always loaded in unsafe mode.</description>
+      </metadata>
+      <criteria operator="AND" negate="false" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Load Controls in Forms3">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Load Controls in Forms3" test_ref="oval:mil.disa.stig.officesystem2016:tst:23000" />
+      </criteria>
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:26" version="1" class="compliance">
+      <metadata>
+        <title>DTOO188 - Protect document metadata</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>When an Office Open XML document is protected with a password and saved, any metadata associated with the document is encrypted along with the rest of the document's contents. If this configuration is changed, potentially sensitive information such as the document author and hyperlink references could be exposed to unauthorized people. </description>
+      </metadata>
+      <criteria operator="AND" negate="false" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Protect document metadata for password protected files">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Protect document metadata for password protected files" test_ref="oval:mil.disa.stig.officesystem2016:tst:26000" />
+      </criteria>
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:27" version="1" class="compliance">
+      <metadata>
+        <title>DTOO187 - Protect metadata / rights managed docs</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>When Information Rights Management (IRM) is used to restrict access to an Office Open XML document, any metadata associated with the document is not encrypted. This configuration could allow potentially sensitive information such as the document author and hyperlink references to be exposed to unauthorized individuals.</description>
+      </metadata>
+      <criteria operator="AND" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Protect document metadata for rights managed Office Open XML Files" negate="false">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Protect document metadata for rights managed Office Open XML Files" test_ref="oval:mil.disa.stig.officesystem2016:tst:27000" />
+      </criteria>
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:31" version="1" class="compliance">
+      <metadata>
+        <title>DTOO321 - Encrypt document properties</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>This policy setting allows a document's properties to be encrypted.  This applies to OLE documents (Office 97-2003 compatible) if the application is configured for CAPI RC4.  Disabling this setting will prevent the encryption of document properties, which may expose sensitive data.</description>
+      </metadata>
+      <criteria operator="AND" negate="false" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encrypt document properties">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encrypt document properties" test_ref="oval:mil.disa.stig.officesystem2016:tst:31000" />
+      </criteria>
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:39" version="1" class="compliance">
+      <metadata>
+        <title>DTOO408 - Office Presentation Service must be removed</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>The Office Presentation Service is a free, public service that allows others to  follow along in a web browser. Allowing this feature could result in presentations with DoD FOUO, PII and other protected data to be viewed in a nonsecure location. By disabling this policy, the user will not have the ability to deliver a presentation online.</description>
+      </metadata>
+      <criteria operator="AND" negate="false" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Present Online\Remove Office Presentation Service from the list of online presentation services in PowerPoint and Word">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Present Online\Remove Office Presentation Service from the list of online presentation services in PowerPoint and Word" test_ref="oval:mil.disa.stig.officesystem2016:tst:39000" />
+      </criteria>
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:40" version="1" class="compliance">
+      <metadata>
+        <title>DTOO409 - Disable programmatic creation of online presentation</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>Allowing online presentations to be created programmatically allows for the capability of malicious content to become imbedded in those programmatically created presentations.</description>
+      </metadata>
+      <criteria operator="AND" negate="false" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Present Online\Restrict programmatic access for creating online presentations in PowerPoint and Word">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Present Online\Restrict programmatic access for creating online presentations in PowerPoint and Word" test_ref="oval:mil.disa.stig.officesystem2016:tst:40000" />
+      </criteria>
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:41" version="1" class="compliance">
+      <metadata>
+        <title>DTOO410 - Office Feedback tool</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>The "Office Feedback" tool, also called "Send-a-Smile", allows a user to click on an icon and send feedback to Microsoft. The "Office Feedback" Tool must be configured to be disabled. In the event that the Office Feedback Tool has not been configured correctly as disabled, this policy configures whether the uploading of screenshots via the tool is allowed and should also be disabled. Uploading screenshots to a commercial vendor from a DoD computer may unintentionally reveal configuration and/or FOUO content.</description>
+      </metadata>
+      <criteria operator="AND" negate="false" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Privacy\Trust Center\Allow including screenshot with Office Feedback">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Privacy\Trust Center\Allow including screenshot with Office Feedback" test_ref="oval:mil.disa.stig.officesystem2016:tst:41000" />
+      </criteria>
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:43" version="1" class="compliance">
+      <metadata>
+        <title>DTOO412 - Disable run unsecure Office apps</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>Unsecure apps for Office, which are apps that have web page or catalog locations that are not SSL-secured (https://), and/or are not in users' Internet zones may allow data to be transmitted/accessed via clear text to outside sources. By configuring this policy to be disabled, users will be prevented from transmitting/accessing data in a nonsecure manner.</description>
+      </metadata>
+      <criteria operator="AND" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Trust Center\Trusted Catalogs\Allow Unsecure Apps and Catalogs"  negate="false">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Trust Center\Trusted Catalogs\Allow Unsecure Apps and Catalogs" test_ref="oval:mil.disa.stig.officesystem2016:tst:43000" />
+      </criteria>
+    </definition>
+    <definition id="oval:mil.disa.stig.officesystem2016:def:47" version="1" class="compliance">
+      <metadata>
+        <title>DTOO416 - Telemetry Agent privacy setting</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>This policy setting configures the Office Telemetry Agent to disguise, or obfuscate, certain file properties that are reported in telemetry data. If this policy setting is enabled, Office Telemetry Agent obfuscates the file name, file path, and title of Office documents before uploading telemetry data to the shared folder. If this policy setting is disabled or not configured, the Office Telemetry Agent uploads telemetry data that shows the full file name, file path, and title of all Office documents.</description>
+      </metadata>
+      <criteria operator="AND" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard\Turn on privacy setting in Office Telemetry Agent" negate="false">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard\Turn on privacy setting in Office Telemetry Agent" test_ref="oval:mil.disa.stig.officesystem2016:tst:47000" />
+      </criteria>
+      </definition>
+      <definition id="oval:mil.disa.stig.officesystem2016:def:48" version="1" class="compliance">
+      <metadata>
+        <title>DTOO601 - Send personal information to Office</title>
+        <affected family="windows">
+          <platform>Microsoft Windows 7</platform>
+	  <platform>Microsoft Windows 10</platform>
+          <platform>Microsoft Windows Server 2008 R2</platform>
+          <platform>Microsoft Windows Server 2012</platform>
+          <platform>Microsoft Windows 8</platform>
+          <platform>Microsoft Windows 8.1</platform>
+          <product>Microsoft Office System 2016</product>
+        </affected>
+        <description>This policy setting controls whether users can send personal information to Office. When users choose to send information Office 2016 applications automatically send information to Office. If you enable this policy setting, users will opt into sending personal information to Office.  If your organization has policies that govern the use of external resources, opting users into the program might cause them to violate these policies.  If you disable this policy setting, Office 2016 users cannot send personal information to Office.  If you do not configure this policy setting, the behavior is the equivalent of setting the policy to "Enabled".</description>
+      </metadata>
+      <criteria operator="AND" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Privacy\Trust Center\Send personal information" negate="false">
+        <criterion comment="User Configuration\Administrative Templates\Microsoft Office 2016\Privacy\Trust Center\Send personal information" test_ref="oval:mil.disa.stig.officesystem2016:tst:48000" />
+      </criteria>
+      </definition>
+     </definitions>
+  <tests>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:1000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\ActiveX Control Initialization" check_existence="none_exist">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:1000" />
+     </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:2000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Trust Center\Allow mix of policy and user locations" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:2000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:2000" />
+    </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:6000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Disable all Trust Bar notifications for security issues" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:6000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:6000" />
+    </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:9000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encryption type for password protected Office 97-2003 files" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:9000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:9000" />
+    </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:10000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encryption type for password protected Office Open XML files" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:10000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:10000" />
+    </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:11000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Tools \ Options \ Spelling\Proofing Data Collection\Improve Proofing Tools" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:11000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:11000" />
+      </registry_test>
+      <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:13000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Microsoft Save As PDF and XPS add-ins\Disable inclusion of document properties in PDF and XPS output" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:13000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:13000" />
+    </registry_test> 
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:17000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Smart Documents (Word, Excel\Disable Smart Document's use of manifests" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:17000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:17000" />
+    </registry_test>    
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:19000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Manage Restricted Permissions\Always require users to connect to verify permission" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:19000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:19000" />
+    </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:21000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Automation Security" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:21000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:21000" />
+    </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:23000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Load Controls in Forms3" check_existence="none_exist">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:23000" />
+     </registry_test>
+     <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:26000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Protect document metadata for password protected files" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:26000" />
+    <state state_ref="oval:mil.disa.stig.officesystem2016:ste:26000" />
+    </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:27000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Protect document metadata for rights managed Office Open XML Files" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:27000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:27000" />
+    </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:31000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encrypt document properties" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:31000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:31000" />
+    </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:39000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Present Online\Remove Office Presentation Service from the list of online presentation services in PowerPoint and Word" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:39000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:39000" />
+    </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:40000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Present Online\Restrict programmatic access for creating online presentations in PowerPoint and Word" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:40000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:40000" />
+    </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:41000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Privacy\Trust Center\Allow including screenshot with Office Feedback" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:41000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:41000" />
+    </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:43000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Trust Center\Trusted Catalogs\Allow Unsecure Apps and Catalogs" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:43000" />
+      <state state_ref="oval:mil.disa.stig.officesystem2016:ste:43000" />
+    </registry_test>
+    <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:47000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard\Turn on privacy setting in Office Telemetry Agent" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:47000" />
+    <state state_ref="oval:mil.disa.stig.officesystem2016:ste:47000" />
+       </registry_test>
+       <registry_test xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:tst:48000" version="1" check="all" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Privacy\Trust Center\Send personal information" check_existence="at_least_one_exists">
+      <object object_ref="oval:mil.disa.stig.officesystem2016:obj:48000" />
+    <state state_ref="oval:mil.disa.stig.officesystem2016:ste:48000" />
+       </registry_test>
+    </tests>
+  <objects>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:1000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\ActiveX Control Initialization">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">Software\Policies\Microsoft\Office\Common\Security</key>
+      <name datatype="string" operation="equals">UFIControls</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:2000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Trust Center\Allow mix of policy and user locations">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">Software\Policies\Microsoft\Office\16.0\common\security\trusted locations</key>
+      <name datatype="string" operation="equals">Allow User Locations</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:6000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Disable all Trust Bar notifications for security issues">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">Software\Policies\Microsoft\Office\16.0\common\trustcenter</key>
+      <name datatype="string" operation="equals">TrustBar</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:9000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encryption type for password protected Office 97-2003 files">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">Software\Policies\Microsoft\Office\16.0\common\security</key>
+      <name datatype="string" operation="equals">DefaultEncryption12</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:10000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encryption type for password protected Office Open XML files">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">Software\Policies\Microsoft\Office\16.0\common\security</key>
+      <name datatype="string" operation="equals">OpenXMLEncryption</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:11000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Tools \ Options \ Spelling\Proofing Data Collection\Improve Proofing Tools">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">Software\Policies\Microsoft\Office\16.0\common\ptwatson</key>
+      <name datatype="string" operation="equals">PTWOptIn</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:13000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Microsoft Save As PDF and XPS add-ins\Disable inclusion of document properties in PDF and XPS output">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">Software\Policies\Microsoft\Office\16.0\common\fixedformat</key>
+      <name datatype="string" operation="equals">DisableFixedFormatDocProperties</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:17000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Smart Documents (Word, Excel\Disable Smart Document's use of manifests">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">Software\Policies\Microsoft\Office\Common\Smart Tag</key>
+      <name datatype="string" operation="equals">NeverLoadManifests</name>
+    </registry_object>    
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:19000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Manage Restricted Permissions\Always require users to connect to verify permission">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">Software\Policies\Microsoft\Office\16.0\common\drm</key>
+      <name datatype="string" operation="equals">RequireConnection</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:21000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Automation Security">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">Software\Policies\Microsoft\Office\Common\Security</key>
+      <name datatype="string" operation="equals">AutomationSecurity</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:23000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Load Controls in Forms3">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">keycupoliciesmsvbasecurity</key>
+      <name datatype="string" operation="equals">LoadControlsInForms</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:26000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Protect document metadata for password protected files">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">Software\Policies\Microsoft\Office\16.0\common\security</key>
+      <name datatype="string" operation="equals">OpenXMLEncryptProperty</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:27000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Protect document metadata for rights managed Office Open XML Files">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">Software\Policies\Microsoft\Office\16.0\common\security</key>
+      <name datatype="string" operation="equals">DRMEncryptProperty</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:31000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encrypt document properties">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">Software\Policies\Microsoft\Office\16.0\common\security</key>
+      <name datatype="string" operation="equals">EncryptDocProps</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:39000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Present Online\Remove Office Presentation Service from the list of online presentation services in PowerPoint and Word">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">software\policies\Microsoft\office\16.0\common\broadcast</key>
+      <name datatype="string" operation="equals">disabledefaultservice</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:40000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Present Online\Restrict programmatic access for creating online presentations in PowerPoint and Word">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">software\policies\Microsoft\office\16.0\common\broadcast</key>
+      <name datatype="string" operation="equals">disableprogrammaticaccess</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:41000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Privacy\Trust Center\Allow including screenshot with Office Feedback">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">software\policies\Microsoft\office\16.0\common\feedback</key>
+      <name datatype="string" operation="equals">includescreenshot</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:43000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Trust Center\Trusted Catalogs\Allow Unsecure Apps and Catalogs">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">software\policies\Microsoft\office\16.0\wef\trustedcatalogs</key>
+      <name datatype="string" operation="equals">requireserververification</name>
+    </registry_object>
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:47000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard\Turn on privacy setting in Office Telemetry Agent">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">software\policies\Microsoft\office\16.0\osm</key>
+      <name datatype="string" operation="equals">enablefileobfuscation</name>
+    </registry_object> 
+    <registry_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:obj:48000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Privacy\Trust Center\Send personal information">
+      <hive datatype="string" operation="equals">HKEY_CURRENT_USER</hive>
+      <key datatype="string" operation="equals">software\policies\Microsoft\office\16.0\common</key>
+      <name datatype="string" operation="equals">sendcustomerdata</name>
+    </registry_object> 
+    </objects>
+  <states>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:2000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Trust Center\Allow mix of policy and user locations">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">0</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:6000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Disable all Trust Bar notifications for security issues">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">0</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:9000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encryption type for password protected Office 97-2003 files">
+      <type datatype="string" operation="equals" entity_check="all">reg_sz</type>
+      <value datatype="string" operation="equals" entity_check="all">Microsoft Enhanced RSA and AES Cryptographic Provider,AES 256,256</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:10000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encryption type for password protected Office Open XML files">
+      <type datatype="string" operation="equals" entity_check="all" >reg_sz</type>
+      <value datatype="string" operation="equals" entity_check="all" >Microsoft Enhanced RSA and AES Cryptographic Provider,AES 256,256</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:11000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Tools \ Options \ Spelling\Proofing Data Collection\Improve Proofing Tools">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">0</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:13000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Microsoft Save As PDF and XPS add-ins\Disable inclusion of document properties in PDF and XPS output">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">1</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:17000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Smart Documents (Word, Excel\Disable Smart Document's use of manifests">
+       <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">1</value>
+    </registry_state>    
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:19000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Manage Restricted Permissions\Always require users to connect to verify permission">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">1</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:21000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Automation Security">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">2</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:26000" version="3" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Protect document metadata for password protected files">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">1</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:27000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Protect document metadata for rights managed Office Open XML Files">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">1</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:31000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Encrypt document properties">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">1</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:39000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Present Online\Remove Office Presentation Service from the list of online presentation services in PowerPoint and Word">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">1</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:40000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Present Online\Restrict programmatic access for creating online presentations in PowerPoint and Word">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">1</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:41000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Privacy\Trust Center\Allow including screenshot with Office Feedback">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">0</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:43000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Security Settings\Trust Center\Trusted Catalogs\Allow Unsecure Apps and Catalogs">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">1</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:47000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Telemetry Dashboard\Turn on privacy setting in Office Telemetry Agent">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">1</value>
+    </registry_state>
+    <registry_state xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#windows" id="oval:mil.disa.stig.officesystem2016:ste:48000" version="1" comment="User Configuration\Administrative Templates\Microsoft Office 2016\Privacy\Trust Center\Send personal information">
+      <type datatype="string" operation="equals" entity_check="all">reg_dword</type>
+      <value datatype="string" operation="equals" entity_check="all">0</value>
+    </registry_state> 
+    </states>  
+</oval_definitions>
+

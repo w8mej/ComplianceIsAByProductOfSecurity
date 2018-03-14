@@ -1,0 +1,28 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="inventory" id="oval:org.mitre.oval:def:4650" version="2">
+  <metadata>
+    <title>Package gc-devel is installed</title>
+    <affected family="unix">
+      <platform>openSUSE Factory</platform>
+    </affected>
+    <reference ref_id="cpe:/a:novell:gc-devel" source="CPE" />
+    <description>Package gc-devel is installed.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2007-11-14T15:01:16">
+          <contributor organization="Maitreya Security">Thomas R. Jones</contributor>
+        </submitted>
+        <status_change date="2007-12-14T15:31:28.996-05:00">DRAFT</status_change>
+        <status_change date="2007-12-31T04:01:53.270-05:00">INTERIM</status_change>
+        <status_change date="2008-02-04T10:17:21.621-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <affected_cpe_list>
+        <cpe>cpe:/o:novell:opensuse:factory</cpe>
+      </affected_cpe_list>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criterion comment="gc-devel is installed" test_ref="oval:org.mitre.oval:tst:6831" />
+  </criteria>
+</definition>

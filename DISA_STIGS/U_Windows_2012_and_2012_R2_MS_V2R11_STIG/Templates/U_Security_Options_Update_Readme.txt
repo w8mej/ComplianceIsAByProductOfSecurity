@@ -1,0 +1,1 @@
+The scegrevl.inf file will update a system to show additional security options (MSS settings) in a policy.  Directions for updating this file are included in the STIG Overview.

@@ -1,0 +1,28 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:21910" version="5">
+  <metadata>
+    <title>RHSA-2011:0390: rsync security update (Moderate)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 6</platform>
+      <product>rsync</product>
+    </affected>
+    <reference ref_id="RHSA-2011:0390-01" ref_url="https://rhn.redhat.com/errata/RHSA-2011-0390.html" source="VENDOR" />
+    <reference ref_id="CVE-2011-1097" ref_url="https://www.redhat.com/security/data/cve/CVE-2011-1097.html" source="CVE" />
+    <description>rsync 3.x before 3.0.8, when certain recursion, deletion, and ownership options are used, allows remote rsync servers to cause a denial of service (heap memory corruption and application crash) or possibly execute arbitrary code via malformed data.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-15T12:06:21">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-15T12:37:11.118-05:00">DRAFT</status_change>
+        <status_change date="2014-02-03T04:04:01.140-05:00">INTERIM</status_change>
+        <status_change date="2014-02-24T04:02:19.311-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criterion comment="rsync is earlier than 0:3.0.6-5.el6_0.1" test_ref="oval:org.mitre.oval:tst:97391" />
+    <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 6" definition_ref="oval:org.mitre.oval:def:20273" />
+  </criteria>
+</definition>

@@ -1,0 +1,31 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:25955" version="4">
+  <metadata>
+    <title>End of life cycle for Adobe Acrobat 9</title>
+    <affected family="windows">
+      <platform>Microsoft Windows 2000</platform>
+      <platform>Microsoft Windows XP</platform>
+      <platform>Microsoft Windows Vista</platform>
+      <platform>Microsoft Windows Server 2003</platform>
+      <platform>Microsoft Windows Server 2008</platform>
+      <platform>Microsoft Windows 7</platform>
+      <product>Adobe Acrobat 9</product>
+    </affected>
+    <reference ref_id="Adobe Acrobat 9" ref_url="http://helpx.adobe.com/acrobat/kb/end-support-acrobat-8-reader.html" source="VENDOR" />
+    <description>Product Adobe Acrobat 9 not longer supported</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-08-07T14:38:51">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </submitted>
+        <status_change date="2014-08-13T10:30:23.313-04:00">DRAFT</status_change>
+        <status_change date="2014-09-01T04:03:09.381-04:00">INTERIM</status_change>
+        <status_change date="2014-09-22T04:00:35.438-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.10</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Adobe Acrobat 9 Series is installed" definition_ref="oval:org.mitre.oval:def:6013" />
+  </criteria>
+</definition>

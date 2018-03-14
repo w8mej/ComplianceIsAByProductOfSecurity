@@ -1,0 +1,9 @@
+NOTICE:
+
+The Oracle Exadata Database Machine - Vendor Best Practice documentation is provided by the vendor 
+
+RE71 is not responsible for and cannot provide support for this guidance. 
+
+All questions pertaining to the Oracle Exadata documents should be directed to: 
+
+stig-oracle-osc_grp@oracle.com

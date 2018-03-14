@@ -1,0 +1,9 @@
+<local_variable xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" comment="full version" datatype="version" id="oval:org.mitre.oval:var:1294" version="2">
+  <concat>
+    <variable_component var_ref="oval:org.mitre.oval:var:1524" />
+    <literal_component datatype="string">.</literal_component>
+    <variable_component var_ref="oval:org.mitre.oval:var:1331" />
+    <literal_component datatype="string">.</literal_component>
+    <variable_component var_ref="oval:org.cisecurity:var:13" />
+  </concat>
+</local_variable>

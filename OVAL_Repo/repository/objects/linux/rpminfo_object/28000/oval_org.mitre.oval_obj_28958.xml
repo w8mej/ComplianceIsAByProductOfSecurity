@@ -1,0 +1,3 @@
+<rpminfo_object xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" comment="texlive package information" id="oval:org.mitre.oval:obj:28958" version="2">
+  <name>texlive</name>
+</rpminfo_object>

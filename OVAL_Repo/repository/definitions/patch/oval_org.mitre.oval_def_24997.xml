@@ -1,0 +1,35 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:24997" version="5">
+  <metadata>
+    <title>DSA-2966-1 samba - security update</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 7.0</platform>
+      <platform>Debian GNU/kFreeBSD 7.0</platform>
+      <product>samba</product>
+    </affected>
+    <reference ref_id="DSA-2966-1" ref_url="http://www.debian.org/security/dsa-2966-1" source="VENDOR" />
+    <reference ref_id="CVE-2014-0178" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0178" source="CVE" />
+    <reference ref_id="CVE-2014-0244" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-0244" source="CVE" />
+    <reference ref_id="CVE-2014-3493" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3493" source="CVE" />
+    <description>Multiple vulnerabilities were discovered and fixed in Samba, a SMB/CIFS file, print, and login server.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-07-02T14:47:55">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-07-03T11:33:28.942-04:00">DRAFT</status_change>
+        <status_change date="2014-07-21T04:01:48.611-04:00">INTERIM</status_change>
+        <status_change date="2014-08-11T04:00:42.708-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.6</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian 7 is installed" definition_ref="oval:org.mitre.oval:def:19338" />
+    <criteria comment="GNU/Linux or GNU/kFreeBSD kernel" operator="OR">
+      <extend_definition comment="Debian GNU/Linux is installed" definition_ref="oval:org.mitre.oval:def:24894" />
+      <extend_definition comment="Debian GNU/kFreeBSD is installed" definition_ref="oval:org.mitre.oval:def:24698" />
+    </criteria>
+    <criterion comment="samba DPKG is earlier than 2:3.6.6-6+deb7u4" test_ref="oval:org.mitre.oval:tst:115354" />
+  </criteria>
+</definition>

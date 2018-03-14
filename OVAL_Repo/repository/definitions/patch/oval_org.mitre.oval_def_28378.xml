@@ -1,0 +1,45 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:28378" version="14">
+  <metadata>
+    <title>ELSA-2014-1873 -- libvirt security and bug fix update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 6</platform>
+      <product>libvirt</product>
+    </affected>
+    <reference ref_id="ELSA-2014-1873" ref_url="http://linux.oracle.com/errata/ELSA-2014-1873.html" source="VENDOR" />
+    <reference ref_id="CVE-2014-3633" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3633" source="CVE" />
+    <reference ref_id="CVE-2014-3657" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3657" source="CVE" />
+    <reference ref_id="CVE-2014-7823" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-7823" source="CVE" />
+    <description>[0.10.2-46.0.1.el6_6.2]
+- Replace docs/et.png in tarball with blank image
+
+[0.10.2-46.el6_6.2]
+- qemu: allow restore with non-migratable XML input (rhbz#1155564)
+- qemu: Introduce qemuDomainDefCheckABIStability (rhbz#1155564)
+- Make ABI stability issue easier to debug (rhbz#1155564)
+- CVE-2014-3633: qemu: blkiotune: Use correct definition when looking up disk (CVE-2014-3633)
+- domain_conf: fix domain deadlock (CVE-2014-3657)
+- CVE-2014-7823: dumpxml: security hole with migratable flag (CVE-2014-7823)</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-12-08T11:06:34">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-12-19T17:34:31.029-05:00">DRAFT</status_change>
+        <status_change date="2015-01-05T04:00:38.134-05:00">INTERIM</status_change>
+        <status_change date="2015-01-26T04:00:40.627-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 6.x" definition_ref="oval:org.mitre.oval:def:16594" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="libvirt is earlier than 0:0.10.2-46.0.1.el6_6.2" test_ref="oval:org.mitre.oval:tst:136009" />
+      <criterion comment="libvirt-client is earlier than 0:0.10.2-46.0.1.el6_6.2" test_ref="oval:org.mitre.oval:tst:135949" />
+      <criterion comment="libvirt-devel is earlier than 0:0.10.2-46.0.1.el6_6.2" test_ref="oval:org.mitre.oval:tst:135675" />
+      <criterion comment="libvirt-python is earlier than 0:0.10.2-46.0.1.el6_6.2" test_ref="oval:org.mitre.oval:tst:135974" />
+      <criterion comment="libvirt-lock-sanlock is earlier than 0:0.10.2-46.0.1.el6_6.2" test_ref="oval:org.mitre.oval:tst:135954" />
+    </criteria>
+  </criteria>
+</definition>

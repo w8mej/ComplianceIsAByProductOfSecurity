@@ -1,0 +1,33 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:22141" version="15">
+  <metadata>
+    <title>RHSA-2010:0518: scsi-target-utils security update (Important)</title>
+    <affected family="unix">
+      <platform>Red Hat Enterprise Linux 5</platform>
+      <platform>CentOS Linux 5</platform>
+      <product>scsi-target-utils</product>
+    </affected>
+    <reference ref_id="RHSA-2010:0518-01" ref_url="https://rhn.redhat.com/errata/RHSA-2010-0518.html" source="VENDOR" />
+    <reference ref_id="CESA-2010:0518" source="CESA" />
+    <reference ref_id="CVE-2010-2221" ref_url="https://www.redhat.com/security/data/cve/CVE-2010-2221.html" source="CVE" />
+    <description>Multiple buffer overflows in the iSNS implementation in isns.c in (1) Linux SCSI target framework (aka tgt or scsi-target-utils) before 1.0.6, (2) iSCSI Enterprise Target (aka iscsitarget or IET) 1.4.20.1 and earlier, and (3) Generic SCSI Target Subsystem for Linux (aka SCST or iscsi-scst) 1.0.1.1 and earlier allow remote attackers to cause a denial of service (memory corruption and daemon crash) or possibly execute arbitrary code via (a) a long iSCSI Name string in an SCN message or (b) an invalid PDU.</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-01-15T12:48:40">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-01-15T12:45:07.952-05:00">DRAFT</status_change>
+        <status_change date="2014-02-03T04:04:25.255-05:00">INTERIM</status_change>
+        <status_change date="2014-02-24T04:02:48.608-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <criteria comment="Redhat 5 or Centos 5 release" operator="OR">
+      <extend_definition comment="The operating system installed on the system is Red Hat Enterprise Linux 5" definition_ref="oval:org.mitre.oval:def:11414" />
+      <extend_definition comment="The operating system installed on the system is CentOS Linux 5.x" definition_ref="oval:org.mitre.oval:def:15802" />
+    </criteria>
+    <criterion comment="scsi-target-utils is earlier than 0:0.0-6.20091205snap.el5_5.3" test_ref="oval:org.mitre.oval:tst:99571" />
+  </criteria>
+</definition>

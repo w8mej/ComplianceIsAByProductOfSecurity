@@ -1,0 +1,33 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:20224" version="6">
+  <metadata>
+    <title>DSA-1679-1 awstats - cross-site scripting</title>
+    <affected family="unix">
+      <platform>Debian GNU/Linux 4.0</platform>
+      <product>awstats</product>
+    </affected>
+    <reference ref_id="DSA-1679-1" ref_url="http://www.debian.org/security/dsa-1679-1" source="VENDOR" />
+    <reference ref_id="CVE-2008-3714" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3714" source="CVE" />
+    <description>Morgan Todd discovered a cross-site scripting vulnerability in awstats, a log file analyzer, involving the "config" request parameter (and possibly others; &lt;a href="http://security-tracker.debian.org/tracker/CVE-2008-3714"&gt;CVE-2008-3714&lt;/a&gt;).</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2013-12-06T10:22:58">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2013-12-06T14:49:29.787-05:00">DRAFT</status_change>
+        <status_change date="2013-12-23T04:01:40.433-05:00">INTERIM</status_change>
+        <status_change date="2014-01-13T04:01:19.938-05:00">ACCEPTED</status_change>
+        <modified comment="EDITED oval:org.mitre.oval:def:20224 - Debian Patch Update" date="2014-06-06T17:36:00.316-04:00">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </modified>
+        <status_change date="2014-06-06T17:38:25.217-04:00">INTERIM</status_change>
+        <status_change date="2014-06-23T04:07:02.665-04:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.4</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Debian GNU/Linux 4.0 is installed." definition_ref="oval:org.mitre.oval:def:6461" />
+    <criterion comment="awstats DPKG is earlier than 0:6.5+dfsg-1+etch1" test_ref="oval:org.mitre.oval:tst:89338" />
+  </criteria>
+</definition>

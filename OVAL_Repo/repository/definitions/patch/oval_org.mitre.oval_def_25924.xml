@@ -1,0 +1,66 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" id="oval:org.mitre.oval:def:25924" version="5">
+  <metadata>
+    <title>SUSE-SU-2014:1129-1 -- Security update for glibc</title>
+    <affected family="unix">
+      <platform>SUSE Linux Enterprise Server 11</platform>
+      <product>glibc</product>
+    </affected>
+    <reference ref_id="SUSE-SU-2014:1129-1" ref_url="https://www.suse.com/support/update/announcement/2014/suse-su-20141129-1.html" source="VENDOR" />
+    <reference ref_id="CVE-2014-5119" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5119" source="CVE" />
+    <reference ref_id="CVE-2013-4357" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4357" source="CVE" />
+    <reference ref_id="CVE-2014-6040" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6040" source="CVE" />
+    <reference ref_id="CVE-2012-6656" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-6656" source="CVE" />
+    <description>This glibc update fixes a critical privilege escalation problem and two
+additional issues:
+
+    * bnc#892073: An off-by-one error leading to a heap-based buffer
+      overflow was found in __gconv_translit_find(). An exploit that
+targets the problem is publicly available. (CVE-2014-5119)
+    * bnc#836746: Avoid race between {, __de}allocate_stack and
+      __reclaim_stacks during fork.
+    * bnc#844309: Fixed various overflows, reading large /etc/hosts or
+      long names. (CVE-2013-4357)
+    * bnc#894553, bnc#894556: Fixed various crashes on invalid input in
+      IBM gconv modules. (CVE-2014-6040, CVE-2012-6656)
+
+Security Issues:
+
+    * CVE-2012-6656
+      &lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-6656&gt;
+    * CVE-2013-4357
+      &lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4357&gt;
+    * CVE-2014-5119
+      &lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5119&gt;
+    * CVE-2014-6040
+      &lt;http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6040&gt;</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-09-26T10:29:07">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-09-29T12:10:39.259-04:00">DRAFT</status_change>
+        <status_change date="2014-10-20T04:00:15.541-04:00">INTERIM</status_change>
+        <status_change date="2014-11-10T04:01:14.360-05:00">ACCEPTED</status_change>
+      </dates>
+      <status>ACCEPTED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="SUSE Linux Enterprise Server 11.x is installed" definition_ref="oval:org.mitre.oval:def:17270" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="glibc RPM is earlier than 0:2.11.3-17.45.53.1" test_ref="oval:org.mitre.oval:tst:124211" />
+      <criterion comment="glibc-devel RPM is earlier than 0:2.11.3-17.45.53.1" test_ref="oval:org.mitre.oval:tst:123760" />
+      <criterion comment="glibc-html RPM is earlier than 0:2.11.3-17.45.53.1" test_ref="oval:org.mitre.oval:tst:124222" />
+      <criterion comment="glibc-i18ndata RPM is earlier than 0:2.11.3-17.45.53.1" test_ref="oval:org.mitre.oval:tst:124083" />
+      <criterion comment="glibc-info RPM is earlier than 0:2.11.3-17.45.53.1" test_ref="oval:org.mitre.oval:tst:123256" />
+      <criterion comment="glibc-locale RPM is earlier than 0:2.11.3-17.45.53.1" test_ref="oval:org.mitre.oval:tst:124088" />
+      <criterion comment="glibc-profile RPM is earlier than 0:2.11.3-17.45.53.1" test_ref="oval:org.mitre.oval:tst:123904" />
+      <criterion comment="nscd RPM is earlier than 0:2.11.3-17.45.53.1" test_ref="oval:org.mitre.oval:tst:124245" />
+      <criterion comment="glibc-32bit RPM is earlier than 0:2.11.3-17.45.53.1" test_ref="oval:org.mitre.oval:tst:124165" />
+      <criterion comment="glibc-devel-32bit RPM is earlier than 0:2.11.3-17.45.53.1" test_ref="oval:org.mitre.oval:tst:124170" />
+      <criterion comment="glibc-locale-32bit RPM is earlier than 0:2.11.3-17.45.53.1" test_ref="oval:org.mitre.oval:tst:124209" />
+      <criterion comment="glibc-profile-32bit RPM is earlier than 0:2.11.3-17.45.53.1" test_ref="oval:org.mitre.oval:tst:123640" />
+    </criteria>
+  </criteria>
+</definition>

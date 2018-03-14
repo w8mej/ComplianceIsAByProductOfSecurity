@@ -1,0 +1,3 @@
+NOTE- This STIG was formerly named "Cisco ISR 4000 series STIG".
+
+The name was changed to reflect and include other Cisco devices that use the same OS.

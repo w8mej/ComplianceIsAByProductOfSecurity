@@ -1,0 +1,39 @@
+<definition xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" class="patch" deprecated="true" id="oval:org.mitre.oval:def:27669" version="15">
+  <metadata>
+    <title>DEPRECATED: ELSA-2010-0565 -- w3m security update (moderate)</title>
+    <affected family="unix">
+      <platform>Oracle Linux 5</platform>
+      <product>w3m</product>
+    </affected>
+    <reference ref_id="ELSA-2010-0565" ref_url="http://linux.oracle.com/errata/ELSA-2010-0565.html" source="VENDOR" />
+    <reference ref_id="CVE-2010-2074" ref_url="http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-2074" source="CVE" />
+    <description>[0.5.1-17]
+- Resolves:rh#604861:Clear execstack requirement also for ia64 architecture
+
+[0.5.1-16]
+- Resolves:rh#604861:CVE-2010-2074 w3m: doesn't handle NULL in Common Name properly</description>
+    <oval_repository>
+      <dates>
+        <submitted date="2014-11-05T10:26:08">
+          <contributor organization="ALTX-SOFT">Sergey Artykhov</contributor>
+        </submitted>
+        <status_change date="2014-11-05T19:06:16.370-05:00">DRAFT</status_change>
+        <status_change date="2014-11-24T04:05:34.935-05:00">INTERIM</status_change>
+        <status_change date="2014-12-15T04:02:36.026-05:00">ACCEPTED</status_change>
+        <modified comment="deprecated due to duplicate Definition" date="2015-02-10T21:04:13.871-05:00">
+          <contributor organization="ALTX-SOFT">Maria Mikhno</contributor>
+        </modified>
+        <status_change date="2015-02-10T21:04:13.871-05:00">DEPRECATED</status_change>
+      </dates>
+      <status>DEPRECATED</status>
+      <min_schema_version>5.3</min_schema_version>
+    </oval_repository>
+  </metadata>
+  <criteria>
+    <extend_definition comment="Oracle Linux 5.x" definition_ref="oval:org.mitre.oval:def:15459" />
+    <criteria comment="Packages match section" operator="OR">
+      <criterion comment="w3m is earlier than 0:0.5.1-17.el5_5" test_ref="oval:org.mitre.oval:tst:134580" />
+      <criterion comment="w3m-img is earlier than 0:0.5.1-17.el5_5" test_ref="oval:org.mitre.oval:tst:135058" />
+    </criteria>
+  </criteria>
+</definition>
