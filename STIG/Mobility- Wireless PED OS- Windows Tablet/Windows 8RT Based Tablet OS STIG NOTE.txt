@@ -1,0 +1,3 @@
+STIGs applicable to Tablets running Windows 8RT is as follows:
+
+A STIG for Windows 8 RT based tablets is currently unavailable

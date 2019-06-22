@@ -1,0 +1,5 @@
+
+STIGs applicable to Tablets running Windows 8 is as follows:
+
+The general Windows 8 STIG is applicable Windows 8 based tablets.
+

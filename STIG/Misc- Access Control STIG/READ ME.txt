@@ -1,0 +1,3 @@
+The Access Control STIG has been pulled from publication because it became out of sync with updated policy.
+
+An update is in progress. 
