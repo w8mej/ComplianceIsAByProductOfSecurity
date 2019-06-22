@@ -1,4 +1,0 @@
-for Client Specific Guidance
-
-See ..Net- Remote Access - Secure Remote Computing (SRC) STIG \ U_Remote_XenApp_ICA_Thin_Client_STIG_V2R6_20120127.zip
-

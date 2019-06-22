@@ -1,4 +1,0 @@
-STIGs applicable to Tablets running Windows 7 is as follows:
-
-The general Windows 7 STIG is applicable Windows 7 based tablets.
-
