@@ -1,0 +1,144 @@
+rules:
+  - name: explicit whitelist, pass
+    resource:
+      - type: organization
+        resource_ids:
+          - '*'
+    key: name
+    mode: whitelist
+    values:
+      - fake-cluster
+
+  - name: explicit whitelist, fail
+    resource:
+      - type: organization
+        resource_ids:
+          - '*'
+    key: name
+    mode: whitelist
+    values:
+      - real-cluster
+
+  - name: explicit blacklist, pass
+    resource:
+      - type: organization
+        resource_ids:
+          - '*'
+    key: name
+    mode: blacklist
+    values:
+      - real-cluster
+
+  - name: explicit blacklist, fail
+    resource:
+      - type: organization
+        resource_ids:
+          - '*'
+    key: name
+    mode: blacklist
+    values:
+      - fake-cluster
+
+  - name: multiple values, pass
+    resource:
+      - type: organization
+        resource_ids:
+          - '*'
+    key: name
+    mode: whitelist
+    values:
+      - real-cluster
+      - fake-cluster
+
+  - name: multiple values, fail
+    resource:
+      - type: organization
+        resource_ids:
+          - '*'
+    key: name
+    mode: whitelist
+    values:
+      - real-cluster
+      - imaginary-cluster
+
+  - name: nested keys, pass
+    resource:
+      - type: organization
+        resource_ids:
+          - '*'
+    key: addonsConfig.kubernetesDashboard.disabled
+    mode: whitelist
+    values:
+      - True
+
+  - name: use projection to look for a list, pass
+    resource:
+      - type: organization
+        resource_ids:
+          - '*'
+    key: nodePools[*].config.imageType
+    mode: whitelist
+    values:
+      - ["COS", "COS"]
+
+  - name: use projection, look for a list, fail
+    resource:
+      - type: organization
+        resource_ids:
+          - '*'
+    key: nodePools[*].config.imageType
+    mode: whitelist
+    values:
+      - ["COS"]
+      - ["Ubuntu", "COS"]
+
+  - name: simple function, pass
+    resource:
+      - type: organization
+        resource_ids:
+          - '*'
+    key: length(nodePools)
+    mode: whitelist
+    values:
+      - 2
+
+  - name: all nodePools use COS, pass
+    resource:
+      - type: organization
+        resource_ids:
+          - '*'
+    key: 'length(nodePools) == length(nodePools[].{name: config.imageType}[?name==`COS`])'
+    mode: whitelist
+    values:
+      - True
+
+  # If a cluster has no node pools, the nodePools field is not
+  # returned by the GKE API.  Thus scanner doesn't have enough
+  # information to get this test rule correct.  But still, scanner
+  # shouldn't raise an exception and fail.  So this is just ensuring
+  # the fix to #2665 fixes the crash.  See also the next rule.
+
+  - name: missing nodePool, should not generate violation
+    resource:
+      - type: organization
+        resource_ids:
+          - '*'
+    key: 'length(nodePools) > `0`'
+    mode: whitelist
+    values:
+      - true
+
+  # This rule uses OR to handle clusters with no node pools.  Not only
+  # should this rule not produce an exception, it should actually
+  # detect the test cluster data with no node pools.  See also the
+  # previous rule.
+
+  - name: missing nodePool, should generate violation
+    resource:
+      - type: organization
+        resource_ids:
+          - '*'
+    key: 'length(nodePools || `[]`) > `0`'
+    mode: whitelist
+    values:
+      - true

@@ -1,0 +1,17 @@
+- name: Allow my company users to be in my company groups.
+  group_email: my_customer
+  mode: whitelist
+  conditions:
+    - member_email: '@mycompany.com'
+
+- name: Allow gmail users to be in AAAAA group.
+  group_email: aaaaa@mycompany.com
+  mode: whitelist
+  conditions:
+    - member_email: '@gmail.com'
+
+- name: Allow gmail users to be in CCCCC group.
+  group_email: ccccc@mycompany.com
+  mode: whitelist
+  conditions:
+    - member_email: '@gmail.com'

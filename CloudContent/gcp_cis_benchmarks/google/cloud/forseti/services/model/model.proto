@@ -1,0 +1,89 @@
+// Copyright 2017 The Forseti Security Authors. All rights reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+syntax = "proto3";
+
+package model;
+
+service Modeller {
+  rpc Ping(PingRequest) returns (PingReply) {}
+
+  rpc CreateModel(CreateModelRequest) returns (CreateModelReply) {}
+
+  rpc DeleteModel(DeleteModelRequest) returns (DeleteModelReply) {}
+
+  rpc ListModel(ListModelRequest) returns (stream ModelSimplified) {}
+
+  rpc GetModel(GetModelRequest) returns (ModelDetails) {}
+
+}
+
+message CreateModelRequest {
+  string type = 1;
+  string name = 2;
+  int64 id = 3;
+  bool background = 4;
+}
+
+message CreateModelReply {
+  ModelSimplified model = 1;
+}
+
+message DeleteModelRequest {
+  string handle = 1;
+}
+
+message DeleteModelReply {
+  enum Status {
+    SUCCESS = 0;
+    FAIL = 1;
+  }
+  Status status = 1;
+}
+
+message ListModelRequest {
+}
+
+
+message ModelSimplified {
+  string handle = 1;
+  string name = 2;
+  string status = 3;
+  string description = 4;
+  string message = 5;
+  string createdAt = 6;
+}
+
+message GetModelRequest {
+  string identifier = 1;
+}
+
+message ModelDetails {
+  string handle = 1;
+  string name = 2;
+  string status = 3;
+  string description = 4;
+  string message = 5;
+  string warnings = 6;
+  string createdAt = 7;
+}
+
+message PingRequest {
+  string data = 1;
+}
+
+message PingReply {
+  string data = 1;
+}
+
