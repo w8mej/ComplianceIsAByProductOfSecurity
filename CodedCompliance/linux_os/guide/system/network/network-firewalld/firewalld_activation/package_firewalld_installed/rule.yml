@@ -1,0 +1,16 @@
+documentation_complete: true
+
+prodtype: rhel7,rhel8,ol7,ol8
+
+title: 'Install firewalld'
+
+description: |-
+    {{{ describe_package_install(package="firewalld") }}}
+
+rationale: 'The firewalld package should be installed to provide access control methods.'
+
+severity: medium
+
+ocil_clause: 'the package is not installed'
+
+ocil: '{{{ ocil_package(package="firewalld") }}}'
